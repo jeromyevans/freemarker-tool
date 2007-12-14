@@ -1,0 +1,7 @@
+<h1>Contact Request</h1>
+<p>A contact request has been made via the website.</p>
+<table>
+<tr><td>Name:</td><td>Jeromy Evans</td></tr>
+<tr><td>Email:</td><td>jeromy.evans@blueskyminds.com.au</td></tr>
+<tr><td>Message:</td><td>This is a test message</td></tr>
+</table>

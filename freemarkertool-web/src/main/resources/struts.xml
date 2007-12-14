@@ -1,0 +1,58 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+  <constant name="" value=""/>
+  <constant name="struts.objectFactory" value="guice"/>
+  <constant name="guice.module" value="com.blueskyminds.freemarkertool.startup.GuiceModule"/>
+
+  <constant name="struts.devMode" value="true"/>
+  <constant name="struts.configuration.xml.reload" value="false"/>
+  <constant name="struts.ui.theme" value="simple"/>
+
+  <constant name="struts.action.extension" value=",json"/>
+  <!--<constant name="struts.codebehind.defaultPackage" value="main"/>-->
+  <!--<constant name="struts.rest.defaultHandlerName" value="json"/>-->
+
+  <!-- This package sets up default results of ajax JSON-only responses -->
+  <package name="ajaxJSONResponses" extends="struts-default">
+
+    <result-types>
+      <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+      <result-type name="json" class="com.googlecode.jsonplugin.JSONResult"/>
+    </result-types>
+
+    <interceptors>
+        <interceptor name="json" class="com.googlecode.jsonplugin.JSONInterceptor"/>
+    </interceptors>
+    
+    <global-results>
+      <result name="xxxexception" type="tiles">exception.json</result>
+      <result name="error" type="httpheader">
+        <param name="status">404</param>
+        <param name="headers.XStatusText">Access denied</param>
+      </result>
+    </global-results>
+
+    <global-exception-mappings>
+      <exception-mapping exception="java.lang.NoSuchMethodException" result="xxxexception"/>
+      <exception-mapping exception="java.lang.Exception" result="xxxexception"/>
+    </global-exception-mappings>
+
+  </package>
+
+  <package name="main" extends="ajaxJSONResponses" namespace="/">
+    <action name="parse" class="com.blueskyminds.freemarkertool.web.actions.ParseAction">
+      <interceptor-ref name="json"/>
+      <interceptor-ref name="defaultStack"/>
+      <result type="json">
+        <param name="wrapWithComments">true</param>
+      </result>
+    </action>
+  </package>
+
+  <!--<constant name="struts.rest.handlerOverride.xml" value="customXMLHandler"/>-->
+  <!--<constant name="struts.rest.handlerOverride.json" value="customJSONHandler"/>-->
+  <!--<bean type="org.apache.struts2.rest.handler.ContentTypeHandler" name="customJSONHandler" class="com.blueskyminds.housepad.web.plugin.handlers.JSONWriterContentHandler" />-->
+  <!--<bean type="com.opensymphony.xwork2.util.PatternMatcher" name="struts" class="com.opensymphony.xwork2.util.NamedVariablePatternMatcher" />  -->
+</struts>

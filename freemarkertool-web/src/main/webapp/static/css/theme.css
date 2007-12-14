@@ -1,0 +1,21 @@
+/* Grey rounded-rectangle border, white background */
+/* This is the grey : c6c6c6 */
+
+/* set background images for corners */
+.borderbox         { background-color: white; position:relative; z-index:0; }
+.borderboxtop div  { background: url(../images/border_grey_tl.gif) no-repeat top left; position: relative; left: -2px; top: 0px; z-index:1;}
+.borderboxtop      { background: url(../images/border_grey_tr.gif) no-repeat top right; position: relative; left: 1px; top: -1px; z-index:1;}
+.borderboxbot div  { background: url(../images/border_grey_bl.gif) no-repeat bottom left; position: relative; left: -2px; bottom: 0px; z-index:1; }
+.borderboxbot      { background: url(../images/border_grey_br.gif) no-repeat bottom right; position: relative; left: 1px; bottom: -1px; z-index:1; }
+
+ /* height and width details */
+.borderboxtop div, .borderboxtop, .borderboxbot div, .borderboxbot {
+	/*width: 100%;*/
+	height: 10px;
+	font-size: 1px;
+}
+.borderboxcontent  { margin: 0 10px; }
+.borderbox {
+    /*width: 310px;*/
+    border: solid 1px #c6c6c6;
+   }
