@@ -1,5 +1,8 @@
 <decorators defaultdir="/decorators">
   <decorator name="main" page="layout.jsp">
     <pattern>/*</pattern>
+    <excludes>
+      <pattern>*.json</pattern>
+    </excludes>
   </decorator>
 </decorators>

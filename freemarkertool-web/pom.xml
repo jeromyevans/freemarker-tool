@@ -64,7 +64,7 @@
     <dependency>
       <groupId>com.googlecode.struts2yuiplugin</groupId>
       <artifactId>struts2yuiplugin</artifactId>
-      <version>0.1-ALPHA-5-SNAPSHOT</version>
+      <version>0.1-ALPHA-6-SNAPSHOT</version>
     </dependency>
 
     <dependency>

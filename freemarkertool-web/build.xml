@@ -1,0 +1,42 @@
+<project name="syncHS">
+
+  <!-- Copies Javascript files from houspad to freemarkertool-->
+
+  <property name="js.src" value="D:\Projects\src\blueskyminds\src\housepad\housepad-web\src\main\webapp\static\js"/>
+  <property name="js.target" value="D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\webapp\static\js"/>
+
+  <property name="js.core" value="blueskyminds-core.js"/>
+  <property name="js.dom" value="blueskyminds-dom.js"/>
+  <property name="js.events" value="blueskyminds-events.js"/>
+  <property name="js.net" value="blueskyminds-net.js"/>
+  <property name="js.ui" value="blueskyminds-ui.js"/>
+
+  <!-- Macro to make a file read only under windows or unix -->
+  <macrodef name="makeReadOnly">
+    <attribute name="file"/>
+    <sequential>
+      <chmod file="@{file}" perm="a-w"/>
+      <exec executable="cmd.exe" osfamily="windows">
+        <arg line="/c attrib +R"/>
+        <arg file="@{file}"/>
+      </exec>
+    </sequential>
+  </macrodef>
+
+  <macrodef name="sync">
+    <attribute name="file"/>
+    <sequential>
+      <copy file="${js.src}/@{file}" todir="${js.target}" preservelastmodified="true" overwrite="true" verbose="true"/>
+      <makeReadOnly file="${js.target}/@{file}"/>
+    </sequential>
+  </macrodef>
+
+  <target name="sync">
+    <sync file="${js.core}"/>
+    <sync file="${js.dom}"/>
+    <sync file="${js.events}"/>
+    <sync file="${js.net}"/>
+    <sync file="${js.ui}"/>
+  </target>
+
+</project>
