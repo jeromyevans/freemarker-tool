@@ -23,7 +23,10 @@ Attributes:
   </head>
 
   <body>
-    <div id="banner"><span>Freemarker Tool</span></div>
+    <div id="header">
+      <div id="title">Freemarker Tool</div>
+      <div id="adContainer"></div>            
+    </div>
     <div id="content">
       <decorator:body/>
     </div>

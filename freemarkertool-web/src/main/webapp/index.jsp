@@ -14,7 +14,7 @@
   <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/button/assets/skins/sam/button.css">
   <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/css/theme.css">
 </head>
-<body>
+<body id="body">
 <housepad:div theme="box">
   <s:form id="templateForm" action="parse.json">
     <div id="left">
@@ -24,49 +24,60 @@
       </div>
     </div>
     <div id="center">
-      <housepad:div id="openContainer" theme="box" cssClass="editor">
+      <div id="openContainer" class="block">
         <h2>Template</h2>
-        <s:textarea id="open" name="openTemplate" value="1"/>
-      </housepad:div>
-      <housepad:div id="bodyTextContainer" theme="box">
+        <housepad:div theme="box" cssClass="editor">
+          <s:textarea id="open" name="openTemplate" value="1"/>
+        </housepad:div>
+      </div>
+      <div id="bodyTextContainer" class="block">
         <h2>Body Text</h2>
-        <s:textfield id="bodyText" name="bodyText" value="2"/>
-      </housepad:div>
-      <housepad:div id="closeContainer" theme="box" cssClass="editor">
+        <housepad:div theme="box">
+          <s:textfield id="bodyText" name="bodyText" value="2"/>
+        </housepad:div>
+      </div>
+      <div id="closeContainer" class="block">
         <h2>Close Template</h2>
-        <s:textarea id="close" name="closeTemplate" value="3"/>
-      </housepad:div>
-      <s:submit name="Submit"/>     
+        <housepad:div theme="box" cssClass="editor">
+          <s:textarea id="close" name="closeTemplate" value="3"/>
+        </housepad:div>
+      </div>
+      <%--<s:submit name="Submit"/>     --%>
       <div id="errorContainer"></div>
-      <housepad:div theme="box" cssClass="editor readonly">
-        <div id="indicatorContainer"><img id="indicator" src="/static/images/indicator.gif" style="display:none" alt="Loading..."/></div>
-        <s:textarea id="outputText" name="outputText" value="" disabled="true"/>
-      </housepad:div>      
+      <div id="outputTextContainer" class="block">
+        <h2>FreeMarker Result</h2>
+        <housepad:div theme="box" cssClass="editor readonly">      
+          <div id="indicatorContainer"><img id="indicator" src="/static/images/indicator.gif" style="display:none" alt="Loading..."/></div>
+          <s:textarea id="outputText" name="outputText" value="" disabled="true"/>
+        </housepad:div>
+      </div>
     </div>
-    <div id="right">
+    <div id="right" class="block">
+      <h2>Context</h2>
       <housepad:div theme="box">
-        <h2>Context</h2>
-        <table summary="Table of values to include in the Template Context">
-          <thead>
-          <tr><th></th><th>Name</th><th>Value</th><th>Null</th></tr>
-          </thead>
-          <tbody id="contextContainer">
-          <c:forEach var="i" begin="0" end="19" varStatus="status">
-            <tiles:insertDefinition name="contextField.jsp">
-              <tiles:putAttribute name="index" value="${status.index}"/>
-            </tiles:insertDefinition>
-          </c:forEach>
-          </tbody>
-        </table>
+        <div id="contextPanel">
+          <table width="100%" summary="Table of values to include in the Template Context">
+            <thead>
+            <tr><th></th><th>Name</th><th>Value</th><th>Null</th></tr>
+            </thead>
+            <tbody id="contextContainer">
+            <%--<c:forEach var="i" begin="0" end="19" varStatus="status">--%>
+              <%--<tiles:insertDefinition name="contextField.jsp">--%>
+                <%--<tiles:putAttribute name="index" value="${status.index}"/>--%>
+              <%--</tiles:insertDefinition>--%>
+            <%--</c:forEach>--%>
+            </tbody>
+          </table>
+        </div>
       </housepad:div>
     </div>        
   </s:form>
 </housepad:div>
 
-<div class="yui-skin-sam">
-  <div id="log">Log:</div>
-  <div id="myLogger"/>
-</div>
+<!--<div class="yui-skin-sam">-->
+  <!--<div id="log">Log:</div>-->
+  <!--<div id="myLogger"/>-->
+<!--</div>-->
 
 <script type="text/javascript" src="http://yui.yahooapis.com/2.3.1/build/utilities/utilities.js"></script>
 <%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/yahoo/yahoo-debug.js"></script>--%>
@@ -78,7 +89,8 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/button/button-beta-min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/datasource/datasource-beta-min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/datatable/datatable-beta-min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/tabview/tabview-debug.js"></script>
+<%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/tabview/tabview-min.js"></script>--%>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/dragdrop/dragdrop-min.js"></script>
 
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/tools-min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/trimpath-template-1.0.38.js"></script>

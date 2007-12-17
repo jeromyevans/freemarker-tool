@@ -9,6 +9,7 @@ FreemarkerTool.ui = function() {
     var CLOSE_TEXT_ID = "close";
     var BODY_TEXT_CONTAINER_ID = "bodyTextContainer";
     var BODY_TEXT_ID = "bodyText"
+    var OUTPUT_TEXT_CONTAINER_ID = "outputTextContainer"
     var OUTPUT_TEXT_ID = "outputText"
     var ERROR_ID = "errorContainer";
     var INDICATOR_ID = "indicator";
@@ -34,6 +35,8 @@ FreemarkerTool.ui = function() {
     var inputChanged = false;
 
     var contextFields;
+
+    var templateMode;
 
     /** Calls the callback if not reset for the specifid number of ticks to wait */
     var IdleTimer = function(tickInterval, millisToWait, callback) {
@@ -179,15 +182,19 @@ FreemarkerTool.ui = function() {
 
     function setTemplateView(template) {
         if (template) {
-            //YAHOO.util.Dom.getViewportHeight();
+            templateMode = true;
             YAHOO.util.Dom.setStyle(BODY_TEXT_CONTAINER_ID, "display", "none");
             YAHOO.util.Dom.setStyle(CLOSE_CONTAINER_ID, "display", "none");
-            YAHOO.util.Dom.setStyle(OPEN_TEXT_ID, "height", "35em");
+            document.getElementById(BODY_TEXT_ID).disabled = true;
+            document.getElementById(CLOSE_TEXT_ID).disabled = true;
         } else {
-            YAHOO.util.Dom.setStyle(OPEN_TEXT_ID, "height", "15em");
-            YAHOO.util.Dom.setStyle(CLOSE_CONTAINER_ID, "display", "block");
+            templateMode = false;
+            document.getElementById(BODY_TEXT_ID).disabled = false;
+            document.getElementById(CLOSE_TEXT_ID).disabled = false;
             YAHOO.util.Dom.setStyle(BODY_TEXT_CONTAINER_ID, "display", "block");
+            YAHOO.util.Dom.setStyle(CLOSE_CONTAINER_ID, "display", "block");
         }
+        resetHeights();        
     }
 
     function toggleView(e) {
@@ -477,7 +484,71 @@ FreemarkerTool.ui = function() {
         createContextField(0);
     }
 
+    var CONTEXT_PANEL_ID = "contextPanel";
+    
+    function initLayout() {
+        resetHeights();
+
+        YAHOO.util.Event.addListener(window, 'resize', onResizeListener);
+    }
+
+    function onResizeListener(e) {
+        resetHeights();
+    }
+
+    var BORDER = 10;
+    var HEADER_HEIGHT = 100;
+    var CONTENT_VPADDING = BORDER*2;
+    var VOVERFLOW = 20;        /** to ensure we don't get scroll bars */
+    var FOOTER_HEIGHT = 20;
+    var PANEL_MARGIN = BORDER*2+20;
+
+    function resetHeights() {
+        var viewPortHeight = YAHOO.util.Dom.getViewportHeight();
+        //var viewPortWidth = YAHOO.util.Dom.getViewportWidth();
+        var availableHeight = viewPortHeight - HEADER_HEIGHT - FOOTER_HEIGHT - CONTENT_VPADDING - VOVERFLOW;
+
+        var openHeight;
+        var bodyTextHeight;
+        var closeHeight;
+        var outputHeight;
+
+        if (templateMode) {
+            closeHeight = 0;
+            bodyTextHeight = 0;
+            openHeight = availableHeight / 2;
+            outputHeight = availableHeight - openHeight;
+
+            YAHOO.util.Dom.setStyle(OPEN_CONTAINER_ID, "height", openHeight+"px");
+            YAHOO.util.Dom.setStyle(OUTPUT_TEXT_CONTAINER_ID, "height", outputHeight+"px");
+
+            YAHOO.util.Dom.setStyle(OPEN_TEXT_ID, "height", (openHeight-PANEL_MARGIN)+"px");
+            YAHOO.util.Dom.setStyle(OUTPUT_TEXT_ID, "height", (outputHeight-PANEL_MARGIN)+"px");
+        } else {
+            bodyTextHeight = 60;
+            closeHeight = 0;
+            openHeight = (availableHeight - bodyTextHeight) / 3;
+            closeHeight = openHeight;
+            outputHeight = availableHeight - openHeight - bodyTextHeight - closeHeight;
+
+            YAHOO.util.Dom.setStyle(OPEN_CONTAINER_ID, "height", openHeight+"px");
+            YAHOO.util.Dom.setStyle(BODY_TEXT_CONTAINER_ID, "height", bodyTextHeight+"px");
+            YAHOO.util.Dom.setStyle(CLOSE_CONTAINER_ID, "height", closeHeight+"px");
+            YAHOO.util.Dom.setStyle(OUTPUT_TEXT_CONTAINER_ID, "height", outputHeight+"px");
+
+            YAHOO.util.Dom.setStyle(OPEN_TEXT_ID, "height", (openHeight-PANEL_MARGIN)+"px");
+            YAHOO.util.Dom.setStyle(CLOSE_TEXT_ID, "height", (closeHeight-PANEL_MARGIN)+"px");
+            YAHOO.util.Dom.setStyle(OUTPUT_TEXT_ID, "height", (outputHeight-PANEL_MARGIN)+"px");
+        }
+
+        YAHOO.util.Dom.setStyle("right", "height", availableHeight+"px");
+        YAHOO.util.Dom.setStyle(CONTEXT_PANEL_ID, "height", (availableHeight-PANEL_MARGIN)+"px");
+        //YAHOO.util.Dom.setStyle("center", "height", availableHeight);
+    }
+
     function init() {
+        initLayout();
+
         errorController = new blueskyminds.ui.ErrorController(ERROR_ID, ERROR_EVENT)
 
         // the idle timer waits for idle input before posting changes
@@ -501,7 +572,7 @@ FreemarkerTool.ui = function() {
         setTemplateView(toggleButton.get('checked'));
 
         initContext();
-     }
+    }
 
 
     YAHOO.util.Event.onDOMReady(init);
