@@ -19,7 +19,6 @@ Attributes:
     <meta name="Author" content="Blue Sky Minds Pty Ltd" />
     <meta name="Copyright" content="Blue Sky Minds Pty Ltd" />
     <script type="text/javascript"></script>
-    <link rel="stylesheet" href="/static/css/theme.css" type="text/css"/>
     <decorator:head/>
   </head>
 

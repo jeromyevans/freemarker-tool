@@ -2,6 +2,9 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib prefix="yui" uri="/struts-yui-tags" %>
 <%@ taglib prefix="housepad" uri="/housepad-tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
+
 <html>
 <head>
   <title>Freemarker Tool</title>
@@ -43,9 +46,16 @@
     <div id="right">
       <housepad:div theme="box">
         <h2>Context</h2>
-        <s:textfield name="context['parameters.id']" value="a"/>
-        <s:textfield name="context['title']" value="b"/>
-        <s:textfield name="context['parameters.test']" value="c"/>
+        <table summary="Table of values to include in the Template Context">
+          <tr>
+            <th></th><th>Name</th><th>Value</th><th>Null</th>
+          </tr>
+          <c:forEach var="i" begin="0" end="19" varStatus="status">
+            <tiles:insertDefinition name="contextField">
+              <tiles:putAttribute name="index" value="${status.index}"/>
+            </tiles:insertDefinition>
+          </c:forEach>
+        </table>
       </housepad:div>
     </div>        
   </s:form>
@@ -68,7 +78,7 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/datatable/datatable-beta-min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/tabview/tabview-debug.js"></script>
 
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/tools-min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/tools-min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-core.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-dom.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-events.js"></script>

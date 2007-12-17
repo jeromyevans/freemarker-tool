@@ -4,5 +4,6 @@
        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
 
 <tiles-definitions>
-  <definition name="exception.json" template="/tiles/exception.json.jsp"/>
+  <definition name="exception.json" template="/WEB-INF/tiles/exception.json.jsp"/>
+  <definition name="contextField" template="/WEB-INF/tiles/contextField.jsp"/>
 </tiles-definitions>

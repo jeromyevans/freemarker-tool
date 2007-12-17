@@ -28,19 +28,48 @@
 
 #left {
   float: left;
-  width: 200px;
+  width: 100px;
 }
 
 #center {
- margin-left: 200px;
- margin-right: 200px;
+ margin-left: 110px;
+ margin-right: 310px;
 }
 
 #right {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 200px;
+  top: 10px;
+  right: 10px;
+  width: 300px;
+}
+
+#right table,
+#right table tr,
+#right table tr td {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#right tr.disabled {
+  background-color: #cccccc;
+}
+
+#right tr.enabled {
+  background-color: #ccffcc;
+}
+
+
+#right input.name {
+  width: 85px;
+}
+
+#right input.value {
+  width: 85px;
+}
+
+#right input.disabled {
+  background-color: #cccccc;
 }
 
 .editor textarea {

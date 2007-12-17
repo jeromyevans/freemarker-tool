@@ -18,6 +18,8 @@ FreemarkerTool.ui = function() {
     var CHANGE_TIMEOUT = 1000;
     var TICK_INTERVAL = 250;
 
+    var INITIAL_CONTEXT_ITEMS = 20;
+
     var ERROR_EVENT = "error";
 
     var errorController;
@@ -30,6 +32,8 @@ FreemarkerTool.ui = function() {
 
     /** Indicator to control whether a refresh is required */
     var inputChanged = false;
+
+    var contextFields;
 
     /** Calls the callback if not reset for the specifid number of ticks to wait */
     var IdleTimer = function(tickInterval, millisToWait, callback) {
@@ -194,6 +198,191 @@ FreemarkerTool.ui = function() {
         }
     }
 
+
+    /** A ContextField holds the model for the fields used to define each item in the context */
+    var ContextField = function(fieldIndex) {
+
+        var CONTEXT_CONTAINER_ID = "context[{0}].container";
+        var CONTEXT_ENABLED_CHECKBOX_ID = "context[{0}].enabled";
+        var CONTEXT_NAME_TEXT_ID = "context[{0}].name";
+        var CONTEXT_VALUE_TEXT_ID = "context[{0}].value";
+        var CONTEXT_VALUE_NULL_CHECKBOX_ID = "context[{0}].nullValue";
+
+        /** Index of this ContextField */
+        var index = fieldIndex;
+        var containerEl;
+        var enabledEl;
+        var nameEl;
+        var valueEl;
+        var nullEl;
+
+        var lastValue = "";
+
+        /** Merges the index into a template used to determine the ID */
+        function idOf(template) {
+            return YAHOO.Tools.printf(template, index);
+        }
+
+        function onEnabledChange(e) {
+            if (e.target.checked) {
+                enable();
+            } else {
+                disable();
+            }
+        }
+
+        function isEnabled() {
+            return enabledEl.get('checked');
+        }
+
+        function setEnabledFlag(enabled) {
+            if (enabled) {
+                enabledEl.set('checked', true);
+                enabledEl.set('value', "true");
+            } else {
+                enabledEl.set('checked', false);
+                enabledEl.set('value', "false");
+            }
+        }
+
+        function enable() {
+            setEnabledFlag(true);
+            containerEl.removeClass("disabled");
+            containerEl.addClass("enabled");
+            nameEl.removeClass('disabled');
+            nullEl.removeClass('disabled');
+            setNullValue(isNull());
+        }
+
+        function disable() {
+            setEnabledFlag(false);
+            containerEl.removeClass("enabled");
+            containerEl.addClass("disabled");
+            nameEl.addClass('disabled');
+            valueEl.addClass('disabled');
+            nullEl.addClass('disabled');
+        }
+
+        function isNull() {
+            return nullEl.get('checked');
+        }
+
+        function setNullFlag(nullFlag) {
+            if (nullFlag) {
+                nullEl.set('checked', true);
+                nullEl.set('value', "true");
+            } else {
+                nullEl.set('checked', false);
+                nullEl.set('value', "false");
+            }
+        }
+
+        function setNullValue(checked) {
+            setNullFlag(checked);
+            if (checked) {
+                valueEl.addClass('disabled');
+                // save previous value
+                if (lastValue == null) {
+                    var value = valueEl.get('element').value;
+                    lastValue = (value ? value : "");
+                    valueEl.set('value', "< null >");
+                }
+            } else {
+                valueEl.removeClass('disabled');
+                if (lastValue != null) {
+                   // restore last value
+                   valueEl.set('value', lastValue);
+                   lastValue = null;
+                }
+            }
+        }
+
+        function onNameChange(e) {
+            enable();
+        }
+
+        function onNameFocus(e) {
+            enable();
+        }
+
+        function onValueChange(e) {
+            enable();
+        }
+
+        function onValueFocus(e) {
+            enable();
+        }
+
+        function onNullChange(e) {
+            setNullValue(e.target.checked);
+            enable();
+        }
+
+        function reset() {
+            if (isEnabled()) {
+                enable();
+            } else {
+                disable();
+            }
+        }
+        
+        function init() {
+            containerEl = new YAHOO.util.Element(idOf(CONTEXT_CONTAINER_ID));
+            enabledEl = new YAHOO.util.Element(idOf(CONTEXT_ENABLED_CHECKBOX_ID));
+            nameEl = new YAHOO.util.Element(idOf(CONTEXT_NAME_TEXT_ID));
+            valueEl = new YAHOO.util.Element(idOf(CONTEXT_VALUE_TEXT_ID));
+            nullEl = new YAHOO.util.Element(idOf(CONTEXT_VALUE_NULL_CHECKBOX_ID));
+
+            if (enabledEl) {
+                enabledEl.on('click', onEnabledChange);
+            }
+
+            if (nameEl) {
+                nameEl.on('keyup', onNameChange)
+                nameEl.on('keydown', onNameChange)
+                nameEl.on('keypress', onNameChange)
+                nameEl.on('focus', onNameFocus)
+                nameEl.on('click', onNameFocus)
+            }
+
+            if (valueEl) {
+                valueEl.on('keyup', onValueChange)
+                valueEl.on('keydown', onValueChange)
+                valueEl.on('keypress', onValueChange)
+                valueEl.on('focus', onValueFocus)
+                valueEl.on('click', onValueFocus)
+            }
+
+            if (nullEl) {
+                nullEl.on('click', onNullChange);
+            }
+
+            reset();
+        }
+
+        init();
+
+        return {
+            isEnabled : function() {
+                if (enabledEl) {
+                    return enabledEl.checked;
+                } else {
+                    return false;
+                }
+            }
+        }
+    };
+
+    /**
+     * Setup the UI controls to define the context
+     */
+    function initContext() {
+        contextFields = new Array();
+        for (var itemNo = 0; itemNo < INITIAL_CONTEXT_ITEMS; itemNo++) {
+            contextFields[itemNo] = new ContextField(itemNo);
+        }
+    }
+
     function init() {
         errorController = new blueskyminds.ui.ErrorController(ERROR_ID, ERROR_EVENT)
 
@@ -215,7 +404,9 @@ FreemarkerTool.ui = function() {
         var toggleButton = new YAHOO.widget.Button(TOGGLE_VIEW_BTN_ID);
 
         toggleButton.on("click", toggleView);
-        setTemplateView(toggleButton.get('checked'));                
+        setTemplateView(toggleButton.get('checked'));
+
+        initContext();
      }
 
 

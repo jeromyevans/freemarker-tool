@@ -1,12 +1,9 @@
 package com.blueskyminds.freemarkertool.web.actions;
 
-
 import org.apache.commons.lang.StringUtils;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Map;
+import java.util.*;
+
 
 /**
  * Converts name=value pairs into an object graph (of maps)
@@ -27,6 +24,25 @@ public class ContextFactory {
             for (Map.Entry<String, String> entry : context.entrySet()) {
                 expression = entry.getKey();
                 processExpression(expression, root, entry.getValue());
+            }
+        }
+        return root;
+    }
+
+    /** Converts the context defined by beans into an object graph of maps (todo: and collections) */
+    public Map<String, Object> createContext(List<TemplateContextBean> context) {
+        String expression;
+        Map<String, Object> root = new HashMap<String, Object>();
+        if (context != null) {
+            for (TemplateContextBean entry : context) {
+                if (entry.isEnabled()) {
+                    expression = entry.getName();
+                    if (!entry.isNullValue()) {
+                        processExpression(expression, root, entry.getValue());
+                    } else {
+                        processExpression(expression, root, null);
+                    }
+                }
             }
         }
         return root;
