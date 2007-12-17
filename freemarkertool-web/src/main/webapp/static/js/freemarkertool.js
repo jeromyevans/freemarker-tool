@@ -198,11 +198,15 @@ FreemarkerTool.ui = function() {
         }
     }
 
+     var CONTEXT_CONTAINER_ID = "context[{0}].container";
 
-    /** A ContextField holds the model for the fields used to define each item in the context */
-    var ContextField = function(fieldIndex) {
+    /** A ContextField holds the model for the fields used to define each item in the context
+    * @param fieldIndex sequential number of this field
+    * @param listener to fire when focus is obtained
+    **/
+    var ContextField = function(fieldIndex, onFocusListener, onChangeListener) {
 
-        var CONTEXT_CONTAINER_ID = "context[{0}].container";
+
         var CONTEXT_ENABLED_CHECKBOX_ID = "context[{0}].enabled";
         var CONTEXT_NAME_TEXT_ID = "context[{0}].name";
         var CONTEXT_VALUE_TEXT_ID = "context[{0}].value";
@@ -218,6 +222,9 @@ FreemarkerTool.ui = function() {
 
         var lastValue = "";
 
+        var focusListener = onFocusListener;
+        var changeListener = onChangeListener;
+
         /** Merges the index into a template used to determine the ID */
         function idOf(template) {
             return YAHOO.Tools.printf(template, index);
@@ -226,9 +233,11 @@ FreemarkerTool.ui = function() {
         function onEnabledChange(e) {
             if (e.target.checked) {
                 enable();
+                fireFocusListener();
             } else {
                 disable();
             }
+            fireChangeListener();
         }
 
         function isEnabled() {
@@ -299,23 +308,33 @@ FreemarkerTool.ui = function() {
 
         function onNameChange(e) {
             enable();
+            fireChangeListener();
         }
 
         function onNameFocus(e) {
             enable();
+            fireChangeListener();
         }
 
         function onValueChange(e) {
             enable();
+            fireChangeListener();
         }
 
         function onValueFocus(e) {
             enable();
+            fireFocusListener();
         }
 
+        /** Listener for a change in the null checkox.  
+         * Enables the row, fires the listener and resets the idle timer
+         * @param e
+         */
         function onNullChange(e) {
             setNullValue(e.target.checked);
             enable();
+            fireFocusListener();
+            fireChangeListener();
         }
 
         function reset() {
@@ -325,7 +344,21 @@ FreemarkerTool.ui = function() {
                 disable();
             }
         }
-        
+
+        /** Notifies the listner that this ContextField has focus */
+        function fireFocusListener() {
+            if (focusListener) {
+                focusListener(index);
+            }
+        }
+
+        /** Notifies the listener that this ContextField has changed state */
+        function fireChangeListener() {
+            if (changeListener) {
+                changeListener(index);
+            }
+        }
+
         function init() {
             containerEl = new YAHOO.util.Element(idOf(CONTEXT_CONTAINER_ID));
             enabledEl = new YAHOO.util.Element(idOf(CONTEXT_ENABLED_CHECKBOX_ID));
@@ -373,14 +406,75 @@ FreemarkerTool.ui = function() {
         }
     };
 
+    var PARENT_CONTEXT_CONTAINER_ID = "contextContainer";
+    var CONTEXT_TEMPLATE_ID = "contextFieldTemplate";
+    var contextFieldTemplate;
+
+    /**
+     * Adds a new ContextField to the DOM and initialise a controller for it
+     * @param itemNo
+     */
+    function createContextField(itemNo) {
+
+        var templateContext = {
+            index : itemNo
+        }
+
+        // insert the HTML into the DOM
+        var html = contextFieldTemplate.process(templateContext);
+        var node  = document.createElement("tr");
+        node['id'] = YAHOO.tools.printf(CONTEXT_CONTAINER_ID, itemNo);
+        node['className'] = "contextField";
+
+        var parent = document.getElementById(PARENT_CONTEXT_CONTAINER_ID);
+        parent.appendChild(node);
+
+        node.innerHTML = html;
+
+        //blueskyminds.dom.appendHTML(PARENT_CONTEXT_CONTAINER_ID, html, true);
+
+        // initialise the controller
+        contextFields[itemNo] = new ContextField(itemNo, onContextFieldFocus, onContextFieldChange);
+    }
+
+    /**
+     * Listener for focus in a context field.  Used to create a new context field
+     *  instance if the focus is in the last one
+     * @param itemNo
+     */
+    function onContextFieldFocus(itemNo) {
+        if (itemNo == contextFields.length - 1) {
+            createContextField(itemNo+1);
+        }
+    }
+
+    /**
+     * Listener for for change of state in a context field.  Triggers a new repost
+     * @param itemNo
+     */
+    function onContextFieldChange(itemNo) {
+        idleTimer.reset();
+        setInputChangedFlag();
+    }
+
     /**
      * Setup the UI controls to define the context
      */
     function initContext() {
         contextFields = new Array();
-        for (var itemNo = 0; itemNo < INITIAL_CONTEXT_ITEMS; itemNo++) {
-            contextFields[itemNo] = new ContextField(itemNo);
+
+        contextFieldTemplate = TrimPath.parseDOMTemplate(CONTEXT_TEMPLATE_ID);
+        
+        // remove the hard-coded context fields
+        var elements = YAHOO.util.Dom.getElementsByClassName("contextField");
+        var parentNode;
+        for (var itemNo = 0; itemNo < elements.length; itemNo++) {
+            parentNode = elements[itemNo].parentNode;
+            parentNode.removeChild(elements[itemNo]);
         }
+
+        // setup the first field
+        createContextField(0);
     }
 
     function init() {
@@ -410,7 +504,7 @@ FreemarkerTool.ui = function() {
      }
 
 
-    init();
+    YAHOO.util.Event.onDOMReady(init);
 
     return {
         parseTemplate : function() {

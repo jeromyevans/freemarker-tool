@@ -47,14 +47,16 @@
       <housepad:div theme="box">
         <h2>Context</h2>
         <table summary="Table of values to include in the Template Context">
-          <tr>
-            <th></th><th>Name</th><th>Value</th><th>Null</th>
-          </tr>
+          <thead>
+          <tr><th></th><th>Name</th><th>Value</th><th>Null</th></tr>
+          </thead>
+          <tbody id="contextContainer">
           <c:forEach var="i" begin="0" end="19" varStatus="status">
-            <tiles:insertDefinition name="contextField">
+            <tiles:insertDefinition name="contextField.jsp">
               <tiles:putAttribute name="index" value="${status.index}"/>
             </tiles:insertDefinition>
           </c:forEach>
+          </tbody>
         </table>
       </housepad:div>
     </div>        
@@ -79,6 +81,7 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/tabview/tabview-debug.js"></script>
 
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/tools-min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/trimpath-template-1.0.38.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-core.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-dom.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-events.js"></script>
@@ -86,11 +89,14 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-ui.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/freemarkertool.js"></script>
 
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/trimpath-template-1.0.38.js"></script>
+
 
 <%--<script type="text/javascript">--%>
   <%--var myLogReader = new YAHOO.widget.LogReader("myLogger");--%>
 <%--</script>--%>
+<textarea id="contextFieldTemplate" style="display:none">
+    <tiles:insertDefinition name="contextField.jst"/>
+</textarea>
 
 </body>
 </html>
