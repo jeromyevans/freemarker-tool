@@ -8,9 +8,9 @@
 <html>
 <head>
   <title>Freemarker Tool</title>
-  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/logger/assets/skins/sam/logger.css">
-  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/datatable/assets/skins/sam/datatable.css">
-  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/tabview/assets/skins/sam/tabview.css">
+  <%--<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/logger/assets/skins/sam/logger.css">--%>
+  <%--<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/datatable/assets/skins/sam/datatable.css">--%>
+  <%--<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/tabview/assets/skins/sam/tabview.css">--%>
   <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/button/assets/skins/sam/button.css">
   <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/css/theme.css">
 </head>
@@ -19,26 +19,28 @@
   <s:form id="templateForm" action="parse.json">
     <div id="left">
       <div class="yui-skin-sam">
-        <%--<yui:pushbutton id="toggleViewBtn" value="Toggle" noscript="true"/>--%>
-        <input type="checkbox" id="toggleViewBtn" checked="false" value="Template"/>
+        <div id="toggleViewBtnGroup" class="yui-buttongroup">           
+          <input type="radio" id="toggleViewPageBtn" checked value="Page"/><br/>
+          <input type="radio" id="toggleViewTagBtn" value="Tag"/>
+        </div>
       </div>
     </div>
     <div id="center">
       <div id="openContainer" class="block">
         <h2>Template</h2>
-        <housepad:div theme="box" cssClass="editor">
+        <housepad:div id="openContainerBox" theme="box" cssClass="editor">
           <s:textarea id="open" name="openTemplate" value="1"/>
         </housepad:div>
       </div>
       <div id="bodyTextContainer" class="block">
         <h2>Body Text</h2>
-        <housepad:div theme="box">
+        <housepad:div id="bodyTextContainerBox" theme="box" cssClass="editor">
           <s:textfield id="bodyText" name="bodyText" value="2"/>
         </housepad:div>
       </div>
       <div id="closeContainer" class="block">
         <h2>Close Template</h2>
-        <housepad:div theme="box" cssClass="editor">
+        <housepad:div id="closeContainerBox" theme="box" cssClass="editor">
           <s:textarea id="close" name="closeTemplate" value="3"/>
         </housepad:div>
       </div>

@@ -4,16 +4,19 @@ FreemarkerTool.ui = function() {
 
     var FORM_ID = "templateForm";
     var OPEN_CONTAINER_ID = "openContainer";
+    var OPEN_CONTAINER_BOX_ID = "openContainerBox";
     var OPEN_TEXT_ID = "open";
     var CLOSE_CONTAINER_ID = "closeContainer";
+    var CLOSE_CONTAINER_BOX_ID = "closeContainerBox";
     var CLOSE_TEXT_ID = "close";
     var BODY_TEXT_CONTAINER_ID = "bodyTextContainer";
+    var BODY_TEXT_CONTAINER_BOX_ID = "bodyTextContainerBox";
     var BODY_TEXT_ID = "bodyText"
     var OUTPUT_TEXT_CONTAINER_ID = "outputTextContainer"
     var OUTPUT_TEXT_ID = "outputText"
     var ERROR_ID = "errorContainer";
     var INDICATOR_ID = "indicator";
-    var TOGGLE_VIEW_BTN_ID = "toggleViewBtn";
+    var TOGGLE_VIEW_BTN_ID = "toggleViewBtnGroup";
 
     /** The number of milliseconds to wait before posting a request */
     var CHANGE_TIMEOUT = 1000;
@@ -73,19 +76,32 @@ FreemarkerTool.ui = function() {
 
     /** A controller for the text inputs
     * @param id  id of the text element
+    * @param containerId id of the container element
     * @param idleTimer an IdleTimer used to detect when the input has been idle since the last update
     * @param changedCallback callback to notify */
-    var TextInputController = function(id, callback) {
-        var element;
+    var TextInputController = function(id, containerId, callback) {
 
+        var container = containerId;
+        var element;
+                
         function onChangeListener(e) {
             callback();
         }
 
+        function onFocusListener(e) {
+            YAHOO.util.Dom.setStyle(container, "background-color", "#ffffe8");
+        }
+
+        function onBlurListener(e) {
+            YAHOO.util.Dom.setStyle(container, "background-color", "white");
+        }
+
         element = new YAHOO.util.Element(id);
-        element.on('keyup', onChangeListener)
-        element.on('keydown', onChangeListener)
-        element.on('keypress', onChangeListener)
+        element.on('keyup', onChangeListener);
+        element.on('keydown', onChangeListener);
+        element.on('keypress', onChangeListener);
+        element.on('focus', onFocusListener);
+        element.on('blur', onBlurListener)
     };   
 
     /** Updates the value displayed in the ouput */
@@ -197,12 +213,14 @@ FreemarkerTool.ui = function() {
         resetHeights();        
     }
 
-    function toggleView(e) {
-        if (this.get('checked')) {
+    /** Radio button listener to toggle between the two view modes */
+    function toggleView(eventInfo) {
+        if (this.get('checkedButton').index == 0) {
             setTemplateView(true);
         } else {
             setTemplateView(false);
         }
+        document.getElementById(OPEN_TEXT_ID).focus();       
     }
 
      var CONTEXT_CONTAINER_ID = "context[{0}].container";
@@ -226,6 +244,9 @@ FreemarkerTool.ui = function() {
         var nameEl;
         var valueEl;
         var nullEl;
+
+        var nameElId;
+        var valueElId;
 
         var lastValue = "";
 
@@ -320,7 +341,12 @@ FreemarkerTool.ui = function() {
 
         function onNameFocus(e) {
             enable();
-            fireChangeListener();
+            YAHOO.util.Dom.setStyle(nameElId, "background-color", "#ffffe8");
+            fireFocusListener();
+        }
+
+        function onNameBlur(e) {
+            YAHOO.util.Dom.setStyle(nameElId, "background-color", "white");
         }
 
         function onValueChange(e) {
@@ -330,7 +356,12 @@ FreemarkerTool.ui = function() {
 
         function onValueFocus(e) {
             enable();
+            YAHOO.util.Dom.setStyle(valueElId, "background-color", "#ffffe8");
             fireFocusListener();
+        }
+
+        function onValueBlur(e) {
+            YAHOO.util.Dom.setStyle(valueElId, "background-color", "white");
         }
 
         /** Listener for a change in the null checkox.  
@@ -369,8 +400,10 @@ FreemarkerTool.ui = function() {
         function init() {
             containerEl = new YAHOO.util.Element(idOf(CONTEXT_CONTAINER_ID));
             enabledEl = new YAHOO.util.Element(idOf(CONTEXT_ENABLED_CHECKBOX_ID));
-            nameEl = new YAHOO.util.Element(idOf(CONTEXT_NAME_TEXT_ID));
-            valueEl = new YAHOO.util.Element(idOf(CONTEXT_VALUE_TEXT_ID));
+            nameElId = idOf(CONTEXT_NAME_TEXT_ID);
+            nameEl = new YAHOO.util.Element(nameElId);
+            valueElId = idOf(CONTEXT_VALUE_TEXT_ID);
+            valueEl = new YAHOO.util.Element(valueElId);
             nullEl = new YAHOO.util.Element(idOf(CONTEXT_VALUE_NULL_CHECKBOX_ID));
 
             if (enabledEl) {
@@ -378,19 +411,21 @@ FreemarkerTool.ui = function() {
             }
 
             if (nameEl) {
-                nameEl.on('keyup', onNameChange)
-                nameEl.on('keydown', onNameChange)
-                nameEl.on('keypress', onNameChange)
-                nameEl.on('focus', onNameFocus)
-                nameEl.on('click', onNameFocus)
+                nameEl.on('keyup', onNameChange);
+                nameEl.on('keydown', onNameChange);
+                nameEl.on('keypress', onNameChange);
+                nameEl.on('focus', onNameFocus);
+                nameEl.on('blur', onNameBlur);
+                nameEl.on('click', onNameFocus);
             }
 
             if (valueEl) {
-                valueEl.on('keyup', onValueChange)
-                valueEl.on('keydown', onValueChange)
-                valueEl.on('keypress', onValueChange)
-                valueEl.on('focus', onValueFocus)
-                valueEl.on('click', onValueFocus)
+                valueEl.on('keyup', onValueChange);
+                valueEl.on('keydown', onValueChange);
+                valueEl.on('keypress', onValueChange);
+                valueEl.on('focus', onValueFocus);
+                valueEl.on('blur', onValueBlur);
+                valueEl.on('click', onValueFocus);
             }
 
             if (nullEl) {
@@ -555,9 +590,9 @@ FreemarkerTool.ui = function() {
         idleTimer = new IdleTimer(TICK_INTERVAL, CHANGE_TIMEOUT, idleCallback)
 
         // controllers for each of the widgets
-        openTextController = new TextInputController(OPEN_TEXT_ID, inputChangedListener);
-        bodyTextController = new TextInputController(BODY_TEXT_ID, inputChangedListener);
-        closingTextController = new TextInputController(CLOSE_TEXT_ID, inputChangedListener);
+        openTextController = new TextInputController(OPEN_TEXT_ID, OPEN_CONTAINER_BOX_ID, inputChangedListener);
+        bodyTextController = new TextInputController(BODY_TEXT_ID, BODY_TEXT_CONTAINER_BOX_ID, inputChangedListener);
+        closingTextController = new TextInputController(CLOSE_TEXT_ID, CLOSE_CONTAINER_BOX_ID, inputChangedListener);
 
         // setup the connection manager listeners
         blueskyminds.events.register("startedParsing", new YAHOO.util.CustomEvent("startedParsing"));
@@ -566,10 +601,13 @@ FreemarkerTool.ui = function() {
         indicatorController = new blueskyminds.ui.ProgressIndicatorController(INDICATOR_ID, "startedParsing", "stoppedParsing");
 
         // setup the toggle view button
-        var toggleButton = new YAHOO.widget.Button(TOGGLE_VIEW_BTN_ID);
+        //var toggleButton = new YAHOO.widget.Button(TOGGLE_VIEW_BTN_ID);
+        var toggleButton = new YAHOO.widget.ButtonGroup(TOGGLE_VIEW_BTN_ID);
 
-        toggleButton.on("click", toggleView);
-        setTemplateView(toggleButton.get('checked'));
+        toggleButton.check(0);
+        toggleButton.addListener("checkedButtonChange", toggleView);
+        
+        setTemplateView(true);
 
         initContext();
     }

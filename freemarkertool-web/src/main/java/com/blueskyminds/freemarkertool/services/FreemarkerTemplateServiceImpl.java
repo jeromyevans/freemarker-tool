@@ -57,10 +57,19 @@ public class FreemarkerTemplateServiceImpl implements TemplateService {
 
             result = writer.toString();
         } catch (TemplateException e) {
-            result = writer.toString();       // includes backtrace
+            result = trimStacktrace(writer.toString());       // includes backtrace
         } catch (IOException e) {
             result = e.getMessage();
         }
         return result;
+    }
+
+    private String trimStacktrace(String stacktrace) {
+        int index = stacktrace.indexOf("at com.blueskyminds");
+        if (index >= 0) {
+            return stacktrace.substring(0, index)+"...";
+        } else {
+            return stacktrace;
+        }        
     }
 }
