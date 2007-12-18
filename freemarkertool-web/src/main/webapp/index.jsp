@@ -27,7 +27,7 @@
     </div>
     <div id="center">
       <div id="openContainer" class="block">
-        <h2>Template</h2>
+        <h2 id="openTitle">Template</h2><h2 id="openTitle" style="display:none">Opening Template</h2>
         <housepad:div id="openContainerBox" theme="box" cssClass="editor">
           <s:textarea id="open" name="openTemplate" value="1"/>
         </housepad:div>
@@ -39,7 +39,7 @@
         </housepad:div>
       </div>
       <div id="closeContainer" class="block">
-        <h2>Close Template</h2>
+        <h2>Closing Template</h2>
         <housepad:div id="closeContainerBox" theme="box" cssClass="editor">
           <s:textarea id="close" name="closeTemplate" value="3"/>
         </housepad:div>

@@ -157,7 +157,6 @@
 }
 
 .editor {
-  /*background-color: #ffffe8;*/
 }
 
 .editor textarea {
@@ -165,6 +164,7 @@
   height: 15em;
   border: none;
   background-color: transparent;
+  color: #000000;
 }
 
 .editor input {
@@ -175,4 +175,11 @@
 
 .readonly {
   background-color: transparent;
+  color: #000000;
+}
+
+#indicatorContainer {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
