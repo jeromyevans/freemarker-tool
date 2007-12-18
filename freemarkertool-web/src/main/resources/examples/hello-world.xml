@@ -1,0 +1,5 @@
+<!-- A simple Hello world example -->
+<example templateView="true">
+  <openTemplate>Hello ${firstName}, we hope you find this tool helpful.</openTemplate>
+  <contextField enabled="true" name="firstName" value="New User" nullValue="false"/>
+</example>

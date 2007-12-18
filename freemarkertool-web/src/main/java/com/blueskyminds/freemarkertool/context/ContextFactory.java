@@ -1,4 +1,4 @@
-package com.blueskyminds.freemarkertool.web.actions;
+package com.blueskyminds.freemarkertool.context;
 
 import org.apache.commons.lang.StringUtils;
 

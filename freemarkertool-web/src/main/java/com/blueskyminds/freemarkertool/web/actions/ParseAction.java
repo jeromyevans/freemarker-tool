@@ -1,12 +1,13 @@
 package com.blueskyminds.freemarkertool.web.actions;
 
 import com.blueskyminds.freemarkertool.services.TemplateService;
+import com.blueskyminds.freemarkertool.context.TemplateContextBean;
+import com.blueskyminds.freemarkertool.context.ContextFactory;
 import com.blueskyminds.housepad.web.plugin.actions.JSONActionSupport;
 import com.google.inject.Inject;
 import com.googlecode.jsonplugin.annotations.JSON;
 import com.opensymphony.xwork2.Preparable;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
 import java.util.LinkedList;
@@ -24,6 +25,7 @@ public class ParseAction extends JSONActionSupport implements Preparable {
     private String openTemplate;
     private String bodyText;
     private String closeTemplate;
+    private String version;
     //private Map<String, String> inputContext;
     private List<TemplateContextBean> inputContext;
     private String result;
@@ -112,6 +114,10 @@ public class ParseAction extends JSONActionSupport implements Preparable {
         return result;
     }
 
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
     @Inject
     public void setTemplateService(TemplateService templateService) {
         this.templateService = templateService;
@@ -121,5 +127,6 @@ public class ParseAction extends JSONActionSupport implements Preparable {
     public void setContextFactory(ContextFactory contextFactory) {
         this.contextFactory = contextFactory;
     }
+
 }
 

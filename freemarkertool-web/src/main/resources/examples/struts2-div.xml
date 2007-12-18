@@ -1,0 +1,83 @@
+<!-- Derivation from the struts2 div template -->
+<example templateView="false">
+  <openTemplate>
+<![CDATA[<#--
+ This is the div template used by the Struts 2.1.0 "simple" theme.
+ The header comments have been omitted and #includes directly imported.
+
+ Modify the context or template to see the results.
+
+ For information about modifying a Struts 2 theme, see http://struts.apache.org/2.x/docs/themes-and-templates.html
+ Source: http://svn.apache.org/viewvc/struts/struts2/tags/STRUTS_2_1_0/core/src/main/resources/template/simple/div.ftl
+-->
+<div
+    <#if parameters.id?exists>               id="${parameters.id?html}"         </#if>
+    <#if parameters.name?exists>             name="${parameters.name?html}"         </#if>
+    <#if parameters.cssClass?exists>         class="${parameters.cssClass?html}"    </#if>
+    <#if parameters.cssStyle?exists>         style="${parameters.cssStyle?html}"    </#if>
+    <#if parameters.title?exists>            title="${parameters.title?html}"<#rt/>
+        </#if>
+<#--<#include "/${parameters.templateDir}/simple/scripting-events.ftl" />-->
+<#if parameters.onclick?exists>
+ onclick="${parameters.onclick?html}"<#rt/>
+</#if>
+<#if parameters.ondblclick?exists>
+ ondblclick="${parameters.ondblclick?html}"<#rt/>
+</#if>
+<#if parameters.onmousedown?exists>
+ onmousedown="${parameters.onmousedown?html}"<#rt/>
+</#if>
+<#if parameters.onmouseup?exists>
+ onmouseup="${parameters.onmouseup?html}"<#rt/>
+</#if>
+<#if parameters.onmouseover?exists>
+ onmouseover="${parameters.onmouseover?html}"<#rt/>
+</#if>
+<#if parameters.onmousemove?exists>
+ onmousemove="${parameters.onmousemove?html}"<#rt/>
+</#if>
+<#if parameters.onmouseout?exists>
+ onmouseout="${parameters.onmouseout?html}"<#rt/>
+</#if>
+<#if parameters.onfocus?exists>
+ onfocus="${parameters.onfocus?html}"<#rt/>
+</#if>
+<#if parameters.onblur?exists>
+ onblur="${parameters.onblur?html}"<#rt/>
+</#if>
+<#if parameters.onkeypress?exists>
+ onkeypress="${parameters.onkeypress?html}"<#rt/>
+</#if>
+<#if parameters.onkeydown?exists>
+ onkeydown="${parameters.onkeydown?html}"<#rt/>
+</#if>
+<#if parameters.onkeyup?exists>
+ onkeyup="${parameters.onkeyup?html}"<#rt/>
+</#if>
+<#if parameters.onselect?exists>
+ onselect="${parameters.onselect?html}"<#rt/>
+</#if>
+<#if parameters.onchange?exists>
+ onchange="${parameters.onchange?html}"<#rt/>
+</#if>
+<#--<#include "/${parameters.templateDir}/simple/common-attributes.ftl" />-->
+<#if parameters.accesskey?exists>
+ accesskey="${parameters.accesskey?html}"
+</#if>
+<#--<#include "/${parameters.templateDir}/simple/dynamic-attributes.ftl" />-->
+<#if (parameters.dynamicAttributes?exists && parameters.dynamicAttributes?size > 0)><#t/>
+    <#assign aKeys = parameters.dynamicAttributes.keySet()><#t/>
+    <#list aKeys as aKey><#t/>
+ ${aKey}="${parameters.dynamicAttributes[aKey]?html}"<#rt/>
+    </#list><#t/>
+</#if><#t/>
+>]]>
+  </openTemplate>
+  <bodyText>This is the body text</bodyText>
+  <closeTemplate><![CDATA[</div>]]></closeTemplate>
+  <contextField enabled="true" name="parameters.id" value="myDiv" nullValue="false"/>
+  <contextField enabled="false" name="parameters.name" value="myDiv" nullValue="false"/>
+  <contextField enabled="true" name="parameters.cssClass" value="myClass" nullValue="false"/>
+  <contextField enabled="false" name="parameters.cssStyle" value="border: solid 1px black;" nullValue="false"/>
+  <!--<contextField enabled="false" name="parameters.dynamicAttributes[" value="border: solid 1px black;" nullValue="false"/>-->
+</example>

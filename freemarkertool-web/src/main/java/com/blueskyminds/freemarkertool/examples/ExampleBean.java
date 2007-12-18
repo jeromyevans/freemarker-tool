@@ -1,4 +1,6 @@
-package com.blueskyminds.freemarkertool.web.actions;
+package com.blueskyminds.freemarkertool.examples;
+
+import com.blueskyminds.freemarkertool.context.TemplateContextBean;
 
 import java.util.List;
 import java.util.LinkedList;

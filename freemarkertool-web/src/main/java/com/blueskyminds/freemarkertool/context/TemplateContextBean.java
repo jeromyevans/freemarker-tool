@@ -1,4 +1,4 @@
-package com.blueskyminds.freemarkertool.web.actions;
+package com.blueskyminds.freemarkertool.context;
 
 /**
  * Used to set a value in the template context

@@ -1,8 +1,12 @@
 package com.blueskyminds.freemarkertool.web.actions;
 
 import com.blueskyminds.housepad.web.plugin.actions.JSONActionSupport;
+import com.blueskyminds.freemarkertool.examples.ExampleBean;
+import com.blueskyminds.freemarkertool.examples.ExampleLoader;
 import com.google.inject.Inject;
 import com.googlecode.jsonplugin.annotations.JSON;
+
+import java.io.IOException;
 
 /**
  * Provides the requested example
@@ -17,14 +21,14 @@ public class ExampleAction extends JSONActionSupport {
 
     private ExampleLoader exampleLoader;
     private ExampleBean example;
-
+        
     public void setId(Integer id) {
         this.id = id;
     }
 
-    public String execute() {
+    public String execute() throws Exception {
         if (id != null) {
-            example = exampleLoader.loadExample(id);
+            example = exampleLoader.loadExample(id);            
         }
         return SUCCESS;
     }

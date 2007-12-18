@@ -5,6 +5,8 @@ import junit.framework.TestCase;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.blueskyminds.freemarkertool.context.ContextFactory;
+
 /**
  * Date Started: 13/12/2007
  * <p/>

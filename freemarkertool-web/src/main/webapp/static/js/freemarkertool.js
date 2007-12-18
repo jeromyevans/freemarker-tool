@@ -492,13 +492,13 @@ FreemarkerTool.ui = function() {
      * @param itemNo
      * @return contextField instance
      */
-    function createContextField(itemNo) {
+    function createContextField() {
 
         var templateContext = {
-            index : itemNo
+            index : contextFieldCount
         }
 
-        var nodeId = YAHOO.tools.printf(CONTEXT_CONTAINER_ID, itemNo);
+        var nodeId = YAHOO.tools.printf(CONTEXT_CONTAINER_ID, templateContext.index);
         var node = document.getElementById(nodeId);
 
         if (!node) {
@@ -514,13 +514,14 @@ FreemarkerTool.ui = function() {
             node.innerHTML = contextFieldTemplate.process(templateContext);
 
             // initialise the controller
-            contextFields[itemNo] = new ContextField(itemNo, onContextFieldFocus, onContextFieldChange);
-            contextFieldCount++;
+            contextFields[templateContext.index] = new ContextField(templateContext.index, onContextFieldFocus, onContextFieldChange);
         } else {
             // this field already exists
-            contextFields[itemNo].clear();
+            contextFields[templateContext.index].clear();
         }
-        return contextFields[itemNo];
+        contextFieldCount++;
+
+        return contextFields[templateContext.index];
     }
 
     /**
@@ -686,13 +687,13 @@ FreemarkerTool.ui = function() {
             closingTextController.setContent(content);
         },
         clearContext : function() {
-            for (var i = 0; i < contextFields.length; i++) {
+            for (var i = 0; i < contextFieldCount; i++) {
                 contextFields[i].clear();
             }
             contextFieldCount = 0;
         },
         addContextItem : function(enabled, name, value, isNullValue) {
-            var contextField = createContextField(contextFieldCount);
+            var contextField = createContextField();
             contextField.setNullValue(isNullValue);
             contextField.setName(name);
             contextField.setValue(value);
@@ -732,19 +733,24 @@ FreemarkerTool.ExampleLoader = function(){
                 if (payload.exception) {
                     blueskyminds.events.fire(ERROR_EVENT, payload.exception.message);
                 } else {
-                    // load the example into the UI
-                    FreemarkerTool.ui.setViewMode(payload.example.templateView);
-                    FreemarkerTool.ui.setOpenTemplate(payload.example.openTemplate);
-                    FreemarkerTool.ui.setBodyText(payload.example.bodyText);
-                    FreemarkerTool.ui.setCloseTemplate(payload.example.closeTemplate);
-                    FreemarkerTool.ui.clearContext();
-                    if (payload.example.context) {
-                        for (var i = 0; i < payload.example.context.length; i++) {
-                            var contextField = payload.example.context[i];
-                            FreemarkerTool.ui.addContextItem(contextField.enabled, contextField.name, contextField.value, contextField.nullValue);
+                    var example = payload.example;
+                    if (example) {
+                        // load the example into the UI
+                        FreemarkerTool.ui.setViewMode(example.templateView);
+                        FreemarkerTool.ui.setOpenTemplate(example.openTemplate);
+                        FreemarkerTool.ui.setBodyText(example.bodyText);
+                        FreemarkerTool.ui.setCloseTemplate(example.closeTemplate);
+                        FreemarkerTool.ui.clearContext();
+                        if (payload.example.context) {
+                            for (var i = 0; i < example.context.length; i++) {
+                                var contextField = example.context[i];
+                                FreemarkerTool.ui.addContextItem(contextField.enabled, contextField.name, contextField.value, contextField.nullValue);
+                            }
                         }
+                        FreemarkerTool.ui.parseTemplates();
+                    } else {
+                        blueskyminds.events.fire(ERROR_EVENT, "The requested example couldn't be loaded by the server");
                     }
-                    FreemarkerTool.ui.parseTemplates();
                 }
             } else {
                 blueskyminds.events.fire(ERROR_EVENT, "Invalid response received from the server");
