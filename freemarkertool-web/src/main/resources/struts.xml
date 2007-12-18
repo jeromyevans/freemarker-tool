@@ -2,7 +2,6 @@
         "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-  <constant name="" value=""/>
   <constant name="struts.objectFactory" value="guice"/>
   <constant name="guice.module" value="com.blueskyminds.freemarkertool.startup.GuiceModule"/>
 
@@ -43,6 +42,13 @@
 
   <package name="main" extends="ajaxJSONResponses" namespace="/">
     <action name="parse" class="com.blueskyminds.freemarkertool.web.actions.ParseAction">
+      <interceptor-ref name="json"/>
+      <interceptor-ref name="defaultStack"/>
+      <result type="json">
+        <param name="wrapWithComments">true</param>
+      </result>
+    </action>
+    <action name="example" class="com.blueskyminds.freemarkertool.web.actions.ExampleAction">
       <interceptor-ref name="json"/>
       <interceptor-ref name="defaultStack"/>
       <result type="json">

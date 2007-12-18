@@ -82,6 +82,7 @@ FreemarkerTool.ui = function() {
     var TextInputController = function(id, containerId, callback) {
 
         var container = containerId;
+        var elementId = id;
         var element;
                 
         function onChangeListener(e) {
@@ -102,6 +103,19 @@ FreemarkerTool.ui = function() {
         element.on('keypress', onChangeListener);
         element.on('focus', onFocusListener);
         element.on('blur', onBlurListener)
+
+        return {
+            setContent: function(text) {
+                var el = document.getElementById(elementId);
+                if (el) {
+                    if (text) {
+                        el.value = text;
+                    } else {
+                        el.value = "";
+                    }
+                }
+            }
+        }
     };   
 
     /** Updates the value displayed in the ouput */
@@ -145,25 +159,7 @@ FreemarkerTool.ui = function() {
         blueskyminds.events.fire("stoppedParsing");
     }
 
-    var connectionEvents = {
-        start: function(eventType, args){
-            showIndicator();
-        },
-        complete:function(eventType, args){
-            //hideIndicator();
-        },
-        success:function(eventType, args){
-            hideIndicator();
-        },
-        failure:function(eventType, args){
-            hideIndicator();
-        },
-        abort:function(eventType, args){
-            hideIndicator();
-        }
-    }
-
-    // private callback for the asyncRequest
+    /** private callback for the asyncRequest */
     var parseCallback = {
         success: function(o) {
             hideIndicator();
@@ -199,6 +195,7 @@ FreemarkerTool.ui = function() {
         }
     }
 
+    /** Switches the view between template or tag mode */
     function setTemplateView(template) {
         if (template) {
             templateMode = true;
@@ -230,14 +227,17 @@ FreemarkerTool.ui = function() {
         document.getElementById(OPEN_TEXT_ID).focus();       
     }
 
-     var CONTEXT_CONTAINER_ID = "context[{0}].container";
+    var CONTEXT_CONTAINER_ID = "context[{0}].container";
+    var PARENT_CONTEXT_CONTAINER_ID = "contextContainer";
+    var CONTEXT_TEMPLATE_ID = "contextFieldTemplate";
+    var contextFieldTemplate;
+    var contextFieldCount;
 
     /** A ContextField holds the model for the fields used to define each item in the context
     * @param fieldIndex sequential number of this field
     * @param listener to fire when focus is obtained
     **/
     var ContextField = function(fieldIndex, onFocusListener, onChangeListener) {
-
 
         var CONTEXT_ENABLED_CHECKBOX_ID = "context[{0}].enabled";
         var CONTEXT_NAME_TEXT_ID = "context[{0}].name";
@@ -339,6 +339,14 @@ FreemarkerTool.ui = function() {
                    lastValue = null;
                 }
             }
+        }
+
+        function clearName() {
+            nameEl.set('value', "");
+        }
+
+        function clearValue() {
+            valueEl.set('value', "");
         }
 
         function onNameChange(e) {
@@ -451,17 +459,38 @@ FreemarkerTool.ui = function() {
                 } else {
                     return false;
                 }
+            },
+            clear : function() {
+                disable();
+                clearName();
+                clearValue();
+                setNullFlag(false);
+            },
+            setName : function(name) {
+                nameEl.set('value', name);
+            },
+            setValue : function(value) {
+                valueEl.set('value', value);
+            },
+            setNullValue : function(isNull) {
+                setNullFlag(isNull);
+                lastValue = null;  // we don't need to remember the last value
+            },
+            setEnabled : function(enabled) {
+                if (enabled) {
+                    enable();
+                } else {
+                    disable();
+                }
             }
         }
     };
 
-    var PARENT_CONTEXT_CONTAINER_ID = "contextContainer";
-    var CONTEXT_TEMPLATE_ID = "contextFieldTemplate";
-    var contextFieldTemplate;
-
     /**
      * Adds a new ContextField to the DOM and initialise a controller for it
+     * If the ContxtField already exists its cleared
      * @param itemNo
+     * @return contextField instance
      */
     function createContextField(itemNo) {
 
@@ -469,21 +498,29 @@ FreemarkerTool.ui = function() {
             index : itemNo
         }
 
-        // insert the HTML into the DOM
-        var html = contextFieldTemplate.process(templateContext);
-        var node  = document.createElement("tr");
-        node['id'] = YAHOO.tools.printf(CONTEXT_CONTAINER_ID, itemNo);
-        node['className'] = "contextField";
+        var nodeId = YAHOO.tools.printf(CONTEXT_CONTAINER_ID, itemNo);
+        var node = document.getElementById(nodeId);
 
-        var parent = document.getElementById(PARENT_CONTEXT_CONTAINER_ID);
-        parent.appendChild(node);
+        if (!node) {
+            // node needs to be created exists
+            node  = document.createElement("tr");
+            node['id'] = nodeId;
+            node['className'] = "contextField";
 
-        node.innerHTML = html;
+            var parent = document.getElementById(PARENT_CONTEXT_CONTAINER_ID);
+            parent.appendChild(node);
 
-        //blueskyminds.dom.appendHTML(PARENT_CONTEXT_CONTAINER_ID, html, true);
+            // insert the HTML into the DOM
+            node.innerHTML = contextFieldTemplate.process(templateContext);
 
-        // initialise the controller
-        contextFields[itemNo] = new ContextField(itemNo, onContextFieldFocus, onContextFieldChange);
+            // initialise the controller
+            contextFields[itemNo] = new ContextField(itemNo, onContextFieldFocus, onContextFieldChange);
+            contextFieldCount++;
+        } else {
+            // this field already exists
+            contextFields[itemNo].clear();
+        }
+        return contextFields[itemNo];
     }
 
     /**
@@ -511,6 +548,7 @@ FreemarkerTool.ui = function() {
      */
     function initContext() {
         contextFields = new Array();
+        contextFieldCount = 0;
 
         contextFieldTemplate = TrimPath.parseDOMTemplate(CONTEXT_TEMPLATE_ID);
         
@@ -544,6 +582,7 @@ FreemarkerTool.ui = function() {
     var VOVERFLOW = 20;        /** to ensure we don't get scroll bars */
     var FOOTER_HEIGHT = 20;
     var PANEL_MARGIN = BORDER*2+23;
+    var SETTINGS_HEIGHT = 68;
 
     function resetHeights() {
         var viewPortHeight = YAHOO.util.Dom.getViewportHeight();
@@ -623,7 +662,9 @@ FreemarkerTool.ui = function() {
 
         initContext();
 
-        document.getElementById(OPEN_TEXT_ID).focus();                       
+        var openText = document.getElementById(OPEN_TEXT_ID);
+        openText.select();
+        openText.focus();
     }
 
     YAHOO.util.Event.onDOMReady(init);
@@ -631,6 +672,121 @@ FreemarkerTool.ui = function() {
     return {
         dismissErrors : function() {
             errorController.dismissErrors();
+        },
+        setViewMode: function(template) {
+            setTemplateView(template);
+        },
+        setOpenTemplate: function(content) {
+            openTextController.setContent(content);
+        },
+        setBodyText: function(content) {
+            bodyTextController.setContent(content);
+        },
+        setCloseTemplate: function(content) {
+            closingTextController.setContent(content);
+        },
+        clearContext : function() {
+            for (var i = 0; i < contextFields.length; i++) {
+                contextFields[i].clear();
+            }
+            contextFieldCount = 0;
+        },
+        addContextItem : function(enabled, name, value, isNullValue) {
+            var contextField = createContextField(contextFieldCount);
+            contextField.setNullValue(isNullValue);
+            contextField.setName(name);
+            contextField.setValue(value);
+            contextField.setEnabled(enabled);
+        },
+        parseTemplates : function() {
+            parseTemplate();
+        }
+    }
+}();
+
+/** Loads an example into the application */
+FreemarkerTool.ExampleLoader = function(){
+
+    var ERROR_EVENT = "error";
+    var START_LOADING_EVENT = "loadingExample";
+    var STOP_LOADING_EVENT = "loadedExample";
+
+    var INDICATOR_ID = "exampleIndicator"
+    var EXAMPLE_ID = "examples";
+    var EXAMPLE_URL = "/example.json";
+
+    function showIndicator() {
+        blueskyminds.events.fire(START_LOADING_EVENT);
+    }
+
+    function hideIndicator() {
+        blueskyminds.events.fire(STOP_LOADING_EVENT);
+    }
+
+    /** private callback for the asyncRequest */
+    var exampleCallback = {
+        success: function(o) {
+            hideIndicator();
+            var payload = blueskyminds.net.json.eval(o.responseText);
+            if (payload) {
+                if (payload.exception) {
+                    blueskyminds.events.fire(ERROR_EVENT, payload.exception.message);
+                } else {
+                    // load the example into the UI
+                    FreemarkerTool.ui.setViewMode(payload.example.templateView);
+                    FreemarkerTool.ui.setOpenTemplate(payload.example.openTemplate);
+                    FreemarkerTool.ui.setBodyText(payload.example.bodyText);
+                    FreemarkerTool.ui.setCloseTemplate(payload.example.closeTemplate);
+                    FreemarkerTool.ui.clearContext();
+                    if (payload.example.context) {
+                        for (var i = 0; i < payload.example.context.length; i++) {
+                            var contextField = payload.example.context[i];
+                            FreemarkerTool.ui.addContextItem(contextField.enabled, contextField.name, contextField.value, contextField.nullValue);
+                        }
+                    }
+                    FreemarkerTool.ui.parseTemplates();
+                }
+            } else {
+                blueskyminds.events.fire(ERROR_EVENT, "Invalid response received from the server");
+            }
+        },
+        failure: function(o) {
+            hideIndicator();
+            blueskyminds.events.fire(ERROR_EVENT, blueskyminds.net.errorMessage(o));
+        }
+    };
+
+    /** Listener for a selection in the example box */
+    function onSelection(eventInfo) {
+        var el = document.getElementById(EXAMPLE_ID);
+        if (el) {
+            var index = el.selectedIndex;
+            if (index) {
+                showIndicator();
+                YAHOO.util.Connect.resetFormState();
+                YAHOO.util.Connect.asyncRequest('GET', EXAMPLE_URL+"?id="+index, exampleCallback);                                   
+            }
+        }
+    }
+
+    function init() {
+        YAHOO.util.Event.addListener(EXAMPLE_ID, 'change', onSelection)
+
+        // setup the connection manager listeners
+        blueskyminds.events.register(START_LOADING_EVENT, new YAHOO.util.CustomEvent(START_LOADING_EVENT));
+        blueskyminds.events.register(STOP_LOADING_EVENT, new YAHOO.util.CustomEvent(STOP_LOADING_EVENT));
+
+        indicatorController = new blueskyminds.ui.ProgressIndicatorController(INDICATOR_ID, START_LOADING_EVENT, STOP_LOADING_EVENT);
+    }
+
+    YAHOO.util.Event.onDOMReady(init);
+
+    return {
+        clearSelection : function() {
+            var el = document.getElementById(EXAMPLE_ID);
+            if (el) {
+                el.selectedIndex = 0;
+            }
         }
     }
 }();

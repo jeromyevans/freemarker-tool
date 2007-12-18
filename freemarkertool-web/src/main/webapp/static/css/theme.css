@@ -55,7 +55,23 @@
   margin: 0 auto;
   width: 728px;
   height: 90px;
-  background-color: #cccccc;
+  background-color: #f6f6f6;
+}
+
+#exampleContainer {
+  font-family:Verdana,arial,sans-serif;
+  font-size:11px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+#exampleContainer div.borderboxcontent {
+  padding-right: 20px;  /* for the indicator */
+}
+
+select {
+  border: solid 1px #c8c8c8;
 }
 
 #content {
@@ -66,7 +82,7 @@
 #left {
   float: left;
   width: 60px;
-  margin-top:14px;
+  margin-top:16px;
 }
 
 #left button {
@@ -124,6 +140,23 @@
   width: 300px;
 }
 
+#settings {
+  margin-top: 16px;
+}
+
+#settings label {
+  display: block;
+  float: left;
+  width: 110px;
+  padding-top: 3px;
+}
+
+#settings input {
+  float: left;
+  padding-left: 120px;
+  
+}
+
 .block h2 {
   padding: 0px;
   margin: 0 0 3px 0;
@@ -160,12 +193,10 @@
 
 #right input.name {
   width: 100%;
-  /*background-color: #ffffe8;*/
 }
 
 #right input.value {
   width: 100%;
-  /*background-color: #ffffe8; */
 }
 
 #right input.disabled {
@@ -198,7 +229,8 @@
   color: #000000;
 }
 
-#indicatorContainer {
+#indicatorContainer,
+.indicatorContainer{
   position: absolute;
   right: 10px;
   top: 10px;

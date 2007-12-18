@@ -1,5 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="decorator" %>
+<%@ taglib prefix="housepad" uri="/housepad-tags" %>
 
 <%--
 General Sitemsh page decorator
@@ -24,8 +25,19 @@ Attributes:
 
   <body>
     <div id="header">
-      <div id="title">FreeMarker Template Tools</div>
-      <div id="adContainer"></div>            
+      <div id="title">FreeMarker Tool</div>
+      <div id="adContainer"></div>
+      <div id="exampleContainer">
+        <housepad:div id="settings" theme="box">          
+          <select id="examples" name="example">
+            <option value="">Examples...</option>
+            <option value="1">hello world</option>
+            <option value="2">struts2-div</option>
+            <option value="3">struts2-checkbox</option>
+          </select>&nbsp;<br/>
+          <div class="indicatorContainer"><img id="exampleIndicator" src="/static/images/indicator.gif" style="display:none" alt="Loading..."/></div>
+        </housepad:div>
+      </div>
     </div>
     <div id="content">
       <decorator:body/>

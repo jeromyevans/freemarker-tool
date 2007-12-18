@@ -17,8 +17,9 @@ import java.util.Map;
  */
 public class FreemarkerTemplateServiceImpl implements TemplateService {
 
-    private static final String OPEN = "open";
-    private static final String CLOSE = "close";
+    private static final String PAGE = "Page Template";
+    private static final String OPEN = "Open Template";
+    private static final String CLOSE = "Close Template";
 
     /** 
      * Merge the context into the templates.
@@ -42,18 +43,24 @@ public class FreemarkerTemplateServiceImpl implements TemplateService {
         }
 
         StringTemplateLoader templateLoader = new StringTemplateLoader();
-        templateLoader.putTemplate(OPEN, openTemplate);
+        templateLoader.putTemplate(PAGE, openTemplate);  // name's significant for error messsages
+        templateLoader.putTemplate(OPEN, openTemplate);  // name's significant for error messsages
         templateLoader.putTemplate(CLOSE, closeTemplate);
         cfg.setTemplateLoader(templateLoader);
 
         try {
-            template = cfg.getTemplate(OPEN);
-            template.process(context, writer);
+            if (closeTemplate != null) {
+                template = cfg.getTemplate(OPEN);
+                template.process(context, writer);
 
-            writer.append(bodyText);
+                writer.append(bodyText);
 
-            template = cfg.getTemplate(CLOSE);
-            template.process(context, writer);
+                template = cfg.getTemplate(CLOSE);
+                template.process(context, writer);
+            } else {
+                template = cfg.getTemplate(PAGE);
+                template.process(context, writer);
+            }
 
             result = writer.toString();
         } catch (TemplateException e) {

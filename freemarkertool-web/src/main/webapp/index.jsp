@@ -26,7 +26,7 @@
       <div id="openContainer" class="block">
         <h2 id="openTitleTemplate">Page Template:</h2><h2 id="openTitleTag" style="display:none">Open Template:</h2>
         <housepad:div id="openContainerBox" theme="box" cssClass="editor">
-          <s:textarea id="open" name="openTemplate" value="Type or paste your template here" wrap="off"/>
+          <s:textarea id="open" name="openTemplate" value="Type or paste your FreeMarker template here" wrap="off"/>
         </housepad:div>
       </div>
       <div id="bodyTextContainer" class="block">
@@ -52,6 +52,14 @@
       </div>
     </div>
     <div id="right" class="block">
+      <housepad:div id="settings" theme="box">
+        <div class="drop">
+        <label for="version">Version:</label>
+          <select id="version" name="version">
+            <option value="freemarker-2.3.8" selected="true">freemarker-2.3.8</option>
+          </select>&nbsp;<br/>
+        </div>        
+      </housepad:div>
       <h2>Context:</h2>
       <housepad:div theme="box">
         <div id="contextPanel">
