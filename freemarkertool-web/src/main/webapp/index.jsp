@@ -24,21 +24,21 @@
     </div>
     <div id="center">
       <div id="openContainer" class="block">
-        <h2 id="openTitle">Template:</h2><h2 id="openTitle" style="display:none">Opening Template</h2>
+        <h2 id="openTitleTemplate">Page Template:</h2><h2 id="openTitleTag" style="display:none">Open Template:</h2>
         <housepad:div id="openContainerBox" theme="box" cssClass="editor">
-          <s:textarea id="open" name="openTemplate" value="Type or paste your template here"/>
+          <s:textarea id="open" name="openTemplate" value="Type or paste your template here" wrap="off"/>
         </housepad:div>
       </div>
       <div id="bodyTextContainer" class="block">
         <h2>Body Text:</h2>
-        <housepad:div id="bodyTextContainerBox" theme="box" cssClass="editor">
-          <s:textfield id="bodyText" name="bodyText" value=""/>
+        <housepad:div id="bodyTextContainerBox" theme="box" cssClass="editor small">
+          <s:textarea id="bodyText" name="bodyText" value="" rows="1" wrap="off"/>
         </housepad:div>
       </div>
       <div id="closeContainer" class="block">
-        <h2>Closing Template:</h2>
+        <h2>Close Template:</h2>
         <housepad:div id="closeContainerBox" theme="box" cssClass="editor">
-          <s:textarea id="close" name="closeTemplate" value=""/>
+          <s:textarea id="close" name="closeTemplate" value="" wrap="off"/>
         </housepad:div>
       </div>
       <%--<s:submit name="Submit"/>     --%>
@@ -107,6 +107,10 @@
 <%--</script>--%>
 <textarea id="contextFieldTemplate" style="display:none">
     <tiles:insertDefinition name="contextField.jst"/>
+</textarea>
+
+<textarea id="errorTemplate" style="display:none">
+    <tiles:insertDefinition name="errorTemplate.jst"/>
 </textarea>
 
 </body>

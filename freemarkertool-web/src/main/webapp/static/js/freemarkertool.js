@@ -17,12 +17,12 @@ FreemarkerTool.ui = function() {
     var ERROR_ID = "errorContainer";
     var INDICATOR_ID = "indicator";
     var TOGGLE_VIEW_BTN_ID = "toggleViewBtnGroup";
+    var OPEN_TITLE_TEMPLATE_ID = "openTitleTemplate";
+    var OPEN_TITLE_TAG_ID = "openTitleTag";
 
-    /** The number of milliseconds to wait before posting a request */
+    /** The number of milliseconds to wait befteore posting a request */
     var CHANGE_TIMEOUT = 1000;
     var TICK_INTERVAL = 250;
-
-    var INITIAL_CONTEXT_ITEMS = 20;
 
     var ERROR_EVENT = "error";
 
@@ -187,6 +187,9 @@ FreemarkerTool.ui = function() {
     /** Invokes an async request to parse the inputs */
     function parseTemplate() {
         var formEl = document.getElementById(FORM_ID);
+
+        FreemarkerTool.ui.dismissErrors();
+        
         if (formEl) {
            YAHOO.util.Connect.setForm(formEl);
            showIndicator();
@@ -201,12 +204,16 @@ FreemarkerTool.ui = function() {
             templateMode = true;
             YAHOO.util.Dom.setStyle(BODY_TEXT_CONTAINER_ID, "display", "none");
             YAHOO.util.Dom.setStyle(CLOSE_CONTAINER_ID, "display", "none");
+            YAHOO.util.Dom.setStyle(OPEN_TITLE_TAG_ID, "display", "none");
+            YAHOO.util.Dom.setStyle(OPEN_TITLE_TEMPLATE_ID, "display", "block");
             document.getElementById(BODY_TEXT_ID).disabled = true;
             document.getElementById(CLOSE_TEXT_ID).disabled = true;
         } else {
             templateMode = false;
             document.getElementById(BODY_TEXT_ID).disabled = false;
             document.getElementById(CLOSE_TEXT_ID).disabled = false;
+            YAHOO.util.Dom.setStyle(OPEN_TITLE_TEMPLATE_ID, "display", "none");
+            YAHOO.util.Dom.setStyle(OPEN_TITLE_TAG_ID, "display", "block");
             YAHOO.util.Dom.setStyle(BODY_TEXT_CONTAINER_ID, "display", "block");
             YAHOO.util.Dom.setStyle(CLOSE_CONTAINER_ID, "display", "block");
         }
@@ -341,12 +348,12 @@ FreemarkerTool.ui = function() {
 
         function onNameFocus(e) {
             enable();
-            YAHOO.util.Dom.setStyle(nameElId, "background-color", "#ffffe8");
+            YAHOO.util.Dom.addClass(nameElId, "focus");
             fireFocusListener();
         }
 
         function onNameBlur(e) {
-            YAHOO.util.Dom.setStyle(nameElId, "background-color", "white");
+            YAHOO.util.Dom.removeClass(nameElId, "focus");
         }
 
         function onValueChange(e) {
@@ -356,12 +363,12 @@ FreemarkerTool.ui = function() {
 
         function onValueFocus(e) {
             enable();
-            YAHOO.util.Dom.setStyle(valueElId, "background-color", "#ffffe8");
+            YAHOO.util.Dom.addClass(nameElId, "focus");
             fireFocusListener();
         }
 
         function onValueBlur(e) {
-            YAHOO.util.Dom.setStyle(valueElId, "background-color", "white");
+            YAHOO.util.Dom.removeClass(nameElId, "focus");
         }
 
         /** Listener for a change in the null checkox.  
@@ -581,10 +588,15 @@ FreemarkerTool.ui = function() {
         //YAHOO.util.Dom.setStyle("center", "height", availableHeight);
     }
 
+    var ERROR_TEMPLATE_ID = "errorTemplate";
+
     function init() {
         initLayout();
 
-        errorController = new blueskyminds.ui.ErrorController(ERROR_ID, ERROR_EVENT)
+        var errorTemplate = TrimPath.parseDOMTemplate(ERROR_TEMPLATE_ID);
+
+        // the error controller reports errors
+        errorController = new blueskyminds.ui.ErrorController(ERROR_ID, ERROR_EVENT, errorTemplate);
 
         // the idle timer waits for idle input before posting changes
         idleTimer = new IdleTimer(TICK_INTERVAL, CHANGE_TIMEOUT, idleCallback)
@@ -614,12 +626,11 @@ FreemarkerTool.ui = function() {
         document.getElementById(OPEN_TEXT_ID).focus();                       
     }
 
-
     YAHOO.util.Event.onDOMReady(init);
 
     return {
-        parseTemplate : function() {
-
+        dismissErrors : function() {
+            errorController.dismissErrors();
         }
     }
 }();

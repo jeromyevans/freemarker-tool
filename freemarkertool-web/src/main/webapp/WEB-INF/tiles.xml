@@ -7,4 +7,5 @@
   <definition name="exception.json" template="/WEB-INF/tiles/exception.json.jsp"/>
   <definition name="contextField.jsp" template="/WEB-INF/tiles/contextField.jsp"/>
   <definition name="contextField.jst" template="/WEB-INF/tiles/contextField.jst"/>
+  <definition name="errorTemplate.jst" template="/WEB-INF/tiles/errorTemplate.jst"/>
 </tiles-definitions>

@@ -37,8 +37,13 @@
   text-align:right;
 }
 
-#footer a {
-  padding-top:2px;
+#footer a img {
+   padding: 2px;
+   border: none;
+}
+
+#footer a span {
+  display: none;
 }
 
 #title {
@@ -149,6 +154,10 @@
  border: none;
 }
 
+.focus {
+  background-color: #ffffe8;
+}
+
 #right input.name {
   width: 100%;
   /*background-color: #ffffe8;*/
@@ -174,6 +183,10 @@
   color: #000000;
 }
 
+.small textarea {
+  height: 1.5em;  
+}
+
 .editor input {
   width: 100%;
   border: none;
@@ -189,4 +202,39 @@
   position: absolute;
   right: 10px;
   top: 10px;
+}
+
+#errorContainer div.borderbox {
+  background-color: #ffcccc;
+}
+
+#errorContainer div.borderbox {
+  background-color: #ffcccc;
+}
+
+#errorContainer .closeBtn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 19px;
+  height: 19px;
+}
+
+#errorContainer a {
+  background: url(../images/error_close.gif) no-repeat top left;
+  display: block;
+  width: 19px;
+  height: 19px;
+}
+
+#errorContainer a:hover {
+  background: url(../images/error_close_h.gif) no-repeat top left;
+}
+
+#errorContainer a span{
+  display:none;
+}
+
+#errorContainer p {
+  padding-right: 15px;
 }
