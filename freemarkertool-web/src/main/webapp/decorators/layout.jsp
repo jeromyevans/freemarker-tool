@@ -24,12 +24,12 @@ Attributes:
 
   <body>
     <div id="header">
-      <div id="title">Freemarker Tool</div>
+      <div id="title">FreeMarker Template Tools</div>
       <div id="adContainer"></div>            
     </div>
     <div id="content">
       <decorator:body/>
     </div>
-    <div id="footer">Copyright (c) Blue Sky Minds Pty Ltd 2007</div>
+    <div id="footer"><a href="http://www.blueskyminds.com.au/" title="Blue Sky Minds">Blue Sky Minds</a></div>
   </body>
 </html>

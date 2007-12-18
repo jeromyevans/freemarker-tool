@@ -7,10 +7,7 @@
 
 <html>
 <head>
-  <title>Freemarker Tool</title>
-  <%--<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/logger/assets/skins/sam/logger.css">--%>
-  <%--<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/datatable/assets/skins/sam/datatable.css">--%>
-  <%--<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/tabview/assets/skins/sam/tabview.css">--%>
+  <title>FreeMarker Template Tools</title>
   <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/button/assets/skins/sam/button.css">
   <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/css/theme.css">
 </head>
@@ -27,27 +24,27 @@
     </div>
     <div id="center">
       <div id="openContainer" class="block">
-        <h2 id="openTitle">Template</h2><h2 id="openTitle" style="display:none">Opening Template</h2>
+        <h2 id="openTitle">Template:</h2><h2 id="openTitle" style="display:none">Opening Template</h2>
         <housepad:div id="openContainerBox" theme="box" cssClass="editor">
-          <s:textarea id="open" name="openTemplate" value="1"/>
+          <s:textarea id="open" name="openTemplate" value="Type or paste your template here"/>
         </housepad:div>
       </div>
       <div id="bodyTextContainer" class="block">
-        <h2>Body Text</h2>
+        <h2>Body Text:</h2>
         <housepad:div id="bodyTextContainerBox" theme="box" cssClass="editor">
-          <s:textfield id="bodyText" name="bodyText" value="2"/>
+          <s:textfield id="bodyText" name="bodyText" value=""/>
         </housepad:div>
       </div>
       <div id="closeContainer" class="block">
-        <h2>Closing Template</h2>
+        <h2>Closing Template:</h2>
         <housepad:div id="closeContainerBox" theme="box" cssClass="editor">
-          <s:textarea id="close" name="closeTemplate" value="3"/>
+          <s:textarea id="close" name="closeTemplate" value=""/>
         </housepad:div>
       </div>
       <%--<s:submit name="Submit"/>     --%>
       <div id="errorContainer"></div>
       <div id="outputTextContainer" class="block">
-        <h2>FreeMarker Result</h2>
+        <h2>FreeMarker Result:</h2>
         <housepad:div theme="box" cssClass="editor readonly">      
           <div id="indicatorContainer"><img id="indicator" src="/static/images/indicator.gif" style="display:none" alt="Loading..."/></div>
           <s:textarea id="outputText" name="outputText" value="" disabled="true"/>
@@ -55,7 +52,7 @@
       </div>
     </div>
     <div id="right" class="block">
-      <h2>Context</h2>
+      <h2>Context:</h2>
       <housepad:div theme="box">
         <div id="contextPanel">
           <table width="100%" summary="Table of values to include in the Template Context">
@@ -86,13 +83,13 @@
 <%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/event/event-debug.js"></script>--%>
 <%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/connection/connection-debug.js"></script>--%>
 <%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/dom/dom-debug.js"></script>--%>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/logger/logger-min.js"></script>
+<%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/logger/logger-min.js"></script>--%>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/element/element-beta-min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/button/button-beta-min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/datasource/datasource-beta-min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/datatable/datatable-beta-min.js"></script>
 <%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/tabview/tabview-min.js"></script>--%>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/dragdrop/dragdrop-min.js"></script>
+<%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/dragdrop/dragdrop-min.js"></script>--%>
 
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/tools-min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/trimpath-template-1.0.38.js"></script>

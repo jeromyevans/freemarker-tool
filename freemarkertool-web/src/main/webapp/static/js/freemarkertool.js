@@ -536,7 +536,7 @@ FreemarkerTool.ui = function() {
     var CONTENT_VPADDING = BORDER*2;
     var VOVERFLOW = 20;        /** to ensure we don't get scroll bars */
     var FOOTER_HEIGHT = 20;
-    var PANEL_MARGIN = BORDER*2+20;
+    var PANEL_MARGIN = BORDER*2+23;
 
     function resetHeights() {
         var viewPortHeight = YAHOO.util.Dom.getViewportHeight();
@@ -610,6 +610,8 @@ FreemarkerTool.ui = function() {
         setTemplateView(true);
 
         initContext();
+
+        document.getElementById(OPEN_TEXT_ID).focus();                       
     }
 
 
