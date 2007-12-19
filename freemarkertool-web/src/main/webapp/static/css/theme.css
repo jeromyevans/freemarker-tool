@@ -55,6 +55,7 @@
   margin: 0 auto;
   width: 728px;
   height: 90px;
+  background: url("../images/banner.gif");
   background-color: #f6f6f6;
 }
 
@@ -149,6 +150,7 @@ select {
   float: left;
   width: 110px;
   padding-top: 3px;
+  font-weight:bold;
 }
 
 #settings input {
@@ -157,10 +159,56 @@ select {
   
 }
 
+#openContainer h2#openTitleTemplate {
+  background: url(/static/images/labels.gif) no-repeat 0 0;
+}
+
+#openContainer h2#openTitleTag {
+  background: url(/static/images/labels.gif) no-repeat 0 -17px;
+}
+
+#bodyTextContainer h2 {
+  background: url(/static/images/labels.gif) no-repeat 0 -33px;
+}
+
+#closeContainer h2 {
+  background: url(/static/images/labels.gif) no-repeat 0 -50px;
+}
+
+#errorContainer h2 {
+  background: url(/static/images/labels.gif) no-repeat 0 -67px;
+}
+
+#outputTextContainer h2 {
+  background: url(/static/images/labels.gif) no-repeat 0 -84px;
+}
+
+#exampleContainer h2 {
+  background: url(/static/images/labels.gif) no-repeat 0 -101px;
+  padding: 0px;
+  margin: 0 0 3px 0;
+  font-size: 12px;
+  height: 17px;
+}
+
+#right h2 {
+  background: url(/static/images/labels.gif) no-repeat 0 -118px;
+}
+
+
+#exampleContainer h2 span {
+  display: none;
+}
+
+.block h2 span {
+  display: none;
+}
+
 .block h2 {
   padding: 0px;
   margin: 0 0 3px 0;
   font-size: 12px;
+  height: 17px;
 }
 
 #right table,

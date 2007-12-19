@@ -2,7 +2,6 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib prefix="yui" uri="/struts-yui-tags" %>
 <%@ taglib prefix="housepad" uri="/housepad-tags" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 
 <html>
@@ -24,19 +23,19 @@
     </div>
     <div id="center">
       <div id="openContainer" class="block">
-        <h2 id="openTitleTemplate">Page Template:</h2><h2 id="openTitleTag" style="display:none">Open Template:</h2>
+        <h2 id="openTitleTemplate"><span>Page Template:</span></h2><h2 id="openTitleTag" style="display:none"><span>Open Template:</span></h2>
         <housepad:div id="openContainerBox" theme="box" cssClass="editor">
           <s:textarea id="open" name="openTemplate" value="Type or paste your FreeMarker template here" wrap="off"/>
         </housepad:div>
       </div>
       <div id="bodyTextContainer" class="block">
-        <h2>Body Text:</h2>
+        <h2><span>Body Text:</span></h2>
         <housepad:div id="bodyTextContainerBox" theme="box" cssClass="editor small">
           <s:textarea id="bodyText" name="bodyText" value="" rows="1" wrap="off"/>
         </housepad:div>
       </div>
       <div id="closeContainer" class="block">
-        <h2>Close Template:</h2>
+        <h2><span>Close Template:</span></h2>
         <housepad:div id="closeContainerBox" theme="box" cssClass="editor">
           <s:textarea id="close" name="closeTemplate" value="" wrap="off"/>
         </housepad:div>
@@ -44,8 +43,8 @@
       <%--<s:submit name="Submit"/>     --%>
       <div id="errorContainer"></div>
       <div id="outputTextContainer" class="block">
-        <h2>FreeMarker Result:</h2>
-        <housepad:div theme="box" cssClass="editor readonly">      
+        <h2><span>FreeMarker Result:</span></h2>
+        <housepad:div theme="box" cssClass="editor readonly">
           <div id="indicatorContainer"><img id="indicator" src="/static/images/indicator.gif" style="display:none" alt="Loading..."/></div>
           <s:textarea id="outputText" name="outputText" value="" disabled="true"/>
         </housepad:div>
@@ -60,20 +59,12 @@
           </select>&nbsp;<br/>
         </div>        
       </housepad:div>
-      <h2>Context:</h2>
+      <h2><span>Context:</span></h2>
       <housepad:div theme="box">
         <div id="contextPanel">
           <table width="100%" summary="Table of values to include in the Template Context">
-            <thead>
-            <tr><th></th><th>Name</th><th>Value</th><th>Null</th></tr>
-            </thead>
-            <tbody id="contextContainer">
-            <%--<c:forEach var="i" begin="0" end="19" varStatus="status">--%>
-              <%--<tiles:insertDefinition name="contextField.jsp">--%>
-                <%--<tiles:putAttribute name="index" value="${status.index}"/>--%>
-              <%--</tiles:insertDefinition>--%>
-            <%--</c:forEach>--%>
-            </tbody>
+            <thead><tr><th></th><th>Name</th><th>Value</th><th>Null</th></tr></thead>
+            <tbody id="contextContainer"></tbody>
           </table>
         </div>
       </housepad:div>

@@ -13,10 +13,9 @@ Attributes:
   <head>
     <title><decorator:title default="Freemarker Tool" /></title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <meta name="Keywords" content="freemarker java">
-    <meta name="Description" content="Renders freemarker templates">
+    <meta name="Keywords" content="freemarker template, freemarker, template, java, mvc, struts2, struts, tag, taglib">
+    <meta name="Description" content="A tool to preview FreeMarker templates online">
     <meta name="Robots" content="Index,Follow">
-    <meta name="MS.Locale" content="EN-AU" />
     <meta name="Author" content="Blue Sky Minds Pty Ltd" />
     <meta name="Copyright" content="Blue Sky Minds Pty Ltd" />
     <script type="text/javascript"></script>
@@ -25,12 +24,13 @@ Attributes:
 
   <body>
     <div id="header">
-      <div id="title">FreeMarker Tool</div>
+      <div id="title"><img src="/static/images/freemarkertool.jpg" alt="FreeMarker Tool" width="175" height="35"></div>
       <div id="adContainer"></div>
-      <div id="exampleContainer">
-        <housepad:div id="settings" theme="box">          
+      <div id="exampleContainer">        
+        <housepad:div id="settings" theme="box">
+          <h2><span>Examples:</span></h2>
           <select id="examples" name="example">
-            <option value="">Examples...</option>
+            <option value=""></option>
             <option value="1">hello world</option>
             <option value="2">struts2-div</option>
             <option value="3">struts2-checkbox</option>

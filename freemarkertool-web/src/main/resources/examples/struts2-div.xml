@@ -5,7 +5,7 @@
  This is the div template used by the Struts 2.1.0 "simple" theme.
  The header comments have been omitted and #includes directly imported.
 
- Modify the context or template to see the results.
+ Modify the context or templates to change the result.
 
  For information about modifying a Struts 2 theme, see http://struts.apache.org/2.x/docs/themes-and-templates.html
  Source: http://svn.apache.org/viewvc/struts/struts2/tags/STRUTS_2_1_0/core/src/main/resources/template/simple/div.ftl
