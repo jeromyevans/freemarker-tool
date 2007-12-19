@@ -1,9 +1,13 @@
-<project name="syncHS">
+<project name="sync-js">
 
   <!-- Copies Javascript files from houspad to freemarkertool-->
 
   <property name="js.src" value="D:\Projects\src\blueskyminds\src\housepad\housepad-web\src\main\webapp\static\js"/>
   <property name="js.target" value="D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\webapp\static\js"/>
+
+  <property name="target.dir" value="target"/>
+  <property name="statics.dir" value="src/main/webapp/static"/>
+  <property name="module.name" value="freemarkertool-web"/>
 
   <property name="js.core" value="blueskyminds-core.js"/>
   <property name="js.dom" value="blueskyminds-dom.js"/>
@@ -39,4 +43,7 @@
     <sync file="${js.ui}"/>
   </target>
 
+  <target name="package-statics">
+    <zip destfile="${target.dir}/${module.name}-static.zip" basedir="${statics.dir}" update="true" compress="true" />
+  </target>
 </project>
