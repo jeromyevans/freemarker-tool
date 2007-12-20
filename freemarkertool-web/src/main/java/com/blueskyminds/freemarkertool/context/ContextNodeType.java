@@ -8,6 +8,6 @@ package com.blueskyminds.freemarkertool.context;
 public enum ContextNodeType {
     String,
     Map,
-    List,
+    Sequence,
     Set
 }
