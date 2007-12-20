@@ -738,8 +738,12 @@ FreemarkerTool.layout = function() {
 
     function resetHeights() {
         var viewPortHeight = YAHOO.util.Dom.getViewportHeight();
-        //var viewPortWidth = YAHOO.util.Dom.getViewportWidth();
-        var availableHeight = viewPortHeight - HEADER_HEIGHT - FOOTER_HEIGHT - CONTENT_VPADDING - VOVERFLOW;
+        var availableHeight;
+        if (YAHOO.tools.getBrowserEngine().msie) {
+	        availableHeight = viewPortHeight - HEADER_HEIGHT - (4*BORDER) - FOOTER_HEIGHT - CONTENT_VPADDING - VOVERFLOW;
+        } else {
+            availableHeight = viewPortHeight - HEADER_HEIGHT - FOOTER_HEIGHT - CONTENT_VPADDING - VOVERFLOW;
+        }
 
         var openHeight;
         var bodyTextHeight;
@@ -774,15 +778,17 @@ FreemarkerTool.layout = function() {
             YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OUTPUT_TEXT_ID, "height", (outputHeight-PANEL_MARGIN)+"px");
         }
 
-        YAHOO.util.Dom.setStyle("right", "height", availableHeight+"px");
-        YAHOO.util.Dom.setStyle(CONTEXT_PANEL_ID, "height", (availableHeight-PANEL_MARGIN)+"px");
-        //YAHOO.util.Dom.setStyle("center", "height", availableHeight);
+        var ePanel = document.getElementById("mainPanel");
+        var eSettings = document.getElementById("settings");
+        var rightHeight = (ePanel.offsetHeight-CONTENT_VPADDING);
+        var contextHeight = rightHeight-eSettings.offsetHeight;
+        YAHOO.util.Dom.setStyle("right", "height",  rightHeight+"px");
+        YAHOO.util.Dom.setStyle(CONTEXT_PANEL_ID, "height", (contextHeight-PANEL_MARGIN)+"px");
     }
 
     /** Radio button listener to toggle between the two view modes */
     function toggleView(eventInfo) {
         if (this.get('checkedButton').index === 0) {
-            //FreemarkerTool.layout.setTemplateView(true);
             templateMode = true;
             YAHOO.util.Dom.setStyle(FreemarkerTool.constants.BODY_TEXT_CONTAINER_ID, "display", "none");
             YAHOO.util.Dom.setStyle(FreemarkerTool.constants.CLOSE_CONTAINER_ID, "display", "none");
@@ -791,7 +797,6 @@ FreemarkerTool.layout = function() {
             document.getElementById(FreemarkerTool.constants.BODY_TEXT_ID).disabled = true;
             document.getElementById(FreemarkerTool.constants.CLOSE_TEXT_ID).disabled = true;
         } else {
-            //FreemarkerTool.layout.setTemplateView(false);
             templateMode = false;
             document.getElementById(FreemarkerTool.constants.BODY_TEXT_ID).disabled = false;
             document.getElementById(FreemarkerTool.constants.CLOSE_TEXT_ID).disabled = false;
@@ -808,8 +813,6 @@ FreemarkerTool.layout = function() {
     }
 
     function initLayout() {
-        //resetHeights();
-
         // setup the toggle view button
         toggleButton = new YAHOO.widget.ButtonGroup(FreemarkerTool.constants.TOGGLE_VIEW_BTN_ID);
 

@@ -11,7 +11,7 @@
   <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/css/theme.css">
 </head>
 <body id="body">
-<housepad:div theme="box">
+<housepad:div id="mainPanel" theme="box">
   <s:form id="templateForm" action="parse.json">
     <div id="left">
       <div class="yui-skin-sam">
@@ -31,7 +31,7 @@
       <div id="bodyTextContainer" class="block">
         <h2><span>Body Text:</span></h2>
         <housepad:div id="bodyTextContainerBox" theme="box" cssClass="editor small">
-          <s:textarea id="bodyText" name="bodyText" value="" rows="1" wrap="off"/>
+          <s:textarea id="bodyText" name="bodyText" value="" rows="1" wrap="off" onclick="this.focus();"/>
         </housepad:div>
       </div>
       <div id="closeContainer" class="block">
@@ -46,7 +46,7 @@
         <h2><span>FreeMarker Result:</span></h2>
         <housepad:div theme="box" cssClass="editor readonly">
           <div id="indicatorContainer"><img id="indicator" src="/static/images/indicator.gif" style="display:none" alt="Loading..."/></div>
-          <s:textarea id="outputText" name="outputText" value="" disabled="true"/>
+          <s:textarea id="outputText" name="outputText" value="" disabled="true" cssStyle="color:#000000"/>
         </housepad:div>
       </div>
     </div>
