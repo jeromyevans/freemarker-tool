@@ -47,7 +47,8 @@
 }
 
 #title {
-  float: left;
+  position: absolute;
+  top: 10px;
 }
 
 #adContainer {
@@ -58,18 +59,34 @@
   background: url("../images/banner.gif");
   background-color: #f6f6f6;
 }
-
+                                             
 #exampleContainer {
-  font-family:Verdana,arial,sans-serif;
-  font-size:11px;
   position: absolute;
-  top: 0;
-  right: 10px;
+  top: 60px;
+  left: 30px;
+  font-family:Verdana,arial,sans-serif;
+  margin-top: 0px;
+  margin-left: 0px;
 }
 
-#exampleContainer div.borderboxcontent {
-  padding-right: 20px;  /* for the indicator */
+#exampleContainer h2 {
+  /*background: url(/static/images/labels.gif) no-repeat 0 -101px;*/
+  /*height: 17px;*/
+  padding: 0px;
+  margin: 0 0 3px 0;
+  font-size: 11px;
+  font-weight: normal;
 }
+
+#exampleContainer div.indicatorContainer {
+  position: absolute;
+  left: -20px;
+  top: 0px;
+}
+
+/*#exampleContainer h2 span {*/
+  /*display: none;*/
+/*}*/
 
 select {
   border: solid 1px #c8c8c8;
@@ -142,7 +159,7 @@ select {
 }
 
 #settings {
-  margin-top: 16px;
+  margin-top: 0px;
 }
 
 #settings label {
@@ -156,7 +173,7 @@ select {
 #settings input {
   float: left;
   padding-left: 120px;
-  
+
 }
 
 #openContainer h2#openTitleTemplate {
@@ -183,21 +200,8 @@ select {
   background: url(/static/images/labels.gif) no-repeat 0 -84px;
 }
 
-#exampleContainer h2 {
-  background: url(/static/images/labels.gif) no-repeat 0 -101px;
-  padding: 0px;
-  margin: 0 0 3px 0;
-  font-size: 12px;
-  height: 17px;
-}
-
 #right h2 {
   background: url(/static/images/labels.gif) no-repeat 0 -118px;
-}
-
-
-#exampleContainer h2 span {
-  display: none;
 }
 
 .block h2 span {
@@ -233,6 +237,8 @@ select {
 
 #right input {
  border: none;
+ padding: 0px;
+ border: 0px;
 }
 
 .focus {
@@ -240,11 +246,13 @@ select {
 }
 
 #right input.name {
-  width: 100%;
+  /*width: 100%;*/  /* not for IE */
+  width: 100px;
 }
 
 #right input.value {
-  width: 100%;
+  /*width: 100%;*/ /* not for IE */
+  width: 100px;
 }
 
 #right input.disabled {
@@ -263,7 +271,7 @@ select {
 }
 
 .small textarea {
-  height: 1.5em;  
+  height: 1.5em;
 }
 
 .editor input {

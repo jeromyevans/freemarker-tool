@@ -24,19 +24,17 @@ Attributes:
 
   <body>
     <div id="header">
+      <div id="adContainer"></div>            
       <div id="title"><img src="/static/images/freemarkertool.jpg" alt="FreeMarker Tool" width="175" height="35"></div>
-      <div id="adContainer"></div>
-      <div id="exampleContainer">        
-        <housepad:div id="settings" theme="box">
-          <h2><span>Examples:</span></h2>
-          <select id="examples" name="example">
-            <option value=""></option>
-            <option value="1">hello world</option>
-            <option value="2">struts2-div</option>
-            <option value="3">struts2-checkbox</option>
-          </select>&nbsp;<br/>
-          <div class="indicatorContainer"><img id="exampleIndicator" src="/static/images/indicator.gif" style="display:none" alt="Loading..."/></div>
-        </housepad:div>
+      <div id="exampleContainer">
+        <h2><span>Examples:</span></h2>
+        <select id="examples" name="example">
+          <option value=""></option>
+          <option value="1">hello world</option>
+          <option value="2">struts2-div</option>
+          <option value="3">struts2-checkbox</option>
+        </select>&nbsp;<br/>
+        <div class="indicatorContainer"><img id="exampleIndicator" src="/static/images/indicator.gif" style="display:none" alt="Loading..."/></div>
       </div>
     </div>
     <div id="content">

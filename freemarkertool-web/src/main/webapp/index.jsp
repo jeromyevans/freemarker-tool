@@ -16,7 +16,7 @@
     <div id="left">
       <div class="yui-skin-sam">
         <div id="toggleViewBtnGroup" class="yui-buttongroup">           
-          <input type="radio" id="toggleViewPageBtn" checked value="Page"/><br/>
+          <input type="radio" id="toggleViewPageBtn" value="Page"/><br/>
           <input type="radio" id="toggleViewTagBtn" value="Tag"/>
         </div>
       </div>
