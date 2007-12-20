@@ -209,6 +209,10 @@ FreemarkerTool.ui = function() {
     var CONTEXT_CONTAINER_ID = "context[{0}].container";
     var PARENT_CONTEXT_CONTAINER_ID = "contextContainer";
     var CONTEXT_TEMPLATE_ID = "contextFieldTemplate";
+    var CONTEXT_ENABLED_CHECKBOX_ID = "context[{0}].enabled";
+    var CONTEXT_NAME_TEXT_ID = "context[{0}].name";
+    var CONTEXT_VALUE_TEXT_ID = "context[{0}].value";
+    var CONTEXT_VALUE_NULL_CHECKBOX_ID = "context[{0}].nullValue";
     var contextFieldTemplate;
     var contextFieldCount;
 
@@ -217,11 +221,6 @@ FreemarkerTool.ui = function() {
     * @param listener to fire when focus is obtained
     **/
     var ContextField = function(fieldIndex, onFocusListener, onChangeListener) {
-
-        var CONTEXT_ENABLED_CHECKBOX_ID = "context[{0}].enabled";
-        var CONTEXT_NAME_TEXT_ID = "context[{0}].name";
-        var CONTEXT_VALUE_TEXT_ID = "context[{0}].value";
-        var CONTEXT_VALUE_NULL_CHECKBOX_ID = "context[{0}].nullValue";
 
         /** Index of this ContextField */
         var index = fieldIndex;
@@ -484,7 +483,26 @@ FreemarkerTool.ui = function() {
         idleTimer.reset();
         setInputChangedFlag();
     }
-    
+
+    /** Creates a td and input element with the id prepared from the
+         id value and template */
+    function prepareInput(id, idTemplate, type, className) {
+
+        var eTD = YAHOO.util.Dom.create("td");
+        var idValue = YAHOO.tools.printf(idTemplate, id);
+        var eInput = YAHOO.util.Dom.create("input", {
+            id : idValue,
+            type: type,
+            className: className,
+            name: idValue
+        });
+
+        eTD.appendChild(eInput);
+
+        return eTD;
+     }
+
+
     /**
      * Adds a new ContextField to the DOM and initialise a controller for it
      * If the ContxtField already exists its cleared
@@ -501,16 +519,21 @@ FreemarkerTool.ui = function() {
         var node = document.getElementById(nodeId);
 
         if (!node) {
-            // node needs to be created exists
-            node  = document.createElement("tr");
-            node.id = nodeId;
-            node.className = "contextField";
+            node = YAHOO.util.Dom.create("tr", {
+                id : nodeId,
+                className : "contextField"
+            });
+
+            node.appendChild(prepareInput(templateContext.index, CONTEXT_ENABLED_CHECKBOX_ID, "checkbox", ""));
+            node.appendChild(prepareInput(templateContext.index, CONTEXT_NAME_TEXT_ID, "text", "name"));
+            node.appendChild(prepareInput(templateContext.index, CONTEXT_VALUE_TEXT_ID, "text", "value"));
+            node.appendChild(prepareInput(templateContext.index, CONTEXT_VALUE_NULL_CHECKBOX_ID, "checkbox", ""));
 
             var parent = document.getElementById(PARENT_CONTEXT_CONTAINER_ID);
             parent.appendChild(node);
 
             // insert the HTML into the DOM
-            node.innerHTML = contextFieldTemplate.process(templateContext);
+            //node.innerHTML = contextFieldTemplate.process(templateContext);
 
             // initialise the controller
             contextFields[templateContext.index] = new ContextField(templateContext.index, onContextFieldFocus, onContextFieldChange);
