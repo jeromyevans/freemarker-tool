@@ -1,0 +1,10 @@
+<!-- A simple static list example -->
+<example templateView="true">
+  <openTemplate><![CDATA[
+  <#-- A simple freemarker sequence -->
+  <#list ["Joe", "Fred"] as user>
+    - ${user}
+  </#list>]]>
+  </openTemplate>
+  <contextField enabled="false" name="" value="" nullValue="false"/>
+</example>

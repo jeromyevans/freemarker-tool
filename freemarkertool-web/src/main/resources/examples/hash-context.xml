@@ -1,0 +1,14 @@
+<!-- A simple list of hash example -->
+<example templateView="true">
+  <openTemplate><![CDATA[
+  <#-- A simple sequence of hashes in the context -->
+  <#list users as user>
+    - ${user.firstName} ${user.lastName}
+  </#list>]]>
+  </openTemplate>
+  <contextField enabled="true" name="users[0].firstName" value="Joe" nullValue="false"/>
+  <contextField enabled="true" name="users[0].lastName" value="Blogs" nullValue="false"/>
+  <contextField enabled="true" name="users[1].firstName" value="Fred" nullValue="false"/>
+  <contextField enabled="true" name="users[1].lastName" value="Neck" nullValue="false"/>
+  <contextField enabled="false" name="" value="" nullValue="false"/>
+</example>

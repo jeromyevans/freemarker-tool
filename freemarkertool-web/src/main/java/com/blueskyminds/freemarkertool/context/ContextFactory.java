@@ -59,12 +59,10 @@ public class ContextFactory {
 
     /** Trims leading . */
     private String trimExpression(String expression) {
-        String result;
-        if (expression.startsWith(".")) {
-            result = expression.substring(1);
-        } else {
-            result = expression;
-        }
+        String result = expression;
+        while (result.startsWith(".")) {
+            result = result.substring(1);
+        } 
         if (StringUtils.isNotBlank(result)) {
             return result;
         } else {
@@ -82,17 +80,24 @@ public class ContextFactory {
         String left;
         String right = null;
 
+        expression = trimExpression(expression);
+
         int dotSeparator = expression.indexOf(".");
         int leftBracket = expression.indexOf("[");
         int rightBracket = expression.indexOf("]");
-        int leftStart;
-        int leftEnd;
-        int rightStart;
+        int leftStart = -1;
+        int leftEnd = -2;
+        int rightStart = -1;
 
         if (leftBracket == 0) {
-            leftStart = 1;
-            leftEnd = rightBracket-1;
-            rightStart = rightBracket+1;
+            if (rightBracket >= 0) {
+                leftStart = 1;
+                leftEnd = rightBracket-1;
+                rightStart = rightBracket+1;
+            } else {
+                // invalid
+                leftStart = -1;
+            }
         } else {
             leftStart = 0;
             if (dotSeparator >= 0) {
@@ -113,9 +118,14 @@ public class ContextFactory {
                 }
             }
         }
+        leftStart = Math.max(0, leftStart);
+        leftEnd = Math.max(leftStart-1, Math.min(leftEnd, expression.length()-1));
+                        
         left = StringTools.stripQuotes(expression.substring(leftStart, leftEnd+1));
         if (rightStart >= 0) {
-            right = trimExpression(expression.substring(rightStart, expression.length()));
+            if (rightStart < expression.length()) {
+                right = trimExpression(expression.substring(rightStart, expression.length()));
+            }
         }
         return new String[]{left, right};
     }

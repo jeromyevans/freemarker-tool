@@ -31,8 +31,11 @@ Attributes:
         <select id="examples" name="example">
           <option value=""></option>
           <option value="1">hello world</option>
-          <option value="2">struts2-div</option>
-          <option value="3">struts2-checkbox</option>
+          <option value="2">sequence</option>
+          <option value="3">sequence-context</option>
+          <option value="4">hash-context</option>
+          <option value="5">struts2-div</option>
+          <option value="6">struts2-checkbox</option>
         </select>&nbsp;<br/>
         <div class="indicatorContainer"><img id="exampleIndicator" src="/static/images/indicator.gif" style="display:none" alt="Loading..."/></div>
       </div>

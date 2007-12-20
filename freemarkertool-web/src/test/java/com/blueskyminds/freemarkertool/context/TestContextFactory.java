@@ -91,6 +91,20 @@ public class TestContextFactory extends TestCase {
         assertSplitEquals("one", "two", "[one].two");
         assertSplitEquals("one", "two", "[\"one\"].two");
         assertSplitEquals("1", "two", "[1].two");
+        assertSplitEquals("test", "[]", "test[]");
+        assertSplitEquals("", null, "[]");
+        assertSplitEquals("one", null, "\"one\"");
+
+        assertSplitEquals("test2", "[", "test2[");
+        assertSplitEquals("", null, "[");
+        assertSplitEquals("test2", null, ".test2");   // ignore prefix
+        assertSplitEquals("test2", null, "..test2");   // ignore prefix
+        assertSplitEquals("te", "st2", "te..st2");   // ignore prefix
+        assertSplitEquals("te]st2", null, "te]st2");   // ignore it
+        assertSplitEquals("te", "[st2", "te[st2");
+        assertSplitEquals("", null, "[st2");
+        assertSplitEquals("te st2", null, "te st2");   // ignore prefix
+        assertSplitEquals("t\"", null, "t\"");   // ignore prefix
     }
 
     /** Create a sequence */
@@ -179,5 +193,12 @@ public class TestContextFactory extends TestCase {
 
         assertTrue(Map.class.isAssignableFrom(result2.get("test").getClass()));
         assertEquals(3, ((Map) result2.get("test")).size());
+    }
+
+    public void testInvlidReferences() {
+
+
+         // looks like a sequence
+        Map<String, Object> result1 = contextFactory.createContext(context);
     }
 }

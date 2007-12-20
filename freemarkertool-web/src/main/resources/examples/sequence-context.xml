@@ -1,0 +1,12 @@
+<!-- A simple list example -->
+<example templateView="true">
+  <openTemplate><![CDATA[
+  <#-- A simple sequence in the context -->
+  <#list users as user>
+    - ${user}
+  </#list>]]>
+  </openTemplate>
+  <contextField enabled="true" name="users[0]" value="Joe" nullValue="false"/>
+  <contextField enabled="true" name="users[1]" value="Fred" nullValue="false"/>
+  <contextField enabled="false" name="" value="" nullValue="false"/>
+</example>
