@@ -6,7 +6,7 @@
   <property name="js.target" value="D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\webapp\static\js"/>
 
   <property name="target.dir" value="target"/>
-  <property name="statics.dir" value="src/main/webapp/static"/>
+  <property name="statics.dir" value="src/main/www"/>
   <property name="module.name" value="freemarkertool-web"/>
 
   <property name="js.core" value="blueskyminds-core.js"/>

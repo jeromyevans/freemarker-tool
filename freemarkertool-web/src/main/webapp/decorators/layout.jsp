@@ -14,7 +14,7 @@ Attributes:
     <title><decorator:title default="Freemarker Tool" /></title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <meta name="Keywords" content="freemarker template, freemarker, template, java, mvc, struts2, struts, tag, taglib">
-    <meta name="Description" content="A tool to preview FreeMarker templates online">
+    <meta name="Description" content="A tool to edit and review live FreeMarker templates online">
     <meta name="Robots" content="Index,Follow">
     <meta name="Author" content="Blue Sky Minds Pty Ltd" />
     <meta name="Copyright" content="Blue Sky Minds Pty Ltd" />
