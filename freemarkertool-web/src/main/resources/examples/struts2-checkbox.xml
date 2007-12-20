@@ -1,0 +1,141 @@
+<!-- Derivation from the struts2 div template -->
+<example templateView="true">
+  <openTemplate>
+<![CDATA[<#--
+ This is the checkbox.ftl template used by the Struts 2.1.0 "css_xhtml" theme.
+ The header comments have been omitted and #includes directly imported.
+
+ Modify the context or templates to change the result.
+
+ For information about modifying a Struts 2 theme, see http://struts.apache.org/2.x/docs/themes-and-templates.html
+ Source: http://svn.apache.org/viewvc/struts/struts2/tags/STRUTS_2_1_0/core/src/main/resources/template/css_xhtml/checkbox.ftl
+-->
+<#assign hasFieldErrors = fieldErrors?exists && fieldErrors[parameters.name]?exists/>
+<div <#rt/><#if parameters.id?exists>id="wwgrp_${parameters.id}"<#rt/></#if> class="wwgrp">
+
+<#if hasFieldErrors>
+<div <#rt/><#if parameters.id?exists>id="wwerr_${parameters.id}"<#rt/></#if> class="wwerr">
+<#list fieldErrors[parameters.name] as error>
+    <div<#rt/>
+    <#if parameters.id?exists>
+     errorFor="${parameters.id}"<#rt/>
+    </#if>
+    class="errorMessage">
+             ${error?html}
+    </div><#t/>
+</#list>
+</div><#t/>
+</#if>
+<#if parameters.labelposition?default("") == 'left'>
+<span <#rt/>
+<#if parameters.id?exists>id="wwlbl_${parameters.id}"<#rt/></#if> class="wwlbl">
+<label<#t/>
+<#if parameters.id?exists>
+ for="${parameters.id?html}"<#rt/>
+</#if>
+<#if hasFieldErrors>
+ class="checkboxErrorLabel"<#rt/>
+<#else>
+ class="label"<#rt/>
+</#if>
+>${parameters.label?html}</label><#rt/>
+</span>
+</#if>
+
+<#if parameters.labelposition?default("top") == 'top'>
+<div <#rt/>
+<#else>
+<span <#rt/>
+</#if>
+<#if parameters.id?exists>id="wwctrl_${parameters.id}"<#rt/></#if> class="wwctrl">
+
+<#if parameters.required?default(false)>
+        <span class="required">*</span><#t/>
+</#if>
+
+<#--<#include "/${parameters.templateDir}/simple/checkbox.ftl" />-->
+<input type="checkbox" name="${parameters.name?html}" value="${parameters.fieldValue?html}"<#rt/>
+<#if parameters.nameValue?exists && parameters.nameValue>
+ checked="checked"<#rt/>
+</#if>
+<#if parameters.disabled?default(false)>
+ disabled="disabled"<#rt/>
+</#if>
+<#if parameters.readonly?default(false)>
+ readonly="readonly"<#rt/>
+</#if>
+<#if parameters.tabindex?exists>
+ tabindex="${parameters.tabindex?html}"<#rt/>
+</#if>
+<#if parameters.id?exists>
+ id="${parameters.id?html}"<#rt/>
+</#if>
+<#if parameters.cssClass?exists>
+ class="${parameters.cssClass?html}"<#rt/>
+</#if>
+<#if parameters.cssStyle?exists>
+ style="${parameters.cssStyle?html}"<#rt/>
+</#if>
+<#if parameters.title?exists>
+ title="${parameters.title?html}"<#rt/>
+</#if>
+<#if parameters.labelposition?default("") != 'left'>
+<#if parameters.labelposition?default("top") == 'top'>
+</div> <#rt/>
+<#else>
+</span>  <#rt/>
+</#if>
+<#if parameters.label?exists>
+<#if parameters.labelposition?default("top") == 'top'>
+<div <#rt/>
+<#else>
+<span <#rt/>
+</#if>
+<#if parameters.id?exists>id="wwlbl_${parameters.id}"<#rt/></#if> class="wwlbl">
+<label<#t/>
+<#if parameters.id?exists>
+ for="${parameters.id?html}"<#rt/>
+</#if>
+<#if hasFieldErrors>
+ class="checkboxErrorLabel"<#rt/>
+<#else>
+ class="checkboxLabel"<#rt/>
+</#if>
+>${parameters.label?html}</label><#rt/>
+</#if>
+</#if>
+<#if parameters.label?exists>
+<#if parameters.labelposition?default("top") == 'top'>
+</div> <#rt/>
+<#else>
+</span> <#rt/>
+</#if>
+</#if>
+</div>
+<#--<#include "/${parameters.templateDir}/simple/common-attributes.ftl" />-->
+<#if parameters.accesskey?exists>
+ accesskey="${parameters.accesskey?html}"
+</#if>
+<#--<#include "/${parameters.templateDir}/simple/dynamic-attributes.ftl" />-->
+<#if (parameters.dynamicAttributes?exists && parameters.dynamicAttributes?size > 0)><#t/>
+    <#assign aKeys = parameters.dynamicAttributes.keySet()><#t/>
+    <#list aKeys as aKey><#t/>
+ ${aKey}="${parameters.dynamicAttributes[aKey]?html}"<#rt/>
+    </#list><#t/>
+</#if><#t/>
+/>
+<input type="hidden" name="__checkbox_${parameters.name?html}" value="${parameters.fieldValue?html}" />]]>
+  </openTemplate>
+  <bodyText>This is the body text</bodyText>
+  <closeTemplate><![CDATA[</div>]]></closeTemplate>
+  <contextField enabled="true" name="parameters.id" value="myCheck1" nullValue="false"/>
+  <contextField enabled="true" name="parameters.cssClass" value="myClass" nullValue="false"/>
+  <contextField enabled="true" name="parameters.name" value="myCheck" nullValue="false"/>
+  <contextField enabled="false" name="parameters.cssStyle" value="border: solid 1px black;" nullValue="false"/>
+  <contextField enabled="true" name="parameters.label" value="Is this a checkbox?" nullValue="false"/>
+  <contextField enabled="true" name="parameters.labelposition" value="left" nullValue="false"/>
+  <contextField enabled="true" name="parameters.fieldValue" value="yes" nullValue="false"/>
+  <contextField enabled="true" name="parameters.required" value="true" nullValue="false"/>
+  
+  <!--<contextField enabled="false" name="parameters.dynamicAttributes[" value="border: solid 1px black;" nullValue="false"/>-->
+</example>

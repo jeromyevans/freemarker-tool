@@ -2,7 +2,7 @@
 <example templateView="false">
   <openTemplate>
 <![CDATA[<#--
- This is the div template used by the Struts 2.1.0 "simple" theme.
+ This is the div.ftl template used by the Struts 2.1.0 "simple" theme.
  The header comments have been omitted and #includes directly imported.
 
  Modify the context or templates to change the result.
@@ -75,9 +75,9 @@
   </openTemplate>
   <bodyText>This is the body text</bodyText>
   <closeTemplate><![CDATA[</div>]]></closeTemplate>
-  <contextField enabled="true" name="parameters.id" value="myDiv" nullValue="false"/>
-  <contextField enabled="false" name="parameters.name" value="myDiv" nullValue="false"/>
+  <contextField enabled="true" name="parameters.id" value="myDiv" nullValue="false"/>  
   <contextField enabled="true" name="parameters.cssClass" value="myClass" nullValue="false"/>
+  <contextField enabled="false" name="parameters.name" value="myDiv" nullValue="false"/>
   <contextField enabled="false" name="parameters.cssStyle" value="border: solid 1px black;" nullValue="false"/>
   <!--<contextField enabled="false" name="parameters.dynamicAttributes[" value="border: solid 1px black;" nullValue="false"/>-->
 </example>

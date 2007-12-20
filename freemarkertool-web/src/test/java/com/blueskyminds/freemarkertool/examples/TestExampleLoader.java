@@ -33,4 +33,10 @@ public class TestExampleLoader extends TestCase {
         ExampleBean bean = exampleLoader.loadExample("struts2-div.xml");
         assertNotNull(bean);
     }
+
+    public void testReadStruts2Checkbox() throws Exception {
+        ExampleLoader exampleLoader = new ExampleLoader();
+        ExampleBean bean = exampleLoader.loadExample("struts2-checkbox.xml");
+        assertNotNull(bean);
+    }
 }

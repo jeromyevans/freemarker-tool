@@ -25,7 +25,8 @@ public class ExampleLoader {
     private static final String[] EXAMPLES = {
         "",
         "hello-world.xml",
-        "struts2-div.xml"
+        "struts2-div.xml",
+        "struts2-checkbox.xml"
          };
 
     public ExampleLoader() {
