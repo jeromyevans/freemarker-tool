@@ -1,24 +1,27 @@
+/*global FreemarkerTool,blueskyminds,TrimPath,YAHOO*/
 blueskyminds.namespace("FreemarkerTool");
 
-FreemarkerTool.ui = function() {
+FreemarkerTool.constants = {
+    FORM_ID : "templateForm",
+    OPEN_CONTAINER_ID : "openContainer",
+    OPEN_CONTAINER_BOX_ID : "openContainerBox",
+    OPEN_TEXT_ID : "open",
+    CLOSE_CONTAINER_ID : "closeContainer",
+    CLOSE_CONTAINER_BOX_ID : "closeContainerBox",
+    CLOSE_TEXT_ID : "close",
+    BODY_TEXT_CONTAINER_ID : "bodyTextContainer",
+    BODY_TEXT_CONTAINER_BOX_ID : "bodyTextContainerBox",
+    BODY_TEXT_ID : "bodyText",
+    OUTPUT_TEXT_CONTAINER_ID : "outputTextContainer",
+    OUTPUT_TEXT_ID : "outputText",
+    ERROR_ID : "errorContainer",
+    INDICATOR_ID : "indicator",
+    TOGGLE_VIEW_BTN_ID : "toggleViewBtnGroup",
+    OPEN_TITLE_TEMPLATE_ID : "openTitleTemplate",
+    OPEN_TITLE_TAG_ID : "openTitleTag"
+};
 
-    var FORM_ID = "templateForm";
-    var OPEN_CONTAINER_ID = "openContainer";
-    var OPEN_CONTAINER_BOX_ID = "openContainerBox";
-    var OPEN_TEXT_ID = "open";
-    var CLOSE_CONTAINER_ID = "closeContainer";
-    var CLOSE_CONTAINER_BOX_ID = "closeContainerBox";
-    var CLOSE_TEXT_ID = "close";
-    var BODY_TEXT_CONTAINER_ID = "bodyTextContainer";
-    var BODY_TEXT_CONTAINER_BOX_ID = "bodyTextContainerBox";
-    var BODY_TEXT_ID = "bodyText"
-    var OUTPUT_TEXT_CONTAINER_ID = "outputTextContainer"
-    var OUTPUT_TEXT_ID = "outputText"
-    var ERROR_ID = "errorContainer";
-    var INDICATOR_ID = "indicator";
-    var TOGGLE_VIEW_BTN_ID = "toggleViewBtnGroup";
-    var OPEN_TITLE_TEMPLATE_ID = "openTitleTemplate";
-    var OPEN_TITLE_TAG_ID = "openTitleTag";
+FreemarkerTool.ui = function() {
 
     /** The number of milliseconds to wait befteore posting a request */
     var CHANGE_TIMEOUT = 1000;
@@ -39,21 +42,12 @@ FreemarkerTool.ui = function() {
 
     var contextFields;
 
-    var templateMode;
-
     /** Calls the callback if not reset for the specifid number of ticks to wait */
     var IdleTimer = function(tickInterval, millisToWait, callback) {
 
         var tickCounter;
         var lastFired;
         var ticksToWait;
-
-        function init() {
-            tickCounter = 0;
-            lastFired = 0;
-            ticksToWait = (millisToWait / tickInterval);
-            setInterval(tickListener, tickInterval);
-        }
 
         /** Executed every interval tick */
         function tickListener() {
@@ -64,6 +58,13 @@ FreemarkerTool.ui = function() {
             }
         }
 
+        function init() {
+            tickCounter = 0;
+            lastFired = 0;
+            ticksToWait = (millisToWait / tickInterval);
+            setInterval(tickListener, tickInterval);
+        }        
+
         init();
 
         return {
@@ -71,7 +72,7 @@ FreemarkerTool.ui = function() {
                 tickCounter = 0;
                 lastFired = 0;
             }
-        }
+        };
     };
 
     /** A controller for the text inputs
@@ -102,7 +103,7 @@ FreemarkerTool.ui = function() {
         element.on('keydown', onChangeListener);
         element.on('keypress', onChangeListener);
         element.on('focus', onFocusListener);
-        element.on('blur', onBlurListener)
+        element.on('blur', onBlurListener);
 
         return {
             setContent: function(text) {
@@ -115,12 +116,12 @@ FreemarkerTool.ui = function() {
                     }
                 }
             }
-        }
+        };
     };   
 
     /** Updates the value displayed in the ouput */
     function setFreemarkerOutput(text) {
-        var el = document.getElementById(OUTPUT_TEXT_ID);
+        var el = document.getElementById(FreemarkerTool.constants.OUTPUT_TEXT_ID);
         if (el) {
             el.value = text;
         }
@@ -143,14 +144,6 @@ FreemarkerTool.ui = function() {
         setInputChangedFlag();
     }
 
-    /** When idle, check if the input has changed, and if so parse the template */
-    function idleCallback() {
-        if (isInputChanged()) {
-            clearInputChangedFlag();
-            parseTemplate();
-        }
-    }
-
     function showIndicator() {
         blueskyminds.events.fire("startedParsing");
     }
@@ -163,7 +156,7 @@ FreemarkerTool.ui = function() {
     var parseCallback = {
         success: function(o) {
             hideIndicator();
-            var payload = blueskyminds.net.json.eval(o.responseText);
+            var payload = blueskyminds.net.json.evaluate(o.responseText);
             if (payload) {
                 if (payload.exception) {
                     blueskyminds.events.fire(ERROR_EVENT, payload.exception.message);
@@ -182,49 +175,35 @@ FreemarkerTool.ui = function() {
 
     /** Invokes an async request to parse the inputs */
     function parseTemplate() {
-        var formEl = document.getElementById(FORM_ID);
+        var formEl = document.getElementById(FreemarkerTool.constants.FORM_ID);
 
         FreemarkerTool.ui.dismissErrors();
-        
+
         if (formEl) {
            YAHOO.util.Connect.setForm(formEl);
            showIndicator();
            YAHOO.util.Connect.asyncRequest('POST', formEl.action, parseCallback);
         } else {
-            blueskyminds.events.fire(ERROR_EVENT, "Form '"+FORM_ID+"' is missing");
+            blueskyminds.events.fire(ERROR_EVENT, "Form '"+FreemarkerTool.constants.FORM_ID+"' is missing");
         }
     }
 
-    /** Switches the view between template or tag mode */
-    function setTemplateView(template) {
-        if (template) {
-            templateMode = true;
-            YAHOO.util.Dom.setStyle(BODY_TEXT_CONTAINER_ID, "display", "none");
-            YAHOO.util.Dom.setStyle(CLOSE_CONTAINER_ID, "display", "none");
-            YAHOO.util.Dom.setStyle(OPEN_TITLE_TAG_ID, "display", "none");
-            YAHOO.util.Dom.setStyle(OPEN_TITLE_TEMPLATE_ID, "display", "block");
-            document.getElementById(BODY_TEXT_ID).disabled = true;
-            document.getElementById(CLOSE_TEXT_ID).disabled = true;
-        } else {
-            templateMode = false;
-            document.getElementById(BODY_TEXT_ID).disabled = false;
-            document.getElementById(CLOSE_TEXT_ID).disabled = false;
-            YAHOO.util.Dom.setStyle(OPEN_TITLE_TEMPLATE_ID, "display", "none");
-            YAHOO.util.Dom.setStyle(OPEN_TITLE_TAG_ID, "display", "block");
-            YAHOO.util.Dom.setStyle(BODY_TEXT_CONTAINER_ID, "display", "block");
-            YAHOO.util.Dom.setStyle(CLOSE_CONTAINER_ID, "display", "block");
+    /** When idle, check if the input has changed, and if so parse the template */
+    function idleCallback() {
+        if (isInputChanged()) {
+            clearInputChangedFlag();
+            parseTemplate();
         }
-        resetHeights();        
     }
 
     /** Radio button listener to toggle between the two view modes */
     function toggleView(eventInfo) {
-        if (this.get('checkedButton').index == 0) {
-            setTemplateView(true);
+        if (this.get('checkedButton').index === 0) {
+            FreemarkerTool.layout.setTemplateView(true);
         } else {
-            setTemplateView(false);
+            FreemarkerTool.layout.setTemplateView(false);
         }
-        document.getElementById(OPEN_TEXT_ID).focus();       
+        document.getElementById(FreemarkerTool.constants.OPEN_TEXT_ID).focus();
     }
 
     var CONTEXT_CONTAINER_ID = "context[{0}].container";
@@ -260,23 +239,18 @@ FreemarkerTool.ui = function() {
         var focusListener = onFocusListener;
         var changeListener = onChangeListener;
 
-        /** Merges the index into a template used to determine the ID */
-        function idOf(template) {
-            return YAHOO.Tools.printf(template, index);
-        }
-
-        function onEnabledChange(e) {
-            if (e.target.checked) {
-                enable();
-                fireFocusListener();
-            } else {
-                disable();
+        /** Notifies the listner that this ContextField has focus */
+        function fireFocusListener() {
+            if (focusListener) {
+                focusListener(index);
             }
-            fireChangeListener();
         }
 
-        function isEnabled() {
-            return enabledEl.get('checked');
+        /** Notifies the listener that this ContextField has changed state */
+        function fireChangeListener() {
+            if (changeListener) {
+                changeListener(index);
+            }
         }
 
         function setEnabledFlag(enabled) {
@@ -289,22 +263,8 @@ FreemarkerTool.ui = function() {
             }
         }
 
-        function enable() {
-            setEnabledFlag(true);
-            containerEl.removeClass("disabled");
-            containerEl.addClass("enabled");
-            nameEl.removeClass('disabled');
-            nullEl.removeClass('disabled');
-            setNullValue(isNull());
-        }
-
-        function disable() {
-            setEnabledFlag(false);
-            containerEl.removeClass("enabled");
-            containerEl.addClass("disabled");
-            nameEl.addClass('disabled');
-            valueEl.addClass('disabled');
-            nullEl.addClass('disabled');
+        function isEnabled() {
+            return enabledEl.get('checked');
         }
 
         function isNull() {
@@ -326,19 +286,52 @@ FreemarkerTool.ui = function() {
             if (checked) {
                 valueEl.addClass('disabled');
                 // save previous value
-                if (lastValue == null) {
+                if (lastValue === null) {
                     var value = valueEl.get('element').value;
                     lastValue = (value ? value : "");
                     valueEl.set('value', "< null >");
                 }
             } else {
                 valueEl.removeClass('disabled');
-                if (lastValue != null) {
+                if (lastValue !== null) {
                    // restore last value
                    valueEl.set('value', lastValue);
                    lastValue = null;
                 }
             }
+        }
+
+        function enable() {
+            setEnabledFlag(true);
+            containerEl.removeClass("disabled");
+            containerEl.addClass("enabled");
+            nameEl.removeClass('disabled');
+            nullEl.removeClass('disabled');
+            setNullValue(isNull());
+        }
+
+        function disable() {
+            setEnabledFlag(false);
+            containerEl.removeClass("enabled");
+            containerEl.addClass("disabled");
+            nameEl.addClass('disabled');
+            valueEl.addClass('disabled');
+            nullEl.addClass('disabled');
+        }
+
+        /** Merges the index into a template used to determine the ID */
+        function idOf(template) {
+            return YAHOO.Tools.printf(template, index);
+        }
+
+        function onEnabledChange(e) {
+            if (e.target.checked) {
+                enable();
+                fireFocusListener();
+            } else {
+                disable();
+            }
+            fireChangeListener();
         }
 
         function clearName() {
@@ -395,20 +388,6 @@ FreemarkerTool.ui = function() {
                 enable();
             } else {
                 disable();
-            }
-        }
-
-        /** Notifies the listner that this ContextField has focus */
-        function fireFocusListener() {
-            if (focusListener) {
-                focusListener(index);
-            }
-        }
-
-        /** Notifies the listener that this ContextField has changed state */
-        function fireChangeListener() {
-            if (changeListener) {
-                changeListener(index);
             }
         }
 
@@ -483,9 +462,29 @@ FreemarkerTool.ui = function() {
                     disable();
                 }
             }
-        }
+        };
     };
 
+        /**
+     * Listener for focus in a context field.  Used to create a new context field
+     *  instance if the focus is in the last one
+     * @param itemNo
+     */
+    function onContextFieldFocus(itemNo) {
+        if (itemNo == contextFields.length - 1) {
+            createContextField(itemNo+1);
+        }
+    }
+
+    /**
+     * Listener for for change of state in a context field.  Triggers a new repost
+     * @param itemNo
+     */
+    function onContextFieldChange(itemNo) {
+        idleTimer.reset();
+        setInputChangedFlag();
+    }
+    
     /**
      * Adds a new ContextField to the DOM and initialise a controller for it
      * If the ContxtField already exists its cleared
@@ -496,7 +495,7 @@ FreemarkerTool.ui = function() {
 
         var templateContext = {
             index : contextFieldCount
-        }
+        };
 
         var nodeId = YAHOO.tools.printf(CONTEXT_CONTAINER_ID, templateContext.index);
         var node = document.getElementById(nodeId);
@@ -504,8 +503,8 @@ FreemarkerTool.ui = function() {
         if (!node) {
             // node needs to be created exists
             node  = document.createElement("tr");
-            node['id'] = nodeId;
-            node['className'] = "contextField";
+            node.id = nodeId;
+            node.className = "contextField";
 
             var parent = document.getElementById(PARENT_CONTEXT_CONTAINER_ID);
             parent.appendChild(node);
@@ -525,30 +524,10 @@ FreemarkerTool.ui = function() {
     }
 
     /**
-     * Listener for focus in a context field.  Used to create a new context field
-     *  instance if the focus is in the last one
-     * @param itemNo
-     */
-    function onContextFieldFocus(itemNo) {
-        if (itemNo == contextFields.length - 1) {
-            createContextField(itemNo+1);
-        }
-    }
-
-    /**
-     * Listener for for change of state in a context field.  Triggers a new repost
-     * @param itemNo
-     */
-    function onContextFieldChange(itemNo) {
-        idleTimer.reset();
-        setInputChangedFlag();
-    }
-
-    /**
      * Setup the UI controls to define the context
      */
     function initContext() {
-        contextFields = new Array();
+        contextFields = [];
         contextFieldCount = 0;
 
         contextFieldTemplate = TrimPath.parseDOMTemplate(CONTEXT_TEMPLATE_ID);
@@ -565,105 +544,42 @@ FreemarkerTool.ui = function() {
         createContextField(0);
     }
 
-    var CONTEXT_PANEL_ID = "contextPanel";
-    
-    function initLayout() {
-        resetHeights();
-
-        YAHOO.util.Event.addListener(window, 'resize', onResizeListener);
-    }
-
-    function onResizeListener(e) {
-        resetHeights();
-    }
-
-    var BORDER = 10;
-    var HEADER_HEIGHT = 100;
-    var CONTENT_VPADDING = BORDER*2;
-    var VOVERFLOW = 20;        /** to ensure we don't get scroll bars */
-    var FOOTER_HEIGHT = 20;
-    var PANEL_MARGIN = BORDER*2+23;
-    var SETTINGS_HEIGHT = 68;
-
-    function resetHeights() {
-        var viewPortHeight = YAHOO.util.Dom.getViewportHeight();
-        //var viewPortWidth = YAHOO.util.Dom.getViewportWidth();
-        var availableHeight = viewPortHeight - HEADER_HEIGHT - FOOTER_HEIGHT - CONTENT_VPADDING - VOVERFLOW;
-
-        var openHeight;
-        var bodyTextHeight;
-        var closeHeight;
-        var outputHeight;
-
-        if (templateMode) {
-            closeHeight = 0;
-            bodyTextHeight = 0;
-            openHeight = availableHeight / 2;
-            outputHeight = availableHeight - openHeight;
-
-            YAHOO.util.Dom.setStyle(OPEN_CONTAINER_ID, "height", openHeight+"px");
-            YAHOO.util.Dom.setStyle(OUTPUT_TEXT_CONTAINER_ID, "height", outputHeight+"px");
-
-            YAHOO.util.Dom.setStyle(OPEN_TEXT_ID, "height", (openHeight-PANEL_MARGIN)+"px");
-            YAHOO.util.Dom.setStyle(OUTPUT_TEXT_ID, "height", (outputHeight-PANEL_MARGIN)+"px");
-        } else {
-            bodyTextHeight = 60;
-            closeHeight = 0;
-            openHeight = (availableHeight - bodyTextHeight) / 3;
-            closeHeight = openHeight;
-            outputHeight = availableHeight - openHeight - bodyTextHeight - closeHeight;
-
-            YAHOO.util.Dom.setStyle(OPEN_CONTAINER_ID, "height", openHeight+"px");
-            YAHOO.util.Dom.setStyle(BODY_TEXT_CONTAINER_ID, "height", bodyTextHeight+"px");
-            YAHOO.util.Dom.setStyle(CLOSE_CONTAINER_ID, "height", closeHeight+"px");
-            YAHOO.util.Dom.setStyle(OUTPUT_TEXT_CONTAINER_ID, "height", outputHeight+"px");
-
-            YAHOO.util.Dom.setStyle(OPEN_TEXT_ID, "height", (openHeight-PANEL_MARGIN)+"px");
-            YAHOO.util.Dom.setStyle(CLOSE_TEXT_ID, "height", (closeHeight-PANEL_MARGIN)+"px");
-            YAHOO.util.Dom.setStyle(OUTPUT_TEXT_ID, "height", (outputHeight-PANEL_MARGIN)+"px");
-        }
-
-        YAHOO.util.Dom.setStyle("right", "height", availableHeight+"px");
-        YAHOO.util.Dom.setStyle(CONTEXT_PANEL_ID, "height", (availableHeight-PANEL_MARGIN)+"px");
-        //YAHOO.util.Dom.setStyle("center", "height", availableHeight);
-    }
-
     var ERROR_TEMPLATE_ID = "errorTemplate";
 
     function init() {
-        initLayout();
+        FreemarkerTool.layout.init();
 
         var errorTemplate = TrimPath.parseDOMTemplate(ERROR_TEMPLATE_ID);
 
         // the error controller reports errors
-        errorController = new blueskyminds.ui.ErrorController(ERROR_ID, ERROR_EVENT, errorTemplate);
+        errorController = new blueskyminds.ui.ErrorController(FreemarkerTool.constants.ERROR_ID, ERROR_EVENT, errorTemplate);
 
         // the idle timer waits for idle input before posting changes
-        idleTimer = new IdleTimer(TICK_INTERVAL, CHANGE_TIMEOUT, idleCallback)
+        idleTimer = new IdleTimer(TICK_INTERVAL, CHANGE_TIMEOUT, idleCallback);
 
         // controllers for each of the widgets
-        openTextController = new TextInputController(OPEN_TEXT_ID, OPEN_CONTAINER_BOX_ID, inputChangedListener);
-        bodyTextController = new TextInputController(BODY_TEXT_ID, BODY_TEXT_CONTAINER_BOX_ID, inputChangedListener);
-        closingTextController = new TextInputController(CLOSE_TEXT_ID, CLOSE_CONTAINER_BOX_ID, inputChangedListener);
+        openTextController = new TextInputController(FreemarkerTool.constants.OPEN_TEXT_ID, FreemarkerTool.constants.OPEN_CONTAINER_BOX_ID, inputChangedListener);
+        bodyTextController = new TextInputController(FreemarkerTool.constants.BODY_TEXT_ID, FreemarkerTool.constants.BODY_TEXT_CONTAINER_BOX_ID, inputChangedListener);
+        closingTextController = new TextInputController(FreemarkerTool.constants.CLOSE_TEXT_ID, FreemarkerTool.constants.CLOSE_CONTAINER_BOX_ID, inputChangedListener);
 
         // setup the connection manager listeners
         blueskyminds.events.register("startedParsing", new YAHOO.util.CustomEvent("startedParsing"));
         blueskyminds.events.register("stoppedParsing", new YAHOO.util.CustomEvent("stoppedParsing"));
 
-        indicatorController = new blueskyminds.ui.ProgressIndicatorController(INDICATOR_ID, "startedParsing", "stoppedParsing");
+        indicatorController = new blueskyminds.ui.ProgressIndicatorController(FreemarkerTool.constants.INDICATOR_ID, "startedParsing", "stoppedParsing");
 
         // setup the toggle view button
-        //var toggleButton = new YAHOO.widget.Button(TOGGLE_VIEW_BTN_ID);
-        var toggleButton = new YAHOO.widget.ButtonGroup(TOGGLE_VIEW_BTN_ID);
+        //var toggleButton = new YAHOO.widget.Button(FreemarkerTool.constants.TOGGLE_VIEW_BTN_ID);
+        var toggleButton = new YAHOO.widget.ButtonGroup(FreemarkerTool.constants.TOGGLE_VIEW_BTN_ID);
 
         toggleButton.check(0);
         toggleButton.addListener("checkedButtonChange", toggleView);
-        
-        setTemplateView(true);
+
+        FreemarkerTool.layout.setTemplateView(true);
 
         initContext();
 
-        var openText = document.getElementById(OPEN_TEXT_ID);
+        var openText = document.getElementById(FreemarkerTool.constants.OPEN_TEXT_ID);
         openText.select();
         openText.focus();
     }
@@ -675,7 +591,7 @@ FreemarkerTool.ui = function() {
             errorController.dismissErrors();
         },
         setViewMode: function(template) {
-            setTemplateView(template);
+            FreemarkerTool.layout.setTemplateView(template);
         },
         setOpenTemplate: function(content) {
             openTextController.setContent(content);
@@ -702,7 +618,7 @@ FreemarkerTool.ui = function() {
         parseTemplates : function() {
             parseTemplate();
         }
-    }
+    };
 }();
 
 /** Loads an example into the application */
@@ -712,9 +628,11 @@ FreemarkerTool.ExampleLoader = function(){
     var START_LOADING_EVENT = "loadingExample";
     var STOP_LOADING_EVENT = "loadedExample";
 
-    var INDICATOR_ID = "exampleIndicator"
+    var INDICATOR_ID = "exampleIndicator";
     var EXAMPLE_ID = "examples";
     var EXAMPLE_URL = "/example.json";
+
+    var indicatorController;
 
     function showIndicator() {
         blueskyminds.events.fire(START_LOADING_EVENT);
@@ -728,7 +646,7 @@ FreemarkerTool.ExampleLoader = function(){
     var exampleCallback = {
         success: function(o) {
             hideIndicator();
-            var payload = blueskyminds.net.json.eval(o.responseText);
+            var payload = blueskyminds.net.json.evaluate(o.responseText);
             if (payload) {
                 if (payload.exception) {
                     blueskyminds.events.fire(ERROR_EVENT, payload.exception.message);
@@ -776,7 +694,7 @@ FreemarkerTool.ExampleLoader = function(){
     }
 
     function init() {
-        YAHOO.util.Event.addListener(EXAMPLE_ID, 'change', onSelection)
+        YAHOO.util.Event.addListener(EXAMPLE_ID, 'change', onSelection);
 
         // setup the connection manager listeners
         blueskyminds.events.register(START_LOADING_EVENT, new YAHOO.util.CustomEvent(START_LOADING_EVENT));
@@ -794,5 +712,105 @@ FreemarkerTool.ExampleLoader = function(){
                 el.selectedIndex = 0;
             }
         }
+    };
+}();
+
+/** Manages the dynamic layout of the page */
+FreemarkerTool.layout = function() {
+
+    var CONTEXT_PANEL_ID = "contextPanel";
+
+    var BORDER = 10;
+    var HEADER_HEIGHT = 100;
+    var CONTENT_VPADDING = BORDER*2;
+    var VOVERFLOW = 20;        /** to ensure we don't get scroll bars */
+    var FOOTER_HEIGHT = 20;
+    var PANEL_MARGIN = BORDER*2+23;
+    var SETTINGS_HEIGHT = 68;
+
+    var templateMode;
+
+    function resetHeights() {
+        var viewPortHeight = YAHOO.util.Dom.getViewportHeight();
+        //var viewPortWidth = YAHOO.util.Dom.getViewportWidth();
+        var availableHeight = viewPortHeight - HEADER_HEIGHT - FOOTER_HEIGHT - CONTENT_VPADDING - VOVERFLOW;
+
+        var openHeight;
+        var bodyTextHeight;
+        var closeHeight;
+        var outputHeight;
+
+        if (templateMode) {
+            closeHeight = 0;
+            bodyTextHeight = 0;
+            openHeight = availableHeight / 2;
+            outputHeight = availableHeight - openHeight;
+
+            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OPEN_CONTAINER_ID, "height", openHeight+"px");
+            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OUTPUT_TEXT_CONTAINER_ID, "height", outputHeight+"px");
+
+            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OPEN_TEXT_ID, "height", (openHeight-PANEL_MARGIN)+"px");
+            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OUTPUT_TEXT_ID, "height", (outputHeight-PANEL_MARGIN)+"px");
+        } else {
+            bodyTextHeight = 60;
+            closeHeight = 0;
+            openHeight = (availableHeight - bodyTextHeight) / 3;
+            closeHeight = openHeight;
+            outputHeight = availableHeight - openHeight - bodyTextHeight - closeHeight;
+
+            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OPEN_CONTAINER_ID, "height", openHeight+"px");
+            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.BODY_TEXT_CONTAINER_ID, "height", bodyTextHeight+"px");
+            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.CLOSE_CONTAINER_ID, "height", closeHeight+"px");
+            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OUTPUT_TEXT_CONTAINER_ID, "height", outputHeight+"px");
+
+            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OPEN_TEXT_ID, "height", (openHeight-PANEL_MARGIN)+"px");
+            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.CLOSE_TEXT_ID, "height", (closeHeight-PANEL_MARGIN)+"px");
+            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OUTPUT_TEXT_ID, "height", (outputHeight-PANEL_MARGIN)+"px");
+        }
+
+        YAHOO.util.Dom.setStyle("right", "height", availableHeight+"px");
+        YAHOO.util.Dom.setStyle(CONTEXT_PANEL_ID, "height", (availableHeight-PANEL_MARGIN)+"px");
+        //YAHOO.util.Dom.setStyle("center", "height", availableHeight);
     }
+
+
+    function onResizeListener(e) {
+        resetHeights();
+    }
+
+    function initLayout() {
+        resetHeights();
+
+        YAHOO.util.Event.addListener(window, 'resize', onResizeListener);
+    }
+
+    return {
+        init : function() {
+            initLayout();
+        },
+        reset : function(){
+            resetHeights();
+        },
+        /** Switches the view between template or tag mode */
+        setTemplateView: function(template) {
+            if (template) {
+                templateMode = true;
+                YAHOO.util.Dom.setStyle(FreemarkerTool.constants.BODY_TEXT_CONTAINER_ID, "display", "none");
+                YAHOO.util.Dom.setStyle(FreemarkerTool.constants.CLOSE_CONTAINER_ID, "display", "none");
+                YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OPEN_TITLE_TAG_ID, "display", "none");
+                YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OPEN_TITLE_TEMPLATE_ID, "display", "block");
+                document.getElementById(FreemarkerTool.constants.BODY_TEXT_ID).disabled = true;
+                document.getElementById(FreemarkerTool.constants.CLOSE_TEXT_ID).disabled = true;
+            } else {
+                templateMode = false;
+                document.getElementById(FreemarkerTool.constants.BODY_TEXT_ID).disabled = false;
+                document.getElementById(FreemarkerTool.constants.CLOSE_TEXT_ID).disabled = false;
+                YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OPEN_TITLE_TEMPLATE_ID, "display", "none");
+                YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OPEN_TITLE_TAG_ID, "display", "block");
+                YAHOO.util.Dom.setStyle(FreemarkerTool.constants.BODY_TEXT_CONTAINER_ID, "display", "block");
+                YAHOO.util.Dom.setStyle(FreemarkerTool.constants.CLOSE_CONTAINER_ID, "display", "block");
+            }
+            resetHeights();
+        }
+    };
 }();

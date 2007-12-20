@@ -3,7 +3,7 @@
   <!-- Copies Javascript files from houspad to freemarkertool-->
 
   <property name="js.src" value="D:\Projects\src\blueskyminds\src\housepad\housepad-web\src\main\webapp\static\js"/>
-  <property name="js.target" value="D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\webapp\static\js"/>
+  <property name="js.target" value="D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\www\static\js"/>
 
   <property name="target.dir" value="target"/>
   <property name="statics.dir" value="src/main/www"/>
