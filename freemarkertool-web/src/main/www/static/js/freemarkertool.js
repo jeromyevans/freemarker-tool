@@ -1,4 +1,4 @@
-/*global FreemarkerTool,blueskyminds,TrimPath,YAHOO*/
+/*global FreemarkerTool,blueskyminds,YAHOO*/
 blueskyminds.namespace("FreemarkerTool");
 
 FreemarkerTool.constants = {
@@ -543,7 +543,7 @@ FreemarkerTool.ui = function() {
         contextFields = [];
         contextFieldCount = 0;
 
-        contextFieldTemplate = TrimPath.parseDOMTemplate(CONTEXT_TEMPLATE_ID);
+        //contextFieldTemplate = TrimPath.parseDOMTemplate(CONTEXT_TEMPLATE_ID);
         
         // remove the hard-coded context fields
         var elements = YAHOO.util.Dom.getElementsByClassName("contextField");
@@ -557,15 +557,49 @@ FreemarkerTool.ui = function() {
         createContextField(0);
     }
 
-    var ERROR_TEMPLATE_ID = "errorTemplate";
+    /** Create a node to insert into the DOM to report an error */
+    function prepareErrorNode(message) {
+
+        var eDiv = YAHOO.util.Dom.create("div", {
+            className: "block"
+        });
+        eDiv.appendChild(YAHOO.util.Dom.create("h2", {}, [YAHOO.util.Dom.create("span",{}, "Error:")]));
+        var eBox = YAHOO.util.Dom.create("div", {className:"borderbox"});
+        var ebbt= YAHOO.util.Dom.create("div", {className:"borderboxtop"},[YAHOO.util.Dom.create("div")]);
+        eBox.appendChild(ebbt);
+
+        var eContent = YAHOO.util.Dom.create("div", {className:"borderboxcontent"});
+
+        var eBtnDiv =
+                YAHOO.util.Dom.create("div", {
+                    className: "closeBtn"
+                }, [YAHOO.util.Dom.create("a", {
+                        title: "Dismiss Errors",
+                        onclick:"FreemarkerTool.ui.dismissErrors();return false"
+                            }, [YAHOO.util.Dom.create("span", {}, "dismiss")]
+                        )]
+                );
+        eContent.appendChild(eBtnDiv);
+        eContent.appendChild(YAHOO.util.Dom.create("p", {}, message));
+
+        eBox.appendChild(eContent);
+
+        var ebbb = YAHOO.util.Dom.create("div", {className:"borderboxbot"},
+                [YAHOO.util.Dom.create("div")]);
+        eBox.appendChild(ebbb)
+
+        eDiv.appendChild(eBox);
+
+        return eDiv;
+     }
 
     function init() {
         FreemarkerTool.layout.init();
 
-        var errorTemplate = TrimPath.parseDOMTemplate(ERROR_TEMPLATE_ID);
+        //var errorTemplate = TrimPath.parseDOMTemplate(ERROR_TEMPLATE_ID);
 
         // the error controller reports errors
-        errorController = new blueskyminds.ui.ErrorController(FreemarkerTool.constants.ERROR_ID, ERROR_EVENT, errorTemplate);
+        errorController = new blueskyminds.ui.ErrorController(FreemarkerTool.constants.ERROR_ID, ERROR_EVENT, prepareErrorNode);
 
         // the idle timer waits for idle input before posting changes
         idleTimer = new IdleTimer(TICK_INTERVAL, CHANGE_TIMEOUT, idleCallback);
@@ -693,6 +727,7 @@ FreemarkerTool.ExampleLoader = function(){
             if (index) {
                 showIndicator();
                 YAHOO.util.Connect.resetFormState();
+                YAHOO.util.Connect.setForm("exampleForm");
                 YAHOO.util.Connect.asyncRequest('GET', EXAMPLE_URL+"?id="+index, exampleCallback);                                   
             }
         }

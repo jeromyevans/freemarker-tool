@@ -1,6 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="decorator" %>
 <%@ taglib prefix="housepad" uri="/housepad-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 
 <%--
 General Sitemsh page decorator
@@ -27,6 +28,7 @@ Attributes:
       <div id="adContainer"></div>            
       <div id="title"><img src="/static/images/freemarkertool.jpg" alt="FreeMarker Tool" width="175" height="35"></div>
       <div id="exampleContainer">
+        <s:form id="exampleForm" action="example.json">
         <h2><span>Examples:</span></h2>
         <select id="examples" name="example">
           <option value=""></option>
@@ -38,6 +40,7 @@ Attributes:
           <option value="6">struts2-checkbox</option>
         </select>&nbsp;<br/>
         <div class="indicatorContainer"><img id="exampleIndicator" src="/static/images/indicator.gif" style="display:none" alt="Loading..."/></div>
+        </s:form>
       </div>
     </div>
     <div id="content">

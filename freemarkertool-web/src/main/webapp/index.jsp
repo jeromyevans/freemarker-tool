@@ -83,7 +83,7 @@
   <!--<div id="myLogger"/>-->
 <!--</div>-->
 
-<script type="text/javascript" src="http://yui.yahooapis.com/2.3.1/build/utilities/utilities.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/utilities/utilities.js"></script>
 <%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/yahoo/yahoo-debug.js"></script>--%>
 <%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/event/event-debug.js"></script>--%>
 <%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/connection/connection-debug.js"></script>--%>
@@ -97,7 +97,7 @@
 <%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/dragdrop/dragdrop-min.js"></script>--%>
 
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/tools-min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/trimpath-template-1.0.38.js"></script>
+<%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/trimpath-template-1.0.38.js"></script>--%>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-core.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-dom.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-events.js"></script>
