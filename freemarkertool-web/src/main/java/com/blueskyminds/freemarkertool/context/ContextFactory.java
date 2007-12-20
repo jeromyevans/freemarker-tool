@@ -305,6 +305,9 @@ public class ContextFactory {
             child = new LinkedList();
         } else {
             child = new HashMap();
+
+            // enable the keySet method
+            ((Map) child).put("keySet", new KeySetMethod((Map) child));
         }
         return child;
     }
