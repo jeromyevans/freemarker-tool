@@ -733,14 +733,13 @@ FreemarkerTool.layout = function() {
     var SETTINGS_HEIGHT = 68;
 
     var toggleButton;
-
     var templateMode;
 
     function resetHeights() {
         var viewPortHeight = YAHOO.util.Dom.getViewportHeight();
         var availableHeight;
         if (YAHOO.tools.getBrowserEngine().msie) {
-	        availableHeight = viewPortHeight - HEADER_HEIGHT - (4*BORDER) - FOOTER_HEIGHT - CONTENT_VPADDING - VOVERFLOW;
+            availableHeight = viewPortHeight - HEADER_HEIGHT - (4*BORDER) - FOOTER_HEIGHT - CONTENT_VPADDING - VOVERFLOW;
         } else {
             availableHeight = viewPortHeight - HEADER_HEIGHT - FOOTER_HEIGHT - CONTENT_VPADDING - VOVERFLOW;
         }
@@ -778,6 +777,7 @@ FreemarkerTool.layout = function() {
             YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OUTPUT_TEXT_ID, "height", (outputHeight-PANEL_MARGIN)+"px");
         }
 
+
         var ePanel = document.getElementById("mainPanel");
         var eSettings = document.getElementById("settings");
         var rightHeight = (ePanel.offsetHeight-CONTENT_VPADDING);
@@ -793,18 +793,22 @@ FreemarkerTool.layout = function() {
             YAHOO.util.Dom.setStyle(FreemarkerTool.constants.BODY_TEXT_CONTAINER_ID, "display", "none");
             YAHOO.util.Dom.setStyle(FreemarkerTool.constants.CLOSE_CONTAINER_ID, "display", "none");
             YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OPEN_TITLE_TAG_ID, "display", "none");
+            resetHeights();
             YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OPEN_TITLE_TEMPLATE_ID, "display", "block");
             document.getElementById(FreemarkerTool.constants.BODY_TEXT_ID).disabled = true;
             document.getElementById(FreemarkerTool.constants.CLOSE_TEXT_ID).disabled = true;
         } else {
             templateMode = false;
+
             document.getElementById(FreemarkerTool.constants.BODY_TEXT_ID).disabled = false;
             document.getElementById(FreemarkerTool.constants.CLOSE_TEXT_ID).disabled = false;
             YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OPEN_TITLE_TEMPLATE_ID, "display", "none");
             YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OPEN_TITLE_TAG_ID, "display", "block");
             YAHOO.util.Dom.setStyle(FreemarkerTool.constants.BODY_TEXT_CONTAINER_ID, "display", "block");
             YAHOO.util.Dom.setStyle(FreemarkerTool.constants.CLOSE_CONTAINER_ID, "display", "block");
+            resetHeights();        // order important for IE    
         }
+
         document.getElementById(FreemarkerTool.constants.OPEN_TEXT_ID).focus();
     }
 
@@ -837,7 +841,6 @@ FreemarkerTool.layout = function() {
             } else {
                 toggleButton.check(1);
             }
-            resetHeights();
         }
     };
 }();

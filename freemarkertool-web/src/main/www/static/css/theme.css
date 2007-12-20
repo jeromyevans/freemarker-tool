@@ -240,6 +240,10 @@ select {
  border: 0px;
 }
 
+#contextPanel {
+  overflow: auto;
+}
+
 .focus {
   background-color: #ffffe8;
 }
