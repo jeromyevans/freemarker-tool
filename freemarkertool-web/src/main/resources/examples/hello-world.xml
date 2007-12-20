@@ -2,4 +2,5 @@
 <example templateView="true">
   <openTemplate>Hello ${firstName}, we hope you find this tool helpful.</openTemplate>
   <contextField enabled="true" name="firstName" value="New User" nullValue="false"/>
+  <contextField enabled="false" name="" value="" nullValue="false"/>
 </example>

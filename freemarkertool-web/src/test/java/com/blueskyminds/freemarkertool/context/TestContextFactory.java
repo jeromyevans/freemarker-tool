@@ -1,4 +1,4 @@
-package com.blueskyminds.freemarkertool.web.actions;
+package com.blueskyminds.freemarkertool.context;
 
 import junit.framework.TestCase;
 
@@ -51,5 +51,20 @@ public class TestContextFactory extends TestCase {
         Map<String, Object> test2 = (Map<String, Object>) result.get("test2");
         assertEquals("b", test2.get("one"));
         assertEquals("c", test2.get("two"));
+    }
+
+    /** Create a map with a boolean value.  */
+    public void testBoolean() {
+        context.put("test1", "a");
+        context.put("test2.one", "b");
+        context.put("test2.two", "true");
+
+        Map<String, Object> result = contextFactory.createContext(context);
+
+        assertEquals(2, result.size());
+        assertEquals("a", result.get("test1"));
+        Map<String, Object> test2 = (Map<String, Object>) result.get("test2");
+        assertEquals("b", test2.get("one"));
+        assertEquals(true, test2.get("two"));
     }
 }

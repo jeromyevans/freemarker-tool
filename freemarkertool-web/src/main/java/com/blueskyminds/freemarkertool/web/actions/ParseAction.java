@@ -26,7 +26,6 @@ public class ParseAction extends JSONActionSupport implements Preparable {
     private String bodyText;
     private String closeTemplate;
     private String version;
-    //private Map<String, String> inputContext;
     private List<TemplateContextBean> inputContext;
     private String result;
     private TemplateService templateService;
@@ -34,7 +33,6 @@ public class ParseAction extends JSONActionSupport implements Preparable {
     private Map<String, Object> templateContext;
 
     public void prepare() {
-        //inputContext = new HashMap<String, String>();
         inputContext = new LinkedList<TemplateContextBean>();
     }
 

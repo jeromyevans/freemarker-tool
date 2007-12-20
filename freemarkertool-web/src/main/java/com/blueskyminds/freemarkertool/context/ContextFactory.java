@@ -89,8 +89,34 @@ public class ContextFactory {
         }
     }
 
+    /**
+     * Automatically typecasts to boolean for true or false values
+     * @param value
+     * @return
+     */
+    private Object typecastValue(String value) {
+        Object result;
+
+        if ("true".equals(value)) {
+           result = true;
+        } else {
+            if ("false".equals(value)) {
+                result = false;
+            } else {
+                result = value;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Sets the value of a node.
+     * @param node
+     * @param key
+     * @param value
+     */
     private void setValue(Map<String, Object> node, String key, String value) {
-        node.put(key, value);
+        node.put(key, typecastValue(value));
     }
 
     /** Determine whether the specified object is a Map not not */
