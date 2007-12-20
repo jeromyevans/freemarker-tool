@@ -98,12 +98,12 @@
 
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/tools-min.js"></script>
 <%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/trimpath-template-1.0.38.js"></script>--%>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-core.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-dom.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-events.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-net.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-ui.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/freemarkertool.js"></script>
+<%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-core.js"></script>--%>
+<%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-dom.js"></script>--%>
+<%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-events.js"></script>--%>
+<%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-net.js"></script>--%>
+<%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-ui.js"></script>--%>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/freemarkertool-min.js"></script>
 
 <%--<script type="text/javascript">--%>
   <%--var myLogReader = new YAHOO.widget.LogReader("myLogger");--%>

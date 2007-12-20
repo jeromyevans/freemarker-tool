@@ -3,11 +3,14 @@
   <!-- Copies Javascript files from houspad to freemarkertool-->
 
   <property name="js.src" value="D:\Projects\src\blueskyminds\src\housepad\housepad-web\src\main\webapp\static\js"/>
-  <property name="js.target" value="D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\www\static\js"/>
+  <property name="js.target" value="D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\js"/>
 
   <property name="target.dir" value="target"/>
   <property name="statics.dir" value="src/main/www"/>
   <property name="module.name" value="freemarkertool-web"/>
+
+  <property name="js.all" value="freemarkertool-all.js"/>
+  <property name="js.production.dir" value="${statics.dir}/static/js"/>
 
   <property name="js.core" value="blueskyminds-core.js"/>
   <property name="js.dom" value="blueskyminds-dom.js"/>
@@ -41,6 +44,20 @@
     <sync file="${js.events}"/>
     <sync file="${js.net}"/>
     <sync file="${js.ui}"/>
+  </target>
+
+  <macrodef name="sync">
+    <attribute name="file"/>
+    <sequential>
+      <copy file="${js.src}/@{file}" todir="${js.target}" preservelastmodified="true" overwrite="true" verbose="true"/>
+      <makeReadOnly file="${js.target}/@{file}"/>
+    </sequential>
+  </macrodef>
+
+  <target name="concat">
+    <concat destfile="${js.production.dir}/${js.all}">
+      <fileset dir="${js.target}"/>
+    </concat>
   </target>
 
   <target name="package-statics">
