@@ -586,7 +586,7 @@ FreemarkerTool.ui = function() {
 
         var ebbb = YAHOO.util.Dom.create("div", {className:"borderboxbot"},
                 [YAHOO.util.Dom.create("div")]);
-        eBox.appendChild(ebbb)
+        eBox.appendChild(ebbb);
 
         eDiv.appendChild(eBox);
 
