@@ -136,6 +136,7 @@
   <contextField enabled="true" name="parameters.labelposition" value="left" nullValue="false"/>
   <contextField enabled="true" name="parameters.fieldValue" value="yes" nullValue="false"/>
   <contextField enabled="true" name="parameters.required" value="true" nullValue="false"/>
+  <contextField enabled="false" name="fieldErrors['myCheck'][0]" value="Field error msg" nullValue="false"/>  
   <contextField enabled="false" name="" value="" nullValue="false"/>
   <!--<contextField enabled="false" name="parameters.dynamicAttributes[" value="border: solid 1px black;" nullValue="false"/>-->
 </example>

@@ -57,7 +57,13 @@
           <select id="version" name="version">
             <option value="freemarker-2.3.8" selected="true">freemarker-2.3.8</option>
           </select>&nbsp;<br/>
-        </div>        
+        </div>
+        <div class="drop">
+        <label for="version">Context Root:</label>
+          <select id="root" name="root">
+            <option value="map" selected="true">Map</option>
+          </select>&nbsp;<br/>
+        </div>
       </housepad:div>
       <h2><span>Context:</span></h2>
       <housepad:div theme="box">
@@ -99,18 +105,16 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-ui.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/freemarkertool.js"></script>
 
-
-
 <%--<script type="text/javascript">--%>
   <%--var myLogReader = new YAHOO.widget.LogReader("myLogger");--%>
 <%--</script>--%>
-<textarea id="contextFieldTemplate" style="display:none">
-    <tiles:insertDefinition name="contextField.jst"/>
-</textarea>
+<%--<textarea id="contextFieldTemplate" style="display:none">--%>
+    <%--<tiles:insertDefinition name="contextField.jst"/>--%>
+<%--</textarea>--%>
 
-<textarea id="errorTemplate" style="display:none">
-    <tiles:insertDefinition name="errorTemplate.jst"/>
-</textarea>
+<!--<textarea id="errorTemplate" style="display:none">-->
+    <%--<tiles:insertDefinition name="errorTemplate.jst"/>--%>
+<!--</textarea>-->
 
 </body>
 </html>

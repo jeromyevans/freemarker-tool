@@ -161,6 +161,10 @@ select {
   margin-top: 0px;
 }
 
+#settings div.drop {
+  margin-bottom: 2px;
+}
+
 #settings label {
   display: block;
   float: left;

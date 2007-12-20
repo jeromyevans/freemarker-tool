@@ -584,6 +584,7 @@ FreemarkerTool.ui = function() {
         initContext();
 
         var openText = document.getElementById(FreemarkerTool.constants.OPEN_TEXT_ID);
+        openText.blur();   // need to refire the event (it's already been focused)
         openText.select();
         openText.focus();
     }
