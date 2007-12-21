@@ -23,27 +23,46 @@
     border: solid 1px #c6c6c6;
    }
 
-#header {
-  width: 100%;
+body {
+  font-family:Verdana,arial,sans-serif;
+  font-size:11px;
+}
+
+select {
+  border: solid 1px #c8c8c8;
+}
+
+a img {
+  border: none;
+}
+
+#hd {
   height: 90px;  /* 100px inc margin */
   margin:3px 5px 7px 5px;
 }
 
-#footer {
-  width: 100%;
+#ft {
   height: 20px;
-  font-family:Verdana,arial,sans-serif;
   font-size:9px;
   text-align:right;
 }
 
-#footer a img {
-   padding: 2px;
-   border: none;
+#ft a span {
+  display: none;
 }
 
-#footer a span {
-  display: none;
+/* -- structure -- */
+div#left {
+  width:10%;           /** override YUI default */
+  padding-top: 18px;
+}
+
+div#center {
+  width:90%;
+}
+
+div#right {
+  padding-top: 18px;
 }
 
 #title {
@@ -70,9 +89,7 @@
 }
 
 #exampleContainer h2 {
-  /*background: url(/static/images/labels.gif) no-repeat 0 -101px;*/
-  /*height: 17px;*/
-  padding: 0px;
+  padding: 0;
   margin: 0 0 3px 0;
   font-size: 11px;
   font-weight: normal;
@@ -84,52 +101,19 @@
   top: 0px;
 }
 
-/*#exampleContainer h2 span {*/
-  /*display: none;*/
-/*}*/
-
-select {
-  border: solid 1px #c8c8c8;
+.yui-skin-sam .yui-buttongroup {
+  margin: 0 auto;
+  width: 6em;
 }
 
-#content {
-  font-family:Verdana,arial,sans-serif;
-  font-size:11px;
-}
-
-#mainBody {
-}
-
-#left {
-  float: left;
-  width: 60px;
-  margin-top:16px;
-}
-
-#left button {
-  width: 60px;
-}
-
-#left .yui-button {
-  margin-bottom: 5px;
-}
-
-#center {
- /* margin: 0 310px 0 70px;*/
-  margin-left: 70px;
-  margin-right: 310px;
-}
-
-#right {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 300px;
+.yui-skin-sam button {
+  width: 6em;
 }
 
 .yui-skin-sam .yui-button {
   background:transparent url(../images/gradients.gif) repeat-x scroll -100px;
   border-color:#c6c6c6;
+  margin-bottom: 5px;
 }
 .yui-skin-sam .yui-button .first-child {
   border-color:#c6c6c6;
@@ -160,28 +144,6 @@ select {
 .yui-skin-sam .yui-radio-button-checked button,
 .yui-skin-sam .yui-checkbox-button-checked button {
   color:#000000;
-}
-
-#settings {
-  margin-top: 0px;
-}
-
-#settings div.drop {
-  margin-bottom: 2px;
-}
-
-#settings label {
-  display: block;
-  float: left;
-  width: 110px;
-  padding-top: 3px;
-  font-weight:bold;
-}
-
-#settings select {
-  float: left;
-  padding-left: 120px;
-
 }
 
 #openContainer h2#openTitleTemplate {
@@ -223,9 +185,33 @@ select {
   height: 17px;
 }
 
+#settings {
+}
+
+#settings div.drop {
+  margin-bottom: 2px;
+  height: 20px;
+}
+
+#settings label {
+  display: block;
+  float:left;
+  width: 40%;
+  padding-top: 3px;
+  font-size: 10px;
+  font-weight:bold;
+}
+
+#settings select {
+  width: 55%;
+  margin: 0;
+  font-size: 10px;
+}
+
 #right table,
 #right table tr,
 #right table tr td {
+  display: none;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -245,8 +231,8 @@ select {
 
 #right input {
  border: none;
- padding: 0px;
- border: 0px;
+ padding: 0;
+ border: 0;
 }
 
 #contextPanel {

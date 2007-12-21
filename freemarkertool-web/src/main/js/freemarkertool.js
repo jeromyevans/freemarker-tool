@@ -594,7 +594,7 @@ FreemarkerTool.ui = function() {
      }
 
     function init() {
-        FreemarkerTool.layout.init();
+        //FreemarkerTool.layout.init();
 
         //var errorTemplate = TrimPath.parseDOMTemplate(ERROR_TEMPLATE_ID);
 
@@ -860,11 +860,11 @@ FreemarkerTool.layout = function() {
         // setup the toggle view button
         toggleButton = new YAHOO.widget.ButtonGroup(FreemarkerTool.constants.TOGGLE_VIEW_BTN_ID);
 
-        toggleButton.addListener("checkedButtonChange", toggleView);
+        //toggleButton.addListener("checkedButtonChange", toggleView);
 
-        FreemarkerTool.layout.setTemplateView(true);
+        //FreemarkerTool.layout.setTemplateView(true);
 
-        YAHOO.util.Event.addListener(window, 'resize', onResizeListener);
+        //YAHOO.util.Event.addListener(window, 'resize', onResizeListener);
     }
 
     return {

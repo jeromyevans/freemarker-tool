@@ -24,28 +24,32 @@ Attributes:
   </head>
 
   <body>
-    <div id="header">
-      <div id="adContainer"></div>            
-      <div id="title"><img src="/static/images/freemarkertool.jpg" alt="FreeMarker Tool" width="175" height="35"></div>
-      <div id="exampleContainer">
-        <s:form id="exampleForm" action="example.json">
-        <h2><span>Examples:</span></h2>
-        <select id="examples" name="example">
-          <option value="">select...</option>
-          <option value="1">hello world</option>
-          <option value="2">sequence</option>
-          <option value="3">sequence-context</option>
-          <option value="4">hash-context</option>
-          <option value="5">struts2-div</option>
-          <option value="6">struts2-checkbox</option>
-        </select>&nbsp;<br/>
-        <div class="indicatorContainer"><img id="exampleIndicator" src="/static/images/indicator.gif" style="display:none" alt="Loading..."/></div>
-        </s:form>
+    <div id="doc3" class="yui-t6"> <%-- YUI Grids: 100% width, 300px right column --%>
+      <div id="hd"> <%-- YUI Grids: header --%>
+        <div id="adContainer"></div>
+        <div id="title"><img src="/static/images/freemarkertool.jpg" alt="FreeMarker Tool" width="175" height="35"></div>
+        <div id="exampleContainer">
+          <s:form id="exampleForm" action="example.json">
+          <h2><span>Examples:</span></h2>
+          <select id="examples" name="example">
+            <option value="">select...</option>
+            <option value="1">hello world</option>
+            <option value="2">sequence</option>
+            <option value="3">sequence-context</option>
+            <option value="4">hash-context</option>
+            <option value="5">struts2-div</option>
+            <option value="6">struts2-checkbox</option>
+          </select>&nbsp;<br/>
+          <div class="indicatorContainer"><img id="exampleIndicator" src="/static/images/indicator.gif" style="display:none" alt="Loading..."/></div>
+          </s:form>
+        </div>
+      </div>
+      <div id="bd"> <%-- YUI Grids: body --%>
+        <decorator:body/>
+      </div>
+      <div id="ft"> <%-- YUI Grids: footer --%>
+        <a href="http://www.blueskyminds.com.au/" title="Blue Sky Minds"><img src="/static/images/blueskyminds_sml.gif" alt="Blue Sky Minds Logo" width="110" height="15"/><span>Blue Sky Minds</span></a>
       </div>
     </div>
-    <div id="content">
-      <decorator:body/>
-    </div>
-    <div id="footer"><a href="http://www.blueskyminds.com.au/" title="Blue Sky Minds"><img src="/static/images/blueskyminds_sml.gif" alt="Blue Sky Minds Logo" width="110" height="15"/><span>Blue Sky Minds</span></a></div>
   </body>
 </html>

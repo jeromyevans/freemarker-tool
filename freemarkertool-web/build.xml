@@ -60,6 +60,11 @@
     </concat>
   </target>
 
+  <target name="revert">
+    <copy file="${js.src}/@{file}" todir="${js.target}" preservelastmodified="true" overwrite="true" verbose="true"/>
+      <makeReadOnly file="${js.target}/@{file}"/>
+  </target>
+
   <target name="package-statics">
     <zip destfile="${target.dir}/${module.name}-static.zip" basedir="${statics.dir}" update="true" compress="true" />
   </target>
