@@ -146,10 +146,14 @@ FreemarkerTool.ui = function() {
 
     function showIndicator() {
         blueskyminds.events.fire("startedParsing");
+        var formEl = document.getElementById(FreemarkerTool.constants.FORM_ID);
+        formEl.outputText.disabled = true;
     }
 
     function hideIndicator() {
         blueskyminds.events.fire("stoppedParsing");
+        var formEl = document.getElementById(FreemarkerTool.constants.FORM_ID);
+        formEl.outputText.disabled = false;
     }
 
     /** private callback for the asyncRequest */
@@ -771,7 +775,7 @@ FreemarkerTool.layout = function() {
     var toggleButton;
     var templateMode;
 
-    function resetHeights() {
+   /* function resetHeights() {
         var viewPortHeight = YAHOO.util.Dom.getViewportHeight();
         var availableHeight;
         if (YAHOO.tools.getBrowserEngine().msie) {
@@ -839,6 +843,33 @@ FreemarkerTool.layout = function() {
         YAHOO.util.Dom.setStyle("right", "height",  rightHeight+"px");
         YAHOO.util.Dom.setStyle(CONTEXT_PANEL_ID, "height", (contextHeight-PANEL_MARGIN)+"px");
     }
+         */
+
+    function resetHeights() {
+        if (templateMode) {
+            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.BODY_TEXT_CONTAINER_ID, "display", "none");
+            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.CLOSE_CONTAINER_ID, "display", "none");
+
+            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OPEN_TITLE_TAG_ID, "display", "none");
+            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OPEN_TITLE_TEMPLATE_ID, "display", "block");
+
+            document.getElementById(FreemarkerTool.constants.BODY_TEXT_ID).disabled = true;
+            document.getElementById(FreemarkerTool.constants.CLOSE_TEXT_ID).disabled = true;
+
+            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OPEN_TEXT_ID, "height", "30em");
+        } else {
+            document.getElementById(FreemarkerTool.constants.BODY_TEXT_ID).disabled = false;
+            document.getElementById(FreemarkerTool.constants.CLOSE_TEXT_ID).disabled = false;
+
+            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OPEN_TITLE_TEMPLATE_ID, "display", "none");
+            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OPEN_TITLE_TAG_ID, "display", "block");
+
+            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OPEN_TEXT_ID, "height", "10em");
+
+            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.BODY_TEXT_CONTAINER_ID, "display", "block");
+            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.CLOSE_CONTAINER_ID, "display", "block");
+        }
+    }
 
     /** Radio button listener to toggle between the two view modes */
     function toggleView(eventInfo) {
@@ -852,17 +883,17 @@ FreemarkerTool.layout = function() {
         document.getElementById(FreemarkerTool.constants.OPEN_TEXT_ID).focus();
     }
 
-    function onResizeListener(e) {
-        resetHeights();
-    }
+//    function onResizeListener(e) {
+//        resetHeights();
+//    }
 
     function initLayout() {
         // setup the toggle view button
         toggleButton = new YAHOO.widget.ButtonGroup(FreemarkerTool.constants.TOGGLE_VIEW_BTN_ID);
 
-        //toggleButton.addListener("checkedButtonChange", toggleView);
+        toggleButton.addListener("checkedButtonChange", toggleView);
 
-        //FreemarkerTool.layout.setTemplateView(true);
+        FreemarkerTool.layout.setTemplateView(true);
 
         //YAHOO.util.Event.addListener(window, 'resize', onResizeListener);
     }
@@ -871,9 +902,9 @@ FreemarkerTool.layout = function() {
         init : function() {
             initLayout();
         },
-        reset : function(){
-            resetHeights();
-        },
+//        reset : function(){
+//            resetHeights();
+//        },
         /** Switches the view between template or tag mode */
         setTemplateView: function(template) {
             if (template) {
@@ -884,3 +915,4 @@ FreemarkerTool.layout = function() {
         }
     };
 }();
+

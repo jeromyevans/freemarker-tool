@@ -48,7 +48,7 @@
             <h2><span>FreeMarker Result:</span></h2>
             <housepad:div theme="box" cssClass="editor readonly">
               <div id="indicatorContainer"><img id="indicator" src="/static/images/indicator.gif" style="display:none" alt="Loading..."/></div>
-              <s:textarea id="outputText" name="outputText" value="" disabled="true" cssStyle="color:#000000"/>
+              <s:textarea id="outputText" name="outputText" value="" onfocus="this.blur();"/>
             </housepad:div>
           </div>
         </div>

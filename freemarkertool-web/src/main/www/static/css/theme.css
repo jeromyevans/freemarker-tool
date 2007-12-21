@@ -81,7 +81,7 @@ div#right {
                                              
 #exampleContainer {
   position: absolute;
-  top: 60px;
+  top: 50px;
   left: 30px;
   font-family:Verdana,arial,sans-serif;
   margin-top: 0px;
@@ -245,14 +245,6 @@ div#right {
  height:20px;
 }
 
-/*#contextPanel {*/
-  /*overflow: auto;*/
-/*}*/
-
-.focus {
-  background-color: #ffffe8;
-}
-
 #contextPanel input.name {
   width: 100%;  /* not for IE */
   *width: 100px;
@@ -267,12 +259,17 @@ div#right {
   background-color: #eeeeee;
 }
 
+.focus {
+  background-color: #ffffe8;
+}
+
 .editor {
 }
 
 .editor textarea {
   width: 100%;
-  height: 15em;
+  *width: 97%;            /* space for IE scrollbars */
+  height: 10em;
   border: none;
   background-color: transparent;
   color: #000000;
@@ -283,16 +280,13 @@ div#right {
   height: 1.5em;
 }
 
-.editor input {
-  width: 100%;  /* won't work with IE */
-  border: none;
-  background-color: transparent;
-}
-
-
+/*
+#bodyTextContainerBox {
+  height: 60px;
+}   */
 #bodyText {
   /* Makes it possible to focus on the textarea in IE without hitting the scrollbars */
-  *float: left;
+  /**float: left;     */
 }
 
 
