@@ -46,10 +46,12 @@ public class ContextFactory {
             for (TemplateContextBean entry : context) {
                 if (entry.isEnabled()) {
                     expression = entry.getName();
-                    if (!entry.isNullValue()) {
-                        processExpression(expression, root, entry.getValue(), null);
-                    } else {
-                        processExpression(expression, root, null, null);
+                    if (StringUtils.isNotBlank(expression)) {
+                        if (!entry.isNullValue()) {
+                            processExpression(expression, root, entry.getValue(), null);
+                        } else {
+                            processExpression(expression, root, null, null);
+                        }
                     }
                 }
             }
