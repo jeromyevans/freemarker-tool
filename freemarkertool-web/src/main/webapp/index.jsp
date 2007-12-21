@@ -6,13 +6,16 @@
 
 <html>
 <head>
-  <title>FreeMarker Template Tools</title>
+  <title>FreeMarker Template Tools</title>   
+  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/reset-fonts-grids/reset-fonts-grids.css">
+	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/base/base-min.css">
   <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/button/assets/skins/sam/button.css">
   <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/css/theme.css">
 </head>
 <body id="body">
 <housepad:div id="mainPanel" theme="box">
   <s:form id="templateForm" action="parse.json">
+  <div id="mainBody">
     <div id="left">
       <div class="yui-skin-sam">
         <div id="toggleViewBtnGroup" class="yui-buttongroup">           
@@ -50,6 +53,7 @@
         </housepad:div>
       </div>
     </div>
+  </div>
     <div id="right" class="block">
       <housepad:div id="settings" theme="box">
         <div class="drop">

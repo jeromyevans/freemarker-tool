@@ -97,6 +97,9 @@ select {
   font-size:11px;
 }
 
+#mainBody {
+}
+
 #left {
   float: left;
   width: 60px;
@@ -104,11 +107,24 @@ select {
 }
 
 #left button {
-  width: 50px;
+  width: 60px;
 }
 
 #left .yui-button {
   margin-bottom: 5px;
+}
+
+#center {
+ /* margin: 0 310px 0 70px;*/
+  margin-left: 70px;
+  margin-right: 310px;
+}
+
+#right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 300px;
 }
 
 .yui-skin-sam .yui-button {
@@ -146,17 +162,6 @@ select {
   color:#000000;
 }
 
-#center {
- margin: 0 310px 0 70px; 
-}
-
-#right {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 300px;
-}
-
 #settings {
   margin-top: 0px;
 }
@@ -173,7 +178,7 @@ select {
   font-weight:bold;
 }
 
-#settings input {
+#settings select {
   float: left;
   padding-left: 120px;
 

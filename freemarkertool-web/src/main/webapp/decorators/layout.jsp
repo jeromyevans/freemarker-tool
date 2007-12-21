@@ -31,7 +31,7 @@ Attributes:
         <s:form id="exampleForm" action="example.json">
         <h2><span>Examples:</span></h2>
         <select id="examples" name="example">
-          <option value=""></option>
+          <option value="">select...</option>
           <option value="1">hello world</option>
           <option value="2">sequence</option>
           <option value="3">sequence-context</option>
