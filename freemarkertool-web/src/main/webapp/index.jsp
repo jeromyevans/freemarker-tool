@@ -72,14 +72,14 @@
     </housepad:div>
     <div class="block">
       <h2><span>Context:</span></h2>
-      <housepad:div theme="box">
+      <%--<housepad:div theme="box">--%>
         <div id="contextPanel">
           <table width="100%" summary="Table of values to include in the Template Context">
-            <thead><tr><th></th><th>Name</th><th>Value</th><th>Null</th></tr></thead>
+            <thead><tr><th class="check"></th><th>Name</th><th>Value</th><th class="check">Null</th></tr></thead>
             <tbody id="contextContainer"></tbody>
           </table>
         </div>
-      </housepad:div>
+      <%--</housepad:div>--%>
     </div>
   </div>
   </s:form>

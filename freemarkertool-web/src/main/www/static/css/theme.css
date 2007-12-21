@@ -208,52 +208,62 @@ div#right {
   font-size: 10px;
 }
 
-#right table,
-#right table tr,
-#right table tr td {
-  display: none;
+#contextPanel table,
+#contextPanel table tr,
+#contextPanel table tr th,
+#contextPanel table tr td {
   margin: 0;
   padding: 0;
   text-align: center;
   vertical-align: middle;
+  height:20px;
 }
 
-#right tr.disabled {
+#contextPanel tr.disabled {
   background-color: #eeeeee;
 }
 
-#right tr.enabled {
+#contextPanel tr.enabled {
 }
 
-#right td {
+#contextPanel th {
+  border: none;
+}
+
+#contextPanel th.check {
+  width: 20px;
+}
+
+#contextPanel td {
   border: 1px solid #cccccc;
 }
 
-#right input {
+#contextPanel input {
  border: none;
  padding: 0;
  border: 0;
+ height:20px;
 }
 
-#contextPanel {
-  overflow: auto;
-}
+/*#contextPanel {*/
+  /*overflow: auto;*/
+/*}*/
 
 .focus {
   background-color: #ffffe8;
 }
 
-#right input.name {
-  /*width: 100%;*/  /* not for IE */
-  width: 100px;
+#contextPanel input.name {
+  width: 100%;  /* not for IE */
+  *width: 100px;
 }
 
-#right input.value {
-  /*width: 100%;*/ /* not for IE */
-  width: 100px;
+#contextPanel input.value {
+  width: 100%; /* not for IE */
+  *width: 100px;
 }
 
-#right input.disabled {
+#contextPanel input.disabled {
   background-color: #eeeeee;
 }
 
