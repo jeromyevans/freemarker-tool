@@ -357,12 +357,12 @@ FreemarkerTool.ui = function() {
 
         function onValueFocus(e) {
             enable();
-            YAHOO.util.Dom.addClass(nameElId, "focus");
+            YAHOO.util.Dom.addClass(valueElId, "focus");
             fireFocusListener();
         }
 
         function onValueBlur(e) {
-            YAHOO.util.Dom.removeClass(nameElId, "focus");
+            YAHOO.util.Dom.removeClass(valueElId, "focus");
         }
 
         /** Listener for a change in the null checkox.  
@@ -579,6 +579,7 @@ FreemarkerTool.ui = function() {
                     className: "closeBtn"
                 }, [YAHOO.util.Dom.create("a", {
                         title: "Dismiss Errors",
+                        href: "javascript:FreemarkerTool.ui.dismissErrors();",
                         onclick:"FreemarkerTool.ui.dismissErrors();return false"
                             }, [YAHOO.util.Dom.create("span", {}, "dismiss")]
                         )]
@@ -598,7 +599,7 @@ FreemarkerTool.ui = function() {
      }
 
     function init() {
-        //FreemarkerTool.layout.init();
+        FreemarkerTool.layout.init();
 
         //var errorTemplate = TrimPath.parseDOMTemplate(ERROR_TEMPLATE_ID);
 

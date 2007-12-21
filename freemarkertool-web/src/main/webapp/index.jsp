@@ -110,7 +110,8 @@
 <%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-net.js"></script>--%>
 <%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/blueskyminds-ui.js"></script>--%>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/freemarkertool-min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/freemarkertool.js"></script>
+<%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/freemarkertool-all.js"></script>--%>
+<%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/freemarkertool.js"></script>--%>
 
 <%--<script type="text/javascript">--%>
   <%--var myLogReader = new YAHOO.widget.LogReader("myLogger");--%>

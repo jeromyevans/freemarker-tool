@@ -236,6 +236,7 @@ div#right {
 
 #contextPanel td {
   border: 1px solid #cccccc;
+  vertical-align: middle;
 }
 
 #contextPanel input {
@@ -314,25 +315,25 @@ div#right {
   position: absolute;
   right: 10px;
   top: 10px;
-  width: 19px;
-  height: 19px;
+  /*width: 19px;*/
+  /*height: 19px;*/
 }
 
 #errorContainer a {
-  background: url(../images/error_close.gif) no-repeat top left;
-  display: block;
-  width: 19px;
-  height: 19px;
+  /*background: url(../images/error_close.gif) no-repeat top left;*/
+  /*display: block;*/
+  /*width: 19px;*/
+  /*height: 19px;*/
 }
 
 #errorContainer a:hover {
-  background: url(../images/error_close_h.gif) no-repeat top left;
+  /*background: url(../images/error_close_h.gif) no-repeat top left;*/
 }
 
 #errorContainer a span{
-  display:none;
+  /*display:none;*/
 }
 
 #errorContainer p {
-  padding-right: 15px;
+  /*padding-right: 15px;*/
 }
