@@ -48,7 +48,7 @@ Attributes:
         <decorator:body/>
       </div>
       <div id="ft"> <%-- YUI Grids: footer --%>
-        <!--<a href="http://www.blueskyminds.com.au/contact.jsp" title="Blue Sky Minds"><img src="/static/images/blueskyminds_sml.gif" alt="Blue Sky Minds Logo" width="120" height="15"/><span>Blue Sky Minds</span></a>-->
+        <a href="http://www.blueskyminds.com.au/contact.jsp" title="Blue Sky Minds"><img src="/static/images/blueskyminds_sml.gif" alt="Blue Sky Minds Logo" width="120" height="15"/><span>Blue Sky Minds</span></a>
       </div>
     </div>
   </body>
