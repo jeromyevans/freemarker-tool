@@ -10,6 +10,14 @@
   <constant name="struts.ui.theme" value="simple"/>
 
   <constant name="struts.action.extension" value=",json"/>
+
+  <!-- Enable the pattern-based mapper -->
+  <bean type="com.blueskyminds.freemarkertool.web.mapper.PatternActionMapper" name="regexPatternFactory" class="com.blueskyminds.freemarkertool.web.mapper.RegExPatternMatcherFactory"/>
+  <bean type="org.apache.struts2.dispatcher.mapper.ActionMapper" name="urlMapper" class="com.blueskyminds.freemarkertool.web.mapper.PatternActionMapper"/>
+
+  <constant name="mapper.PatternMatcherFactory" value="regexPatternFactory"/>
+  <constant name="struts.mapper.class" value="urlMapper"/>
+
   <!--<constant name="struts.codebehind.defaultPackage" value="main"/>-->
   <!--<constant name="struts.rest.defaultHandlerName" value="json"/>-->
 
@@ -54,6 +62,12 @@
       <result type="json">
         <param name="wrapWithComments">true</param>
       </result>
+    </action>
+  </package>
+
+  <package name="main" extends="struts-default" namespace="/examples">
+    <action name="example" class="com.blueskyminds.freemarkertool.web.actions.examples.ExampleAction">
+      <result name="success" type="tiles">examples.index</result>
     </action>
   </package>
 

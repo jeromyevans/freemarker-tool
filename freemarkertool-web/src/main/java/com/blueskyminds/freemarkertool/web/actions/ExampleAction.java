@@ -1,12 +1,10 @@
 package com.blueskyminds.freemarkertool.web.actions;
 
 import com.blueskyminds.housepad.web.plugin.actions.JSONActionSupport;
-import com.blueskyminds.freemarkertool.examples.ExampleBean;
 import com.blueskyminds.freemarkertool.examples.ExampleLoader;
+import com.blueskyminds.freemarkertool.examples.ExampleBean;
 import com.google.inject.Inject;
 import com.googlecode.jsonplugin.annotations.JSON;
-
-import java.io.IOException;
 
 /**
  * Provides the requested example

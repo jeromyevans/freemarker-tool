@@ -20,6 +20,10 @@ Attributes:
     <meta name="Author" content="Blue Sky Minds Pty Ltd" />
     <meta name="Copyright" content="Blue Sky Minds Pty Ltd" />
     <script type="text/javascript"></script>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/reset-fonts-grids/reset-fonts-grids.css">
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/base/base-min.css">
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/button/assets/skins/sam/button.css">
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/css/theme.css">
     <decorator:head/>
   </head>
 
@@ -30,7 +34,7 @@ Attributes:
         <div id="title"><img src="/static/images/freemarkertool.jpg" alt="FreeMarker Tool" width="175" height="35"></div>
         <div id="exampleContainer">
           <s:form id="exampleForm" action="example.json">
-          <h2><span>Examples:</span></h2>
+          <h2><span><a href="${pageContext.request.contextPath}/examples/">Examples:</a></span></h2>
           <select id="examples" name="example">
             <option value="">select...</option>
             <option value="1">hello world</option>

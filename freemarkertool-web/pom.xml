@@ -159,6 +159,31 @@
     </dependency>
 
     <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate</artifactId>
+      <version>3.2.4.sp1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-entitymanager</artifactId>
+      <version>3.3.1.ga</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-commons-annotations</artifactId>
+      <version>3.3.0.ga</version>
+    </dependency>
+
+     <dependency>
+      <groupId>hsqldb</groupId>
+      <artifactId>hsqldb</artifactId>
+      <version>1.8.0.7</version>
+      <!--<scope>test</scope>-->
+    </dependency>
+       
+    <dependency>
       <groupId>com.blueskyminds.housepad</groupId>
       <artifactId>housepad-web-plugin</artifactId>
       <version>0.1-SNAPSHOT</version>
@@ -167,6 +192,12 @@
     <dependency>
       <groupId>com.blueskyminds.framework</groupId>
       <artifactId>framework-core</artifactId>
+      <version>0.01-SNAPSHOT</version>
+    </dependency>
+                
+    <dependency>
+      <groupId>com.blueskyminds.framework</groupId>
+      <artifactId>framework-guice</artifactId>
       <version>0.01-SNAPSHOT</version>
     </dependency>
 

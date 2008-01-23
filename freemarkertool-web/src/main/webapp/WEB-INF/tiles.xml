@@ -8,4 +8,8 @@
   <definition name="contextField.jsp" template="/WEB-INF/tiles/contextField.jsp"/>
   <definition name="contextField.jst" template="/WEB-INF/tiles/contextField.jst"/>
   <definition name="errorTemplate.jst" template="/WEB-INF/tiles/errorTemplate.jst"/>
+
+  <definition name="scripts" template="/WEB-INF/tiles/scripts.jsp"/>
+
+  <definition name="examples.index" template="/WEB-INF/tiles/examples/index.jsp"/>
 </tiles-definitions>

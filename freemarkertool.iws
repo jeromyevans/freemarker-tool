@@ -13,13 +13,85 @@
     <option name="synchOutside" value="false" />
     <option name="isHistoryResticted" value="true" />
     <option name="useIdenticalSwitch" value="true" />
+    <option name="synchActivitiesOnRefresh" value="true" />
     <option name="lastScr" value="" />
     <option name="scrTextFileName" value="" />
-    <option name="lastViewType" />
     <option name="historyRevisionsNumber" value="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" name="Default" comment="" />
+    <list default="true" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/mapper/configuration/SampleActionMapConfiguration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/WEB-INF/tiles.xml" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/WEB-INF/tiles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/resources/struts.xml" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/resources/struts.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/resources/freemarkertool.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper" />
+      <change type="DELETED" beforePath="D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\www\index.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/PatternMatcherFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/mapper/matcher/configuration" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/examples/model" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/mapper/TargetActionTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool.iws" afterPath="$PROJECT_DIR$/freemarkertool.iws" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/WEB-INF/tiles/scripts.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/mapper/configuration" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/namespace/NamespaceMatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/action/PlainTextActionNameMatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/configuration/digester" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/actions/mapper" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/namespace" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/startup/GuiceModule.java" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/startup/GuiceModule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/configuration/URIPattern.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool.ipr" afterPath="$PROJECT_DIR$/freemarkertool.ipr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/RegExPatternMatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/configuration/ActionMapConfiguration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/examples" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/mapper/matcher" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/resources/META-INF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/namespace/PlainTextNamespaceMatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/URIMatch.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/mapper/RegExPatternMatcherTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/action" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/mapper/TestRegEx.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/ActionMappingFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/ActionMatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/configuration/ActionSelector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/examples/model/Example.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/actions/Example1Action.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/WEB-INF/tiles/examples" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/URIPatternTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/ParsedURI.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/mapper/matcher/configuration/MockMatcherProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/configuration" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/ExampleAction.java" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/ExampleAction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/DefaultActionMatcher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/decorators/layout.jsp" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/decorators/layout.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/action/ActionNameMatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/MatchContext.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/WEB-INF/tiles/examples/index.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/PatternMatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/examples/ExamplesAction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/freemarkertool-web.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/configuration/ActionMapDefinition.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/pom.xml" afterPath="$PROJECT_DIR$/freemarkertool-web/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/DefaultURIMatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/actions/Example2Action.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/mapper" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/configuration/digester/DigesterActionMapConfiguration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-parent.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/resources/uri-mapping.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/index.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/examples/model/ExampleContext.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/actions/mapper/PatternActionMapperTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/resources/META-INF/persistence.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/MatcherConstants.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/RegExPatternMatcherFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/configuration" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/URIMatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/configuration/MatcherProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/examples/ExampleLoader.java" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/examples/ExampleLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/PatternActionMapper.java" />
+    </list>
     <ignored path="freemarkertool.iws" />
     <ignored path=".idea/workspace.xml" />
   </component>
@@ -38,46 +110,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/ParseAction.java" line="90" class="com.blueskyminds.freemarkertool.web.actions.ParseAction" package="com.blueskyminds.freemarkertool.web.actions">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="jar://d:/projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-sources.jar!/com/opensymphony/xwork2/conversion/impl/DefaultObjectTypeDeterminer.java" line="142" class="com.opensymphony.xwork2.conversion.impl.DefaultObjectTypeDeterminer" package="com.opensymphony.xwork2.conversion.impl">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/actions/TestContextFactory.java" line="30" class="com.blueskyminds.freemarkertool.web.actions.TestContextFactory" package="com.blueskyminds.freemarkertool.web.actions">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/ParseAction.java" line="46" class="com.blueskyminds.freemarkertool.web.actions.ParseAction" package="com.blueskyminds.freemarkertool.web.actions">
+      <breakpoint url="file://$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/mapper/TargetActionTest.java" line="90" class="com.blueskyminds.freemarkertool.web.mapper.TargetActionTest" package="com.blueskyminds.freemarkertool.web.mapper">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -124,7 +157,24 @@
       </breakpoint>
     </breakpoint_any>
     <breakpoint_rules />
-    <ui_properties />
+    <ui_properties>
+      <property name="line_breakpoints_groupByMethods" value="false" />
+      <property name="line_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_flattenPackages" value="true" />
+      <property name="method_breakpoints_flattenPackages" value="true" />
+      <property name="field_breakpoints_flattenPackages" value="true" />
+      <property name="exception_breakpoints_groupByMethods" value="false" />
+      <property name="line_breakpoints_groupByClasses" value="true" />
+      <property name="method_breakpoints_viewId" value="TABLE" />
+      <property name="field_breakpoints_groupByMethods" value="false" />
+      <property name="line_breakpoints_flattenPackages" value="true" />
+      <property name="field_breakpoints_groupByClasses" value="true" />
+      <property name="method_breakpoints_groupByClasses" value="true" />
+      <property name="exception_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_groupByClasses" value="true" />
+      <property name="field_breakpoints_viewId" value="TABLE" />
+      <property name="method_breakpoints_groupByMethods" value="false" />
+    </ui_properties>
   </component>
   <component name="ErrorTreeViewConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -135,52 +185,161 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ParseAction.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/ParseAction.java">
+      <file leaf-file-name="URIMatcher.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/URIMatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="33" selection-start="1353" selection-end="1353" vertical-scroll-proportion="0.32539684">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContextFactory.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/ContextFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="41" selection-start="1913" selection-end="1913" vertical-scroll-proportion="0.14484127">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestContextFactory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/actions/TestContextFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="45" selection-start="1562" selection-end="1562" vertical-scroll-proportion="1.4720616">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContextNodeType.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/ContextNodeType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="7" selection-start="180" selection-end="180" vertical-scroll-proportion="0.39306358">
+            <state line="24" column="18" selection-start="759" selection-end="759" vertical-scroll-proportion="0.71480805">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TemplateService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/services/TemplateService.java">
+      <file leaf-file-name="TestRegEx.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/mapper/TestRegEx.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="22" selection-start="470" selection-end="470" vertical-scroll-proportion="0.74206346">
+            <state line="13" column="13" selection-start="240" selection-end="240" vertical-scroll-proportion="-0.6965265">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegExPatternMatcherTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/mapper/RegExPatternMatcherTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="163" column="52" selection-start="5903" selection-end="5903" vertical-scroll-proportion="0.5206767">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="uri-mapping.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/resources/uri-mapping.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="44" selection-start="1194" selection-end="1194" vertical-scroll-proportion="0.35361215">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PatternMatcherFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/PatternMatcherFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="0" selection-start="198" selection-end="198" vertical-scroll-proportion="0.3418647">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegExPatternMatcherFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/RegExPatternMatcherFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="27" selection-start="382" selection-end="382" vertical-scroll-proportion="0.40402195">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegExPatternMatcher.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/RegExPatternMatcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="69" column="42" selection-start="2379" selection-end="2379" vertical-scroll-proportion="0.31627056">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SampleActionMapConfiguration.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/mapper/configuration/SampleActionMapConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="38" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.77696526">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PatternActionMapperTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/actions/mapper/PatternActionMapperTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="10" selection-start="2680" selection-end="2680" vertical-scroll-proportion="1.179159">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="URIPatternTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/URIPatternTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="23" selection-start="624" selection-end="624" vertical-scroll-proportion="0.30895796">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultURIMatcher.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/DefaultURIMatcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="70" column="31" selection-start="2794" selection-end="2794" vertical-scroll-proportion="0.4332724">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PatternActionMapper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/PatternActionMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="75" column="60" selection-start="3319" selection-end="3319" vertical-scroll-proportion="0.67105263">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1201006607322" expanded="true" signature="1366:1373" placeholder="{...}" />
+                <marker date="1201006607322" expanded="true" signature="1379:1678" placeholder="/**...*/" />
+                <marker date="1201006607322" expanded="true" signature="1797:2166" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TargetActionTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/mapper/TargetActionTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="68" column="69" selection-start="3580" selection-end="3580" vertical-scroll-proportion="0.464351">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultActionMatcher.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/DefaultActionMatcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="66" column="13" selection-start="2836" selection-end="2836" vertical-scroll-proportion="0.60946745">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActionMatcher.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/ActionMatcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="480" selection-end="480" vertical-scroll-proportion="0.43510056">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActionMapDefinition.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/configuration/ActionMapDefinition.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="43" selection-start="984" selection-end="984" vertical-scroll-proportion="1.0438757">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActionSelector.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/configuration/ActionSelector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="13" selection-start="215" selection-end="215" vertical-scroll-proportion="0.2797075">
               <folding />
             </state>
           </provider>
@@ -189,106 +348,7 @@
       <file leaf-file-name="FreemarkerTemplateServiceImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/services/FreemarkerTemplateServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="864" selection-end="864" vertical-scroll-proportion="0.2579365">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ParametersInterceptor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://d:/projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-sources.jar!/com/opensymphony/xwork2/interceptor/ParametersInterceptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="195" column="0" selection-start="8967" selection-end="8967" vertical-scroll-proportion="0.30753967">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="struts.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/resources/struts.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="23" selection-start="901" selection-end="901" vertical-scroll-proportion="0.18558952">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ObjectTypeDeterminer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://d:/projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-sources.jar!/com/opensymphony/xwork2/conversion/ObjectTypeDeterminer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="479" selection-end="479" vertical-scroll-proportion="0.37103173">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenericsObjectTypeDeterminer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://d:/projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-sources.jar!/com/opensymphony/xwork2/conversion/impl/GenericsObjectTypeDeterminer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="64" selection-start="598" selection-end="598" vertical-scroll-proportion="0.5734127">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultObjectTypeDeterminer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://d:/projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-sources.jar!/com/opensymphony/xwork2/conversion/impl/DefaultObjectTypeDeterminer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="0" selection-start="4450" selection-end="4450" vertical-scroll-proportion="0.29166666">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XWorkMapPropertyAccessor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://d:/projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-sources.jar!/com/opensymphony/xwork2/ognl/accessor/XWorkMapPropertyAccessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="154" column="0" selection-start="5441" selection-end="5441" vertical-scroll-proportion="1.0327553">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/webapp/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="40" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.66873705">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OgnlRuntime.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://d:/projects/src/m2/repository/opensymphony/ognl/2.6.11/ognl-2.6.11.jar!/ognl/OgnlRuntime.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="193" column="22" selection-start="14702" selection-end="14702" vertical-scroll-proportion="0.46031746">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ognl.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://d:/projects/src/m2/repository/opensymphony/ognl/2.6.11/ognl-2.6.11.jar!/ognl/Ognl.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="0" selection-start="3819" selection-end="3819" vertical-scroll-proportion="0.2579365">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OgnlUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://d:/projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-sources.jar!/com/opensymphony/xwork2/ognl/OgnlUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="196" column="0" selection-start="7350" selection-end="7350" vertical-scroll-proportion="0.23015873">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OgnlValueStack.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://d:/projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-sources.jar!/com/opensymphony/xwork2/ognl/OgnlValueStack.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="149" column="0" selection-start="5305" selection-end="5305" vertical-scroll-proportion="0.23015873">
+            <state line="17" column="13" selection-start="425" selection-end="425" vertical-scroll-proportion="0.03195489">
               <folding />
             </state>
           </provider>
@@ -297,16 +357,7 @@
       <file leaf-file-name="ObjectAccessor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://d:/projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-sources.jar!/com/opensymphony/xwork2/ognl/accessor/ObjectAccessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="969" selection-end="969" vertical-scroll-proportion="0.5895954">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ObjectArrayPool.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://d:/projects/src/m2/repository/opensymphony/ognl/2.6.11/ognl-2.6.11.jar!/ognl/ObjectArrayPool.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.60515875">
+            <state line="27" column="0" selection-start="969" selection-end="969" vertical-scroll-proportion="0.559415">
               <folding />
             </state>
           </provider>
@@ -315,7 +366,7 @@
       <file leaf-file-name="IntHashMap.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://d:/projects/src/m2/repository/opensymphony/ognl/2.6.11/ognl-2.6.11.jar!/ognl/IntHashMap.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="784" selection-end="784" vertical-scroll-proportion="0.0327553">
+            <state line="25" column="0" selection-start="831" selection-end="831" vertical-scroll-proportion="0.03107861">
               <folding />
             </state>
           </provider>
@@ -338,6 +389,13 @@
     <option name="FILTER_WARNINGS" value="false" />
     <option name="FILTER_INFO" value="true" />
     <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="myImporterPreferences">
+      <MavenImporterPreferences>
+        <option name="autoImportNew" value="false" />
+      </MavenImporterPreferences>
+    </option>
   </component>
   <component name="MavenProjectNavigator">
     <option name="filterStandardPhases" value="true" />
@@ -388,6 +446,84 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="commons-beanutils:commons-beanutils:1.7.0" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:d:\projects\src\m2\repository\commons-beanutils\commons-beanutils\1.7.0\commons-beanutils-1.7.0.jar" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="commons-beanutils:commons-beanutils:1.7.0" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:d:\projects\src\m2\repository\commons-beanutils\commons-beanutils\1.7.0\commons-beanutils-1.7.0.jar" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:d:\projects\src\m2\repository\commons-beanutils\commons-beanutils\1.7.0\commons-beanutils-1.7.0.jar!\org\apache\commons" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="commons-beanutils:commons-beanutils:1.7.0" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:d:\projects\src\m2\repository\commons-beanutils\commons-beanutils\1.7.0\commons-beanutils-1.7.0.jar" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:d:\projects\src\m2\repository\commons-beanutils\commons-beanutils\1.7.0\commons-beanutils-1.7.0.jar!\org\apache\commons" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:d:\projects\src\m2\repository\commons-beanutils\commons-beanutils\1.7.0\commons-beanutils-1.7.0.jar!\org\apache\commons\beanutils" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
@@ -415,36 +551,6 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\resources" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="freemarkertool" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="freemarkertool-web" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\resources" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\resources\templates" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -479,6 +585,128 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool\web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool\web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool\web\mapper" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool\web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool\web\mapper" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool\web\mapper\matcher\configuration" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool\web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool\web\mapper" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool\web\mapper\configuration" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -550,7 +778,91 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool\services" />
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool\web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool\web\actions" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool\web\actions\mapper" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool\web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool\web\actions" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool\web\actions\mapper" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool\web\actions\mapper\matcher" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\test\java\com\blueskyminds\freemarkertool" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -573,70 +885,6 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\webapp" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="freemarkertool" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="freemarkertool-web" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\webapp" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\webapp\WEB-INF" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="freemarkertool" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="freemarkertool-web" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\webapp" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\webapp\tiles" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -730,7 +978,11 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool\startup" />
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool\web\actions" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool\web\actions\mapper" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -764,7 +1016,15 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool\services" />
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool\web\actions" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool\web\actions\mapper" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool\web\actions\mapper\matcher" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -787,6 +1047,148 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool\web\actions" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool\web\actions\mapper" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool\web\actions\mapper\matcher" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool\web\actions\mapper\matcher\namespace" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool\web\actions" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool\web\actions\mapper" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool\web\actions\mapper\matcher" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool\web\actions\mapper\matcher\configuration" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool\web\actions" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool\web\actions\mapper" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool\web\actions\mapper\configuration" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\java\com\blueskyminds\freemarkertool" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -827,22 +1229,34 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.blueskyminds.freemarkertool.web.actions" />
+      <recent name="com.blueskyminds.freemarkertool.examples" />
+    </key>
     <key name="IntroduceConstantDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.blueskyminds.freemarkertool.web.actions.mapper.matcher.namespace" />
+      <recent name="com.blueskyminds.freemarkertool.web.actions.web.mapper" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.blueskyminds.freemarkertool.web.actions.converters" />
+      <recent name="com.blueskyminds.freemarkertool.web.actions.mapper.matcher.configuration" />
+      <recent name="com.blueskyminds.freemarkertool.web.actions.mapper.matcher" />
+      <recent name="com.blueskyminds.freemarkertool.web.actions.mapper.configuration.digest" />
+      <recent name="com.blueskyminds.freemarkertool.web.actions.mapper.configuration" />
+      <recent name="com.blueskyminds.freemarkertool.web.actions.mapper" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.FreemarkerTool">
-    <tempConfiguration default="false" name="TestContextFactory.testMap" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
-      <pattern value="com.blueskyminds.freemarkertool.web.actions.*" />
+  <component name="RunManager" selected="JUnit.RegExPatternMatcherTest.testGroup1">
+    <tempConfiguration default="false" name="RegExPatternMatcherTest.testGroup1" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
+      <pattern value="com.blueskyminds.freemarkertool.web.mapper.*" />
       <module name="freemarkertool-web" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="com.blueskyminds.freemarkertool.web.actions" />
-      <option name="MAIN_CLASS_NAME" value="com.blueskyminds.freemarkertool.web.actions.TestContextFactory" />
-      <option name="METHOD_NAME" value="testMap" />
+      <option name="PACKAGE_NAME" value="com.blueskyminds.freemarkertool.web.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.blueskyminds.freemarkertool.web.mapper.RegExPatternMatcherTest" />
+      <option name="METHOD_NAME" value="testGroup1" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PARAMETERS" value="" />
@@ -853,29 +1267,47 @@
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="wholeProject" />
       </option>
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="1613" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
+      <envs />
       <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method>
         <option name="Make" value="true" />
       </method>
     </tempConfiguration>
-    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
       <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="C:/Program Files/JetBrains/IntelliJ IDEA 6.0/bin/appletviewer.policy" />
       <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
+      <option name="WORKING_DIRECTORY" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="8080" />
+      <option name="LOCAL" value="true" />
+      <option name="OPEN_IN_BROWSER" value="true" />
+      <option name="OPEN_IN_BROWSER_URL" value="/" />
+      <option name="COMMON_VM_ARGUMENTS" value="" />
+      <JAVAEE_FACET FACET_ID="freemarkertool-web/web/Web" DEPLOYMENT_SOURCE_NAME="exploded">
+        <option name="CONTEXT_PATH" value="/" />
+        <option name="DEPLOY" value="false" />
+      </JAVAEE_FACET>
+      <option name="DEPLOY_TOMCAT_MANAGER" value="false" />
+      <option name="BASE_DIRECTORY_NAME" value="" />
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG" enabled="false" merge="false">
       <module name="" />
@@ -899,46 +1331,51 @@
         <value defaultName="wholeProject" />
       </option>
       <option name="PROPERTIES_FILE" />
+      <envs />
       <properties />
       <listeners />
       <method>
         <option name="Make" value="true" />
       </method>
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
-      <option name="WORKING_DIRECTORY" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="8080" />
-      <option name="LOCAL" value="true" />
-      <option name="OPEN_IN_BROWSER" value="true" />
-      <option name="OPEN_IN_BROWSER_URL" value="/" />
-      <option name="COMMON_VM_ARGUMENTS" value="" />
-      <JAVAEE_FACET FACET_ID="freemarkertool-web/web/Web" DEPLOYMENT_SOURCE_NAME="exploded">
-        <option name="CONTEXT_PATH" value="/" />
-        <option name="DEPLOY" value="false" />
-      </JAVAEE_FACET>
-      <option name="DEPLOY_TOMCAT_MANAGER" value="false" />
-      <option name="BASE_DIRECTORY_NAME" value="" />
-      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="C:/Program Files/JetBrains/IntelliJ IDEA 6.0/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="buildParameters">
+          <MavenBuildParameters>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomPath" value="" />
+          </MavenBuildParameters>
+        </option>
+        <option name="coreState">
+          <MavenCoreState>
+            <option name="checksumPolicy" value="fail" />
+            <option name="failureBehavior" value="fail-fast" />
+            <option name="localRepository" value="" />
+            <option name="mavenHome" value="" />
+            <option name="mavenSettingsFile" value="" />
+            <option name="nonRecursive" value="false" />
+            <option name="pluginUpdatePolicy" value="false" />
+            <option name="produceExceptionErrorMessages" value="false" />
+            <option name="usePluginRegistry" value="false" />
+            <option name="workOffline" value="false" />
+          </MavenCoreState>
+        </option>
+        <option name="builderState">
+          <MavenBuilderState>
+            <option name="jreName" value="" />
+            <option name="mavenProperties">
+              <map />
+            </option>
+            <option name="runMavenInBackground" value="false" />
+            <option name="skipTests" value="false" />
+            <option name="syncAfterBuild" value="true" />
+            <option name="useMavenEmbedder" value="false" />
+            <option name="vmOptions" value="" />
+          </MavenBuilderState>
+        </option>
+      </MavenSettings>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="" />
@@ -957,11 +1394,25 @@
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="wholeProject" />
       </option>
+      <envs />
       <method>
         <option name="Make" value="true" />
       </method>
     </configuration>
-    <configuration default="false" name="FreemarkerTool" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 5.5">
+    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="false" name="FreemarkerTool" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 5">
       <option name="WORKING_DIRECTORY" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="8080" />
@@ -969,7 +1420,7 @@
       <option name="OPEN_IN_BROWSER" value="true" />
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
       <option name="COMMON_VM_ARGUMENTS" value="" />
-      <JAVAEE_FACET FACET_ID="freemarkertool-web/web/Web" DEPLOYMENT_SOURCE_NAME="jar">
+      <JAVAEE_FACET FACET_ID="freemarkertool-web/web/Web" DEPLOYMENT_SOURCE_NAME="exploded">
         <option name="CONTEXT_PATH" value="/" />
         <option name="DEPLOY" value="true" />
       </JAVAEE_FACET>
@@ -1017,7 +1468,7 @@
       </method>
     </configuration>
     <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.TestContextFactory.testMap" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.RegExPatternMatcherTest.testGroup1" />
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.FreemarkerTool" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1048,6 +1499,7 @@
     <option name="UPDATE_RUN_STATUS" value="false" />
     <option name="UPDATE_RECURSIVELY" value="true" />
     <option name="MERGE_DRY_RUN" value="false" />
+    <configuration useDefault="true">C:\Documents and Settings\Jeromy\Application Data\Subversion</configuration>
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1070,30 +1522,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="3" y="-5" width="1524" height="1018" extended-state="0" />
-    <editor active="false" />
+    <frame x="7" y="1" width="1524" height="1019" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" order="1" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5195969" order="3" x="1741" y="41" width="1469" height="861" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11640572" order="1" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" order="1" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34675616" order="3" x="1741" y="41" width="1469" height="861" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3281075" order="8" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" order="8" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277405" order="8" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="0" />
-      <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13614704" order="3" />
+      <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.068754256" order="3" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24982981" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27229407" order="0" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6192609" order="8" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
       <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31578946" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2852349" order="2" />
+      <window_info id="Maven Build Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32922733" order="8" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="5" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
@@ -1108,7 +1561,7 @@
     <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
@@ -1159,121 +1612,122 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://d:/projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-sources.jar!/com/opensymphony/xwork2/ognl/OgnlValueStack.java">
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/URIMatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="0" selection-start="5305" selection-end="5305" vertical-scroll-proportion="0.23015873">
+        <state line="24" column="18" selection-start="759" selection-end="759" vertical-scroll-proportion="0.71480805">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://d:/projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-sources.jar!/com/opensymphony/xwork2/ognl/OgnlUtil.java">
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/configuration/ActionMapDefinition.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="196" column="0" selection-start="7350" selection-end="7350" vertical-scroll-proportion="0.23015873">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://d:/projects/src/m2/repository/opensymphony/ognl/2.6.11/ognl-2.6.11.jar!/ognl/Ognl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="0" selection-start="3819" selection-end="3819" vertical-scroll-proportion="0.2579365">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://d:/projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-sources.jar!/com/opensymphony/xwork2/interceptor/ParametersInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="195" column="0" selection-start="8967" selection-end="8967" vertical-scroll-proportion="0.30753967">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/resources/struts.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="23" selection-start="901" selection-end="901" vertical-scroll-proportion="0.18558952">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://d:/projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-sources.jar!/com/opensymphony/xwork2/conversion/ObjectTypeDeterminer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="479" selection-end="479" vertical-scroll-proportion="0.37103173">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://d:/projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-sources.jar!/com/opensymphony/xwork2/conversion/impl/GenericsObjectTypeDeterminer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="64" selection-start="598" selection-end="598" vertical-scroll-proportion="0.5734127">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://d:/projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-sources.jar!/com/opensymphony/xwork2/ognl/accessor/XWorkMapPropertyAccessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="0" selection-start="5441" selection-end="5441" vertical-scroll-proportion="1.0327553">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/services/FreemarkerTemplateServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="864" selection-end="864" vertical-scroll-proportion="0.2579365">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/ContextNodeType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="7" selection-start="180" selection-end="180" vertical-scroll-proportion="0.39306358">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/actions/TestContextFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="45" selection-start="1562" selection-end="1562" vertical-scroll-proportion="1.4720616">
+        <state line="40" column="43" selection-start="984" selection-end="984" vertical-scroll-proportion="1.0438757">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/services/TemplateService.java">
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/PatternActionMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="22" selection-start="470" selection-end="470" vertical-scroll-proportion="0.74206346">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="40" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.66873705">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://d:/projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-sources.jar!/com/opensymphony/xwork2/conversion/impl/DefaultObjectTypeDeterminer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="0" selection-start="4450" selection-end="4450" vertical-scroll-proportion="0.29166666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/ParseAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="33" selection-start="1353" selection-end="1353" vertical-scroll-proportion="0.32539684">
+        <state line="75" column="60" selection-start="3319" selection-end="3319" vertical-scroll-proportion="0.67105263">
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1201006607322" expanded="true" signature="1366:1373" placeholder="{...}" />
+            <marker date="1201006607322" expanded="true" signature="1379:1678" placeholder="/**...*/" />
+            <marker date="1201006607322" expanded="true" signature="1797:2166" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/ContextFactory.java">
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/ActionMatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="41" selection-start="1913" selection-end="1913" vertical-scroll-proportion="0.14484127">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="16" column="0" selection-start="480" selection-end="480" vertical-scroll-proportion="0.43510056">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/DefaultActionMatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="13" selection-start="2836" selection-end="2836" vertical-scroll-proportion="0.60946745">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/mapper/TargetActionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="69" selection-start="3580" selection-end="3580" vertical-scroll-proportion="0.464351">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/mapper/TestRegEx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="240" selection-end="240" vertical-scroll-proportion="-0.6965265">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/mapper/configuration/SampleActionMapConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="38" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.77696526">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/actions/mapper/PatternActionMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="10" selection-start="2680" selection-end="2680" vertical-scroll-proportion="1.179159">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/DefaultURIMatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="31" selection-start="2794" selection-end="2794" vertical-scroll-proportion="0.4332724">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/actions/mapper/matcher/URIPatternTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="23" selection-start="624" selection-end="624" vertical-scroll-proportion="0.30895796">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/PatternMatcherFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="198" selection-end="198" vertical-scroll-proportion="0.3418647">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/RegExPatternMatcherFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="27" selection-start="382" selection-end="382" vertical-scroll-proportion="0.40402195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/mapper/RegExPatternMatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="42" selection-start="2379" selection-end="2379" vertical-scroll-proportion="0.31627056">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/resources/uri-mapping.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="44" selection-start="1194" selection-end="1194" vertical-scroll-proportion="0.35361215">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/test/java/com/blueskyminds/freemarkertool/web/mapper/RegExPatternMatcherTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="163" column="52" selection-start="5903" selection-end="5903" vertical-scroll-proportion="0.5206767">
+          <folding />
         </state>
       </provider>
     </entry>

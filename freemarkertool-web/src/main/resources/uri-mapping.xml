@@ -1,0 +1,48 @@
+<action-mappings>
+  <!--
+  Map any URI ending with .action to an action matching the name (group #2) and with a package namespace matching the path (group #1).
+   The namespace is matched using plainText equivalence
+   -->
+  <action-map>
+    <uri-patterns>
+      <uri-pattern method=".*" path="(.*)/(.*)\.action$"/>
+    </uri-patterns>
+    <action-selectors>
+      <action namespace="$1" name="$2" method="execute"/>
+    </action-selectors>
+  </action-map>
+
+  <!--
+  Map any URI ending with .action to an action matching the name (group #2) and with a package namespace matching the path (group #1).
+  The namespace is matched using the NamedVariablePatternMatcher, allowing property values to be included in path.
+  -->
+  <action-map>
+    <uri-patterns>
+      <uri-pattern method=".*" path="(.*)/(.*)\.action$"/>
+    </uri-patterns>
+    <action-selectors>
+      <action namespaceMatcher="namedVariable" namespace="$1" actionMatcher="plainText" name="$2" method="execute"/>
+    </action-selectors>
+  </action-map>
+
+  <!-- Map to the index method of actions where the URL ends with a / and the HTTP method is GET -->
+  <action-map>
+    <uri-patterns>
+      <uri-pattern method="get" path="**/(.*)/$"/>
+    </uri-patterns>
+    <action-selectors>
+      <action namespaceMatcher="namedVariable" namespace="${path}" actionMatcher="plainText" name="${name}" method="index"/>
+    </action-selectors>
+  </action-map>
+
+  <!-- Map the root namespace to the special-purpose index -->
+  <action-map>
+    <uri-patterns>
+      <uri-pattern method="get" path="^/$"/>
+    </uri-patterns>
+    <action-selectors>
+      <action namespaceMatcher="plainText" namespace="/" actionMatcher="plainText" name="index" method="index"/>
+    </action-selectors>
+  </action-map>
+
+</action-mappings>

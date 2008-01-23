@@ -36,7 +36,7 @@ public class ExampleLoader {
         this.xStream = setupXStream();
     }
 
-    /** Load the ExampleBean with the specified name exactly */
+    /** Load the Example with the specified name exactly */
     public ExampleBean loadExample(String name) throws IOException {
         ExampleBean exampleBean = null;
         URI uri = ResourceLocator.locateResource(EXAMPLES_PATH + name);
@@ -47,7 +47,7 @@ public class ExampleLoader {
     }
 
     /**
-     *  Load the ExampleBean with the specified ID.
+     *  Load the Example with the specified ID.
      **/
     public ExampleBean loadExample(int index) throws IOException {
         if ((index > 0) && (index < EXAMPLES.length)) {
@@ -55,7 +55,7 @@ public class ExampleLoader {
         } else {
             return null;
         }
-    }
+    }    
 
     /** Setup xstream with the aliases and converters */
     private static XStream setupXStream() {
