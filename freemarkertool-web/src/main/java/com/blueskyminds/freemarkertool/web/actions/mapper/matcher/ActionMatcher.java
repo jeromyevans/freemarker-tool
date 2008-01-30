@@ -5,6 +5,8 @@ import com.blueskyminds.freemarkertool.web.actions.mapper.configuration.ActionSe
 import com.opensymphony.xwork2.config.Configuration;
 
 /**
+ * An ActionMatcher can match an Action within a Struts2 Configuration using the selector and context
+ *
  * Date Started: 22/01/2008
  * <p/>
  * History:
@@ -12,7 +14,7 @@ import com.opensymphony.xwork2.config.Configuration;
 public interface ActionMatcher {
 
     /**
-     * Searches for an action in the configuration that matches ActionSelector within the given context
+     * Searches for an action in the configuration that matches the ActionSelector within the given MatchContext
      */
     ActionMapping match(ActionSelector actionSelector, MatchContext matchContext, Configuration configuration);
 }

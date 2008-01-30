@@ -1,7 +1,7 @@
 package com.blueskyminds.freemarkertool.web.actions.mapper.configuration;
 
 /**
- * Defines patterns and references matchers for selecting an action
+ * Defines patterns and matchers for selecting an action
  *
  * Date Started: 21/01/2008
  * <p/>
@@ -18,6 +18,14 @@ public class ActionSelector {
     private String action;
     private String method;
 
+    /**
+     *
+     * @param namespaceMatcher   name of the namespace matcher to use
+     * @param namespace          namespace pattern
+     * @param actionMatcher      name of the action name matcher to use
+     * @param action             action name pattern
+     * @param method             action method to execute
+     */
     public ActionSelector(String namespaceMatcher, String namespace, String actionMatcher, String action, String method) {
         this.namespaceMatcher = namespaceMatcher;
         this.namespace = namespace;
@@ -29,9 +37,9 @@ public class ActionSelector {
     /**
      * Use the default namespace and action matcher
      *
-     * @param namespace
-     * @param action
-     * @param method
+     * @param namespace          namespace pattern
+     * @param action             action name pattern
+     * @param method             action method to execute
      */
     public ActionSelector(String namespace, String action, String method) {
         this.namespace = namespace;

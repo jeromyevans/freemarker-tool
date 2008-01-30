@@ -7,7 +7,6 @@ import com.blueskyminds.freemarkertool.web.actions.mapper.PatternMatcher;
 
 import java.util.List;
 import java.util.Collection;
-import java.util.Iterator;
 
 import org.apache.commons.logging.LogFactory;
 import org.apache.commons.logging.Log;
@@ -19,9 +18,9 @@ import org.apache.commons.logging.Log;
  * <p/>
  * History:
  */
-public class RegExPatternMatcherTest extends TestCase {
+public class TestRegExPatternMatcher extends TestCase {
 
-    private static final Log LOG = LogFactory.getLog(RegExPatternMatcherTest.class);
+    private static final Log LOG = LogFactory.getLog(TestRegExPatternMatcher.class);
 
     private PatternMatcherFactory factory;
 
@@ -156,17 +155,17 @@ public class RegExPatternMatcherTest extends TestCase {
 
     /** Matches any path containing .action */
     public void testGroup1() {
-        PatternMatcher matcher = factory.create("(.*)/{0,1}(.*)\\.action$", false);
+        PatternMatcher matcher = factory.create("(.*)/(.*)\\.action$", false);
         assertEquals(0, matcher.matches("").size());  // no match
         assertEquals(0, matcher.matches("/").size());  // no match
         assertEquals(0, matcher.matches("/example").size());  // no match
         assertEquals(0, matcher.matches("/example/").size());  // no match
-        assertTrue(groupsMatch(matcher.matches("example.action"), new String[] {"example.action", "", "example"}));
-        assertTrue(groupsMatch(matcher.matches(".action"), new String[] {".action", "", ""}));
-        assertTrue(groupsMatch(matcher.matches("/.action"), new String[] {"/.action", "/", ""}));
-        assertTrue(groupsMatch(matcher.matches("/example.action"), new String[] {"/example.action", "/", "example"}));
-        assertTrue(groupsMatch(matcher.matches("/example/.action"), new String[] {"/example/.action", "/example/", ""}));
-        assertTrue(groupsMatch(matcher.matches("/example/path/example.action"), new String[] {"/example/path/example.action", "/example/path/", "example"}));
-        assertTrue(groupsMatch(matcher.matches("/example/path/.action"), new String[] {"/example/path/.action", "/example/path/", ""}));
+        //assertTrue(groupsMatch(matcher.matches("example.action"), new String[] {"example.action", "", "example"}));
+        //assertTrue(groupsMatch(matcher.matches(".action"), new String[] {".action", "", ""}));
+        assertTrue(groupsMatch(matcher.matches("/.action"), new String[] {"/.action", "", ""}));
+        assertTrue(groupsMatch(matcher.matches("/example.action"), new String[] {"/example.action", "", "example"}));
+        assertTrue(groupsMatch(matcher.matches("/example/.action"), new String[] {"/example/.action", "/example", ""}));
+        assertTrue(groupsMatch(matcher.matches("/example/path/example.action"), new String[] {"/example/path/example.action", "/example/path", "example"}));
+        assertTrue(groupsMatch(matcher.matches("/example/path/.action"), new String[] {"/example/path/.action", "/example/path", ""}));
     }
 }

@@ -1,5 +1,8 @@
 package com.blueskyminds.freemarkertool.web.actions.mapper.configuration;
 
+import java.util.Map;
+import java.util.HashMap;
+
 /**
  * Defines patterns for matching a HTTP URI
  *
@@ -12,14 +15,23 @@ public class URIPattern {
     private String id;
     private String method;
     private String path;
-        
+    private Map<String, String> params;
+
+    /**
+     *
+     * @param id
+     * @param method
+     * @param path
+     */
     public URIPattern(String id, String method, String path) {
         this.id = id;
         this.method = method;
         this.path = path;
+        this.params = new HashMap<String, String>();
     }
 
     public URIPattern() {
+        this.params = new HashMap<String, String>();
     }
 
     public String getId() {
@@ -44,5 +56,17 @@ public class URIPattern {
 
     public void setMethod(String method) {
         this.method = method;
+    }
+
+    public void addParameter(String name, String value) {
+        params.put(name, value);
+    }
+
+    public Map<String, String> getParams() {
+        return params;
+    }
+
+    public void setParams(Map<String, String> params) {
+        this.params = params;
     }
 }

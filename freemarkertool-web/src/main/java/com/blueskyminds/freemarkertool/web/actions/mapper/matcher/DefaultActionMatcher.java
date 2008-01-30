@@ -14,7 +14,8 @@ import com.opensymphony.xwork2.config.entities.ActionConfig;
 import java.util.Map;
 
 /**
- * Matches an ActionSelector to an action within a Struts2 Configuration
+ * Matches an ActionSelector to an action within a Struts2 Configuration using the matchers provided by the
+ * injected MatcherProvider
  *
  * Date Started: 22/01/2008
  * <p/>
@@ -75,9 +76,13 @@ public class DefaultActionMatcher implements ActionMatcher {
         return actionMapping;
     }
 
-    /** Substitute values in the context into variables in the input pattern */
-    private String substituteVariables(String inputPattern, MatchContext matchContext) {
-        return inputPattern;
+    public String substituteVariables(String pattern, MatchContext matchContext) {
+        String result = matchContext.evaluateExpression(pattern);
+        if (result.contains("$")) {
+            // allow a level of nesting - this will evaluate expressions in the params of the URIMatch
+            result = matchContext.evaluateExpression(result);
+        }
+        return result;
     }
 
     /**
@@ -116,7 +121,7 @@ public class DefaultActionMatcher implements ActionMatcher {
                 // and match to the action config...
                 actionMapping = actionNameMatcher.match(substituted, actionName, actionConfig, actionSelector, matchContext, packageConfig);
             } else {
-                LOG.error("Unknown ActionNameMatcher specified in ActionSelector: "+ actionSelector.getNamespaceMatcher());
+                LOG.error("Unknown ActionNameMatcher specified in ActionSelector: "+ actionSelector.getActionMatcher());
             }
         } else {
             LOG.error("Null action name specified in ActionSelector: "+ actionSelector.getNamespaceMatcher());

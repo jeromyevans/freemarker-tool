@@ -28,8 +28,15 @@ public class SampleActionMapConfiguration implements ActionMapConfiguration {
         actionMapDefinitions = new LinkedList<ActionMapDefinition>();
 
         ActionMapDefinition jsonMapping = new ActionMapDefinition("default");
-        jsonMapping.addURIPattern(new URIPattern("1", ".*", "(.*)/(*.)\\.action$"));
-        jsonMapping.addActionSelector(new ActionSelector("plainText", "$1", "$2", "plainText", "execute"));
+        URIPattern pattern1 = new URIPattern("1", ".*", "^(.*)/(.*)\\.action$");
+        pattern1.addParameter("path", "$1");
+        pattern1.addParameter("name", "$2");
+        URIPattern pattern2 = new URIPattern("2", ".*", "^(.*)\\.action$");
+        pattern2.addParameter("name", "$1");
+
+        jsonMapping.addURIPattern(pattern1);
+        jsonMapping.addURIPattern(pattern2);
+        jsonMapping.addActionSelector(new ActionSelector("plainText", "${path}", "plainText", "${name}", "execute"));
         actionMapDefinitions.add(jsonMapping);
     }
 

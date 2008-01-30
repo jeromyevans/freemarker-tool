@@ -11,12 +11,14 @@ import com.blueskyminds.freemarkertool.web.actions.mapper.matcher.MatchContext;
  */
 public class PlainTextNamespaceMatcher implements NamespaceMatcher {
 
+    public static final String DEFAULT_NAME = "plainText";
+
     /** Create a namespace matcher that uses exact plain text equality */
     public PlainTextNamespaceMatcher() {
     }
 
     /**
-     * Performs an exact comparison between the input and targetnamespace
+     * Performs an exact comparison between the input and target namespace
      *
      *
      * @param input

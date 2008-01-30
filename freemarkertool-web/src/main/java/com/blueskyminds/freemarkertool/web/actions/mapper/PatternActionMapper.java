@@ -37,6 +37,13 @@ public class PatternActionMapper implements ActionMapper {
     public PatternActionMapper() {
     }
 
+
+    public PatternActionMapper(ActionMapConfiguration mappingConfiguration, URIMatcher uriMatcher, ActionMatcher actionMatcher) {
+        this.mappingConfiguration = mappingConfiguration;
+        this.uriMatcher = uriMatcher;
+        this.actionMatcher = actionMatcher;
+    }
+
     /**
      * Derives an ActionMapping for the current request using the mappingConfiguration
      *

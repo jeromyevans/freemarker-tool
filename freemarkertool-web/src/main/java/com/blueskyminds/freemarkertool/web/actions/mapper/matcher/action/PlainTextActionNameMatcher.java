@@ -8,11 +8,15 @@ import com.opensymphony.xwork2.config.entities.PackageConfig;
 import org.apache.struts2.dispatcher.mapper.ActionMapping;
 
 /**
+ * An action name matcher that uses exact plain text equality
+ *
  * Date Started: 22/01/2008
  * <p/>
  * History:
  */
 public class PlainTextActionNameMatcher implements ActionNameMatcher {
+
+    public static final String DEFAULT_NAME = "plainText";
 
     /** Create an action name matcher that uses exact plain text equality */
     public PlainTextActionNameMatcher() {

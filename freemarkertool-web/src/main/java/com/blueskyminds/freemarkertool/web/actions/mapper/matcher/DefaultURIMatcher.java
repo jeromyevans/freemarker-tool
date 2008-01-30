@@ -13,8 +13,9 @@ import java.util.HashMap;
  * Default implementation of the URIMatch.  Matches a URI to a URIPattern
  *
  * This implementation gets PatternMatchers from a PatternMatcherFactory lazily (when encountered) and
- *  caches the PatternMatcher instance in case it's referenced again.  For RegEx patterns, this means they are
- *  compiled when  encountered and cached in this URIMatcher instance.
+ *  caches the PatternMatcher instance in case it's referenced again.  For RegEx patterns, this means they're
+ *  each compiled when first encountered and cached in this URIMatcher instance.  The caching and compiling will
+ *  be inefficient if this URIMatcher is request-scoped.
  *
  * Date Started: 22/01/2008
  * <p/>
@@ -33,7 +34,9 @@ public class DefaultURIMatcher implements URIMatcher {
     public DefaultURIMatcher() {
     }
 
-    /** Createa new URIMatcher.  The pattern matcher factory implementations must be injected */
+    /** Create a new URIMatcher.
+     * @param patternMatcherFactory    factory used to create a PatternMatcher 
+     **/
     public DefaultURIMatcher(PatternMatcherFactory patternMatcherFactory) {
         this.patternMatcherFactory = patternMatcherFactory;
         this.cachedMethodMatchers = new HashMap<String, PatternMatcher>();
@@ -66,8 +69,8 @@ public class DefaultURIMatcher implements URIMatcher {
      */
     protected boolean matchesMethod(ParsedURI uri, URIPattern pattern) {
         PatternMatcher methodMatcher = prepareMethodMatcher(pattern);
-        if (methodMatcher != null) {
-            List<String> groupMatches = methodMatcher.matches(uri.getPath());
+        if (methodMatcher != null)  {
+            List<String> groupMatches = methodMatcher.matches(uri.getMethod());
             return groupMatches.size() > 0;
         } else {
             return true;
@@ -134,7 +137,7 @@ public class DefaultURIMatcher implements URIMatcher {
     private PatternMatcher prepareMethodMatcher(URIPattern uriPattern) {
         PatternMatcher patternMatcher = cachedMethodMatchers.get(uriPattern.getId());
         if (patternMatcher == null) {
-            patternMatcher = patternMatcherFactory.create(uriPattern.getPath(), false);
+            patternMatcher = patternMatcherFactory.create(uriPattern.getMethod(), false);
             cachedMethodMatchers.put(uriPattern.getId(), patternMatcher);
         }
         return patternMatcher;
@@ -149,7 +152,10 @@ public class DefaultURIMatcher implements URIMatcher {
         matchContext.put(MatcherConstants.PATH, uri.getPath());
         matchContext.put(MatcherConstants.FILE, uri.getFile());
         matchContext.put(MatcherConstants.EXTENSION, uri.getExtension());
-        matchContext.put(MatcherConstants.QUERY, uri.getQuery());        
+        matchContext.put(MatcherConstants.QUERY, uri.getQuery());
+        for (Map.Entry<String, String> entry : pattern.getParams().entrySet()) {
+            matchContext.put(entry.getKey(), entry.getValue());
+        }
         return matchContext;
     }
 
