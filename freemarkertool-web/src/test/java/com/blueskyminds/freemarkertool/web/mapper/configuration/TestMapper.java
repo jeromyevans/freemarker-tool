@@ -18,7 +18,7 @@ public class TestMapper extends TestCase {
      */
     protected void setUp() throws Exception {
         super.setUp();
-        actionMapConfiguration = new SampleActionMapConfiguration();
+        actionMapConfiguration = new SampleOrginalActionMapConfiguration();
     }
 
     public void testMapping() {

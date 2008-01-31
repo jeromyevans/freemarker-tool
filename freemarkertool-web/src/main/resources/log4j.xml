@@ -18,6 +18,14 @@
     <!-- Limit categories -->
     <!-- ================ -->
 
+  <category name="com.blueskyminds.freemarkertool.web.actions.mapper">
+    <priority value="debug"/>
+  </category>
+
+  <category name="com.blueskyminds.freemarkertool.web.actions.mapper.matcher">
+        <priority value="debug"/>
+    </category>
+  
     <category name="com.blueskyminds.housepad">
         <priority value="info"/>
     </category>

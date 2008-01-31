@@ -155,7 +155,7 @@ public class TestRegExPatternMatcher extends TestCase {
 
     /** Matches any path containing .action */
     public void testGroup1() {
-        PatternMatcher matcher = factory.create("(.*)/(.*)\\.action$", false);
+        PatternMatcher matcher = factory.create("^(.*)/(.*)\\.action$", false);
         assertEquals(0, matcher.matches("").size());  // no match
         assertEquals(0, matcher.matches("/").size());  // no match
         assertEquals(0, matcher.matches("/example").size());  // no match
@@ -164,6 +164,22 @@ public class TestRegExPatternMatcher extends TestCase {
         //assertTrue(groupsMatch(matcher.matches(".action"), new String[] {".action", "", ""}));
         assertTrue(groupsMatch(matcher.matches("/.action"), new String[] {"/.action", "", ""}));
         assertTrue(groupsMatch(matcher.matches("/example.action"), new String[] {"/example.action", "", "example"}));
+        assertTrue(groupsMatch(matcher.matches("/example/.action"), new String[] {"/example/.action", "/example", ""}));
+        assertTrue(groupsMatch(matcher.matches("/example/path/example.action"), new String[] {"/example/path/example.action", "/example/path", "example"}));
+        assertTrue(groupsMatch(matcher.matches("/example/path/.action"), new String[] {"/example/path/.action", "/example/path", ""}));
+    }
+
+    /** Matches any path containing .action */
+    public void testGroup2() {
+        PatternMatcher matcher = factory.create("^(.*)\\.action$", false);
+        assertEquals(0, matcher.matches("").size());  // no match
+        assertEquals(0, matcher.matches("/").size());  // no match
+        assertEquals(0, matcher.matches("/example").size());  // no match
+        assertEquals(0, matcher.matches("/example/").size());  // no match
+        //assertTrue(groupsMatch(matcher.matches("example.action"), new String[] {"example.action", "", "example"}));
+        //assertTrue(groupsMatch(matcher.matches(".action"), new String[] {".action", "", ""}));
+        assertTrue(groupsMatch(matcher.matches("/.action"), new String[] {"/.action", "/", ""}));
+        assertTrue(groupsMatch(matcher.matches("/example.action"), new String[] {"/example.action", "/", "example"}));
         assertTrue(groupsMatch(matcher.matches("/example/.action"), new String[] {"/example/.action", "/example", ""}));
         assertTrue(groupsMatch(matcher.matches("/example/path/example.action"), new String[] {"/example/path/example.action", "/example/path", "example"}));
         assertTrue(groupsMatch(matcher.matches("/example/path/.action"), new String[] {"/example/path/.action", "/example/path", ""}));

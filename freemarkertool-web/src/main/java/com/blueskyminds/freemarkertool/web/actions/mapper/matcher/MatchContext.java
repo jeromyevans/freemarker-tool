@@ -22,21 +22,21 @@ public class MatchContext {
 
     private static final Log LOG = LogFactory.getLog(MatchContext.class);
 
-    private Map<String, String> context;
+    private Map<String, String> params;
     private List<String> groups;
     private String namespace;
 
     public MatchContext() {
-        context = new HashMap<String, String>();
+        params = new HashMap<String, String>();
         groups = new ArrayList<String>(10);
     }
 
     public void put(String key, String value) {
-        context.put(key, value);
+        params.put(key, value);
     }
 
     public String get(String key) {
-        return context.get(key);
+        return params.get(key);
     }
 
     public void addGroup(String value) {
@@ -175,5 +175,37 @@ public class MatchContext {
 
         nextState = MatcherState.IN_TEXT;
         return nextState;
+    }
+
+    public String toString() {
+        boolean first;
+
+        StringBuilder result = new StringBuilder();
+        result.append("\n{\n");
+        result.append("  params = {\n");
+        first = true;
+        for (Map.Entry<String, String> entry : params.entrySet()) {
+            if (!first) {
+                result.append(",\n");
+            } else {
+                first = false;
+            }
+            result.append("    "+entry.getKey()+":"+entry.getValue());
+        }
+        result.append("\n  },\n");
+        result.append("  groups = [");
+
+        first = true;
+        for (String entry : groups) {
+            if (!first) {
+                result.append(",");
+            } else {
+                first = false;
+            }
+            result.append(entry);
+        }
+        result.append("]\n");
+        result.append("}\n");
+        return result.toString();
     }
 }

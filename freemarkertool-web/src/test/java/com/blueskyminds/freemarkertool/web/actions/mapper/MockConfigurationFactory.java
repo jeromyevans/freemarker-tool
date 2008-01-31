@@ -22,7 +22,17 @@ public class MockConfigurationFactory {
     public static final String PACKAGE1_NAMESPACE = "/example";
     public static final String ACTION1_NAME = "example";
     public static final String ACTION2_NAME = "example2";
-        
+
+    /**
+     * Defines the following actions:
+     *    package: /
+     *         action: example
+     *
+     *    package: /example
+     *         action: example
+     *         action: example2
+     * @return
+     */
     public static Configuration createConfiguration() {
         // setup a Struts2 configuration
         Configuration configuration = new MockConfiguration();
@@ -40,7 +50,7 @@ public class MockConfigurationFactory {
 
         // Example2Action is used only in package1
         ActionConfig example2Action = new ActionConfig();
-        example1Action.setClassName(Example2Action.class.getName());
+        example2Action.setClassName(Example2Action.class.getName());
         example1Package.addActionConfig(ACTION2_NAME, example2Action);
 
         configuration.addPackageConfig(DEFAULT_PACKAGE_NAME, defaultPackage);

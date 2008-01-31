@@ -9,6 +9,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 /**
  * Default implementation of the URIMatch.  Matches a URI to a URIPattern
  *
@@ -22,6 +25,8 @@ import java.util.HashMap;
  * History:
  */
 public class DefaultURIMatcher implements URIMatcher {
+
+    private static final Log LOG = LogFactory.getLog(DefaultURIMatcher.class);
 
     /** Cached PatternMatchers keyed by URIPattern ID */
     private Map<String, PatternMatcher> cachedMethodMatchers;
@@ -71,6 +76,11 @@ public class DefaultURIMatcher implements URIMatcher {
         PatternMatcher methodMatcher = prepareMethodMatcher(pattern);
         if (methodMatcher != null)  {
             List<String> groupMatches = methodMatcher.matches(uri.getMethod());
+            if (LOG.isDebugEnabled()) {
+                if (groupMatches.size() > 0) {
+                    LOG.debug("Matched method:"+uri.getMethod()+" to pattern "+pattern.getMethod()+" (ID:"+pattern.getId()+")");
+                }
+            }
             return groupMatches.size() > 0;
         } else {
             return true;
@@ -100,6 +110,9 @@ public class DefaultURIMatcher implements URIMatcher {
         if (pathMatcher != null) {
             List<String> groupMatches = pathMatcher.matches(uri.getPath());
             if (groupMatches.size() > 0) {
+                if (LOG.isDebugEnabled()) {
+                    LOG.debug("Matched path:"+uri.getPath()+" to pattern "+pattern.getPath()+" (ID:"+pattern.getId()+")");
+                }
                 match = prepareMatchContext(uri, pattern);
 
                 for (String groupMatch : groupMatches) {

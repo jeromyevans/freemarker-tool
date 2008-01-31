@@ -2,6 +2,8 @@ package com.blueskyminds.freemarkertool.web.actions.mapper;
 
 import org.apache.struts2.dispatcher.mapper.ActionMapper;
 import org.apache.struts2.dispatcher.mapper.ActionMapping;
+import org.apache.commons.logging.LogFactory;
+import org.apache.commons.logging.Log;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -29,6 +31,8 @@ import java.util.Iterator;
  * History:
  */
 public class PatternActionMapper implements ActionMapper {
+
+    private static final Log LOG = LogFactory.getLog(PatternActionMapper.class);
 
     private ActionMapConfiguration mappingConfiguration;
     private URIMatcher uriMatcher;
@@ -67,7 +71,9 @@ public class PatternActionMapper implements ActionMapper {
      **/
     protected ActionMapping getMapping(ParsedURI uri, Configuration configuration) {
         ActionMapping actionMapping = null;
-
+        if (LOG.isDebugEnabled()) {
+            LOG.debug("uri:"+uri.toString());
+        }
         if (mappingConfiguration != null) {
             // check the action map definitions in order
             for (ActionMapDefinition actionMapDefinition : mappingConfiguration.getActionMappings()) {
@@ -75,12 +81,26 @@ public class PatternActionMapper implements ActionMapper {
                 // check each URI pattern...
                 Iterator<URIPattern> uriPatternIterator = actionMapDefinition.getPatterns().iterator();
                 while ((actionMapping == null) && (uriPatternIterator.hasNext())) {
-                    MatchContext matchContext = uriMatcher.match(uri, uriPatternIterator.next());
+                    URIPattern uriPattern = uriPatternIterator.next();
+                    MatchContext matchContext = uriMatcher.match(uri, uriPattern);
                     if (matchContext != null) {
+                        if (LOG.isDebugEnabled()) {
+                            LOG.debug("matchContext="+matchContext.toString());
+                        }
                         // The URI matches, check each action selector...
                         Iterator<ActionSelector> selectorIterator = actionMapDefinition.getActionSelectors().iterator();
                         while ((actionMapping == null) && (selectorIterator.hasNext())) {
                             actionMapping = actionMatcher.match(selectorIterator.next(), matchContext, configuration);                            
+                        }
+
+                        if (LOG.isDebugEnabled()) {
+                            if (actionMapping == null) {
+                                LOG.debug("No matches for an action within this context");
+                            }
+                        }
+                    } else {
+                        if (LOG.isDebugEnabled()) {
+                            LOG.debug("No match for this URI to URIPattern ID"+uriPattern.getId());
                         }
                     }
                 }

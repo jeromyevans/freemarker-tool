@@ -9,18 +9,20 @@ import java.util.List;
 import java.util.LinkedList;
 
 /**
- * Sets up an ActionMapConfiguration for testing 
+ * Sets up an ActionMapConfiguration for testing.
+ * This sample sets up the original action mapping settings for Struts 2:
+ *   /path/name.action ->  namespace: /path action: name  
  *
  * <p/>
  * Date Started: 22/01/2008
  * <p/>
  * History:
  */
-public class SampleActionMapConfiguration implements ActionMapConfiguration {
+public class SampleOrginalActionMapConfiguration implements ActionMapConfiguration {
 
     private List<ActionMapDefinition> actionMapDefinitions;
 
-    public SampleActionMapConfiguration() {
+    public SampleOrginalActionMapConfiguration() {
         init();
     }
 
@@ -28,10 +30,11 @@ public class SampleActionMapConfiguration implements ActionMapConfiguration {
         actionMapDefinitions = new LinkedList<ActionMapDefinition>();
 
         ActionMapDefinition jsonMapping = new ActionMapDefinition("default");
-        URIPattern pattern1 = new URIPattern("1", ".*", "^(.*)/(.*)\\.action$");
+        URIPattern pattern1 = new URIPattern("1", ".*", "^(.+)/(.*)\\.action$");
         pattern1.addParameter("path", "$1");
         pattern1.addParameter("name", "$2");
-        URIPattern pattern2 = new URIPattern("2", ".*", "^(.*)\\.action$");
+        URIPattern pattern2 = new URIPattern("2", ".*", "^/{0,1}(.*)\\.action$");
+        pattern2.addParameter("path", "/");
         pattern2.addParameter("name", "$1");
 
         jsonMapping.addURIPattern(pattern1);

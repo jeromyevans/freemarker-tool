@@ -96,7 +96,13 @@ public class DefaultActionMatcher implements ActionMatcher {
             NamespaceMatcher namespaceMatcher = matcherProvider.getNamespaceMatcher(actionSelector.getNamespaceMatcher());
             if (namespaceMatcher != null) {
                 String substituted = substituteVariables(namespacePattern, matchContext);
-                return namespaceMatcher.match(substituted, candidateNamespace, matchContext);
+                boolean matched = namespaceMatcher.match(substituted, candidateNamespace, matchContext);
+                if (LOG.isDebugEnabled()) {
+                    if (matched) {
+                        LOG.debug("Matched namespace:"+candidateNamespace+" to pattern "+substituted+" using "+actionSelector.getNamespaceMatcher());
+                    }
+                }
+                return matched;
             } else {
                 LOG.error("Unknown NamespaceMatcher specified in ActionSelector: "+ actionSelector.getNamespaceMatcher());
                 return false;
@@ -120,6 +126,14 @@ public class DefaultActionMatcher implements ActionMatcher {
                 String substituted = substituteVariables(actionNamePattern, matchContext);
                 // and match to the action config...
                 actionMapping = actionNameMatcher.match(substituted, actionName, actionConfig, actionSelector, matchContext, packageConfig);
+
+                if (LOG.isDebugEnabled()) {
+                    if (actionMapping != null) {
+                        LOG.debug("Matched action:"+actionName+" to pattern "+substituted+" using "+actionSelector.getActionMatcher());
+                    } else {
+                        LOG.debug("No match for action:"+actionName+" against pattern "+substituted+" using "+actionSelector.getActionMatcher());
+                    }
+                }
             } else {
                 LOG.error("Unknown ActionNameMatcher specified in ActionSelector: "+ actionSelector.getActionMatcher());
             }

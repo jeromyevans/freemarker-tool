@@ -33,7 +33,7 @@ public class ParsedURI {
 
     public String getFile() {
         if (path.indexOf("/") >= 0) {
-            return path.substring(path.lastIndexOf("/"));
+            return path.substring(path.lastIndexOf("/")+1);
         } else {
             return path;
         }
@@ -45,5 +45,9 @@ public class ParsedURI {
         } else {
             return "";
         }
+    }
+
+    public String toString() {
+        return "ParsedURI[method:"+method+" path:"+path+" query:"+query+"]";
     }
 }
