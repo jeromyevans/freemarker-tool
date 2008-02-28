@@ -269,7 +269,7 @@
     <orderEntry type="module-library" exported="">
       <library name="aopalliance:aopalliance:1.0">
         <CLASSES>
-          <root url="jar://d:/projects/src/m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/" />
         </CLASSES>
         <JAVADOC>
           <root url="jar://d:/projects/src/m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0-javadoc.jar!/" />
@@ -438,13 +438,13 @@
     <orderEntry type="module-library" exported="">
       <library name="com.opensymphony:xwork:2.1.0">
         <CLASSES>
-          <root url="jar://d:/projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0.jar!/" />
         </CLASSES>
         <JAVADOC>
-          <root url="jar://d:/projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-javadoc.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-javadoc.jar!/" />
         </JAVADOC>
         <SOURCES>
-          <root url="jar://d:/projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-sources.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -685,13 +685,13 @@
     <orderEntry type="module-library" exported="">
       <library name="log4j:log4j:1.2.14">
         <CLASSES>
-          <root url="jar://d:/projects/src/m2/repository/log4j/log4j/1.2.14/log4j-1.2.14.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/log4j/log4j/1.2.14/log4j-1.2.14.jar!/" />
         </CLASSES>
         <JAVADOC>
-          <root url="jar://d:/projects/src/m2/repository/log4j/log4j/1.2.14/log4j-1.2.14-javadoc.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/log4j/log4j/1.2.14/log4j-1.2.14-javadoc.jar!/" />
         </JAVADOC>
         <SOURCES>
-          <root url="jar://d:/projects/src/m2/repository/log4j/log4j/1.2.14/log4j-1.2.14-sources.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/log4j/log4j/1.2.14/log4j-1.2.14-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -750,13 +750,13 @@
     <orderEntry type="module-library" exported="">
       <library name="org.apache.struts:struts2-core:2.1.0">
         <CLASSES>
-          <root url="jar://d:/projects/src/m2/repository/org/apache/struts/struts2-core/2.1.0/struts2-core-2.1.0.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/org/apache/struts/struts2-core/2.1.0/struts2-core-2.1.0.jar!/" />
         </CLASSES>
         <JAVADOC>
-          <root url="jar://d:/projects/src/m2/repository/org/apache/struts/struts2-core/2.1.0/struts2-core-2.1.0-javadoc.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/org/apache/struts/struts2-core/2.1.0/struts2-core-2.1.0-javadoc.jar!/" />
         </JAVADOC>
         <SOURCES>
-          <root url="jar://d:/projects/src/m2/repository/org/apache/struts/struts2-core/2.1.0/struts2-core-2.1.0-sources.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/org/apache/struts/struts2-core/2.1.0/struts2-core-2.1.0-sources.jar!/" />
           <root url="file://$resources$/struts2.1.0/core/src/main/java" />
         </SOURCES>
       </library>
@@ -829,13 +829,13 @@
     <orderEntry type="module-library" exported="">
       <library name="org.freemarker:freemarker:2.3.10">
         <CLASSES>
-          <root url="jar://d:/projects/src/m2/repository/org/freemarker/freemarker/2.3.10/freemarker-2.3.10.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/org/freemarker/freemarker/2.3.10/freemarker-2.3.10.jar!/" />
         </CLASSES>
         <JAVADOC>
-          <root url="jar://d:/projects/src/m2/repository/org/freemarker/freemarker/2.3.10/freemarker-2.3.10-javadoc.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/org/freemarker/freemarker/2.3.10/freemarker-2.3.10-javadoc.jar!/" />
         </JAVADOC>
         <SOURCES>
-          <root url="jar://d:/projects/src/m2/repository/org/freemarker/freemarker/2.3.10/freemarker-2.3.10-sources.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/org/freemarker/freemarker/2.3.10/freemarker-2.3.10-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
