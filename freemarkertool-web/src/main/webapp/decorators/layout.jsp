@@ -22,14 +22,16 @@ Attributes:
     <script type="text/javascript"></script>
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/reset-fonts-grids/reset-fonts-grids.css">
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/base/base-min.css">
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/assets/skins/sam/layout.css">
+  	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/assets/skins/sam/resize.css"> 
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/button/assets/skins/sam/button.css">
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/css/skin.css">
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/css/theme.css">
     <decorator:head/>
   </head>
 
-  <body>
-    <div id="doc3" class="yui-t6"> <%-- YUI Grids: 100% width, 300px right column --%>
-      <div id="hd"> <%-- YUI Grids: header --%>
+  <body class="yui-skin-sam">
+    <div id="hd">
         <div id="adContainer"></div>
         <div id="title"><img src="/static/images/freemarkertool.jpg" alt="FreeMarker Tool" width="175" height="35"></div>
         <div id="exampleContainer">
@@ -46,14 +48,11 @@ Attributes:
           </select>&nbsp;<br/>
           <div class="indicatorContainer"><img id="exampleIndicator" src="/static/images/indicator.gif" style="display:none" alt="Loading..."/></div>
           </s:form>
-        </div>
-      </div>
-      <div id="bd"> <%-- YUI Grids: body --%>
-        <decorator:body/>
-      </div>
-      <div id="ft"> <%-- YUI Grids: footer --%>
-        <a href="http://www.blueskyminds.com.au/contact.jsp" title="Blue Sky Minds"><img src="/static/images/blueskyminds_sml.gif" alt="Blue Sky Minds Logo" width="120" height="15"/><span>Blue Sky Minds</span></a>
-      </div>
+    </div>
+    <decorator:body/>
+    <div id="ft"> 
+      <a href="http://www.blueskyminds.com.au/contact.jsp" title="Blue Sky Minds"><img src="/static/images/blueskyminds_sml.gif" alt="Blue Sky Minds Logo" width="120" height="15"/><span>Blue Sky Minds</span></a>
+    </div>
     </div>
   </body>
 </html>

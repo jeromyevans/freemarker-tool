@@ -37,12 +37,12 @@ a img {
 }
 
 #hd {
-  height: 90px;  /* 100px inc margin */
-  margin:3px 5px 7px 5px;
+  /*height: 90px;  *//* 100px inc margin */
+  /*margin:3px 5px 7px 5px;*/
 }
 
 #ft {
-  height: 20px;
+  /*height: 20px;*/
   font-size:9px;
   text-align:right;
 }
@@ -52,16 +52,23 @@ a img {
 }
 
 /* -- structure -- */
-div#left {
-  width:10%;           /** override YUI default */
+div#lt {
   padding-top: 18px;
 }
 
-div#center {
-  width:90%;
+
+#lt h2 {
+  color: #666;
+  font-size: 11px;
+  font-weight: normal;
+  text-align: center;
 }
 
-div#right {
+div#center {
+  /*width:90%;*/
+}
+
+div#rt {
   padding-top: 18px;
 }
 
@@ -101,50 +108,7 @@ div#right {
   top: 0px;
 }
 
-.yui-skin-sam .yui-buttongroup {
-  margin: 0 auto;
-  width: 6em;
-}
 
-.yui-skin-sam button {
-  width: 6em;
-}
-
-.yui-skin-sam .yui-button {
-  background:transparent url(../images/gradients.gif) repeat-x scroll -100px;
-  border-color:#c6c6c6;
-  margin-bottom: 5px;
-}
-.yui-skin-sam .yui-button .first-child {
-  border-color:#c6c6c6;
-}
-
-.yui-skin-sam .yui-button-hover {
-  background-position:0pt 0px;
-  border-color:#c6c6c6;
-}
-
-.yui-skin-sam .yui-button-focus {
-  background-position:0pt -200px;
-}
-
-.yui-skin-sam .yui-button-active {
-  background-position:0pt -200px;
-}
-
-.yui-skin-sam .yui-radio-button-checked, .yui-skin-sam .yui-checkbox-button-checked {
-  background-position:0pt -200px;
-  border-color:#c6c6c6;
-}
-
-.yui-skin-sam .yui-radio-button-checked .first-child, .yui-skin-sam .yui-checkbox-button-checked .first-child {
-  border-color:#c6c6c6;
-}
-
-.yui-skin-sam .yui-radio-button-checked button,
-.yui-skin-sam .yui-checkbox-button-checked button {
-  color:#000000;
-}
 
 #openContainer h2#openTitleTemplate {
   background: url(/static/images/labels.gif) no-repeat 0 0;
@@ -170,7 +134,7 @@ div#right {
   background: url(/static/images/labels.gif) no-repeat 0 -84px;
 }
 
-#right h2 {
+#rt h2 {
   background: url(/static/images/labels.gif) no-repeat 0 -118px;
 }
 

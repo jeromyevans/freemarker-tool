@@ -13,7 +13,7 @@
 
   <!-- Instruct struts2 to use the URLPatternActionMapper as the ActionMapper -->
   <constant name="struts.mapper.class" value="urlPatternMapper"/>
-  <constant name="struts.urlplugin.configFile" value="struts-defaultIndex-urls.xml"/>
+  <constant name="struts.urlplugin.configFile" value="freemarkertool-urls.xml"/>
 
   <!-- This package sets up default results of ajax JSON-only responses -->
   <package name="ajaxJSONResponses" extends="struts-default">

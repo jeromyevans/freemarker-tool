@@ -9,54 +9,67 @@
   <title>FreeMarker Template Tools</title>
 </head>
 <body id="body">
-  <s:form id="templateForm" action="parse.json">
-  <div id="yui-main"> <%-- YUI Grids: main body--%>
-    <div class="yui-b"> <%-- YUI Grids: block --%>
-      <div class="yui-gf"> <%-- YUI Grids: grid  1/4 - 3/4 --%>
-        <div id="left" class="yui-u first yui-skin-sam"> <%-- YUI Grids: first unit (1/4) (override to 10%) --%>
-          <div id="toggleViewBtnGroup" class="yui-buttongroup">
-            <input type="radio" id="toggleViewPageBtn" value="Page"/><br/>
-            <input type="radio" id="toggleViewTagBtn" value="Tag"/>
-          </div>
-        </div>
-        <div id="center" class="yui-u"> <%-- YUI Grids: second unit (3/4) (override to 90%) --%>
-          <div id="openContainer" class="block">
-            <h2 id="openTitleTemplate"><span>Page Template:</span></h2><h2 id="openTitleTag" style="display:none"><span>Open Template:</span></h2>
-            <housepad:div id="openContainerBox" theme="box" cssClass="editor">
-              <s:textarea id="open" name="openTemplate" value="Type or paste your FreeMarker template here" wrap="off"/>
-            </housepad:div>
-          </div>
-          <div id="bodyTextContainer" class="block">
-            <h2><span>Body Text:</span></h2>
-            <housepad:div id="bodyTextContainerBox" theme="box" cssClass="editor small">
-              <s:textarea id="bodyText" name="bodyText" value="" rows="1" wrap="off" onclick="this.focus();"/>
-            </housepad:div>
-          </div>
-          <div id="closeContainer" class="block">
-            <h2><span>Close Template:</span></h2>
-            <housepad:div id="closeContainerBox" theme="box" cssClass="editor">
-              <s:textarea id="close" name="closeTemplate" value="" wrap="off"/>
-            </housepad:div>
-          </div>
-          <%--<s:submit name="Submit"/>     --%>
-          <div id="errorContainer"></div>
-          <div id="outputTextContainer" class="block">
-            <h2><span>FreeMarker Result:</span></h2>
-            <housepad:div theme="box" cssClass="editor readonly">
-              <div id="indicatorContainer"><img id="indicator" src="/static/images/indicator.gif" style="display:none" alt="Loading..."/></div>
-              <s:textarea id="outputText" name="outputText" value="" onfocus="this.blur();"/>
-            </housepad:div>
-          </div>
-        </div>
+
+  <div id="lt">
+    <div class="yui-buttongroup">
+      <input type="button" id="newBtn" value="New"/>
+    </div>
+    <div class="yui-buttongroup">
+      <h2>Layout:</h2>
+      <div id="toggleViewBtnGroup">
+        <input type="radio" id="toggleViewPageBtn" value="Page"/><br/>
+        <input type="radio" id="toggleViewTagBtn" value="Tag"/>
       </div>
     </div>
   </div>
-  <div id="right" class="yui-b"> <%-- YUI Grids: block (not main): 300px via doc3 page--%>
+
+  <s:form id="templateForm" action="parse.json">
+    <s:hidden name="openTemplate"/>
+    <s:hidden name="bodyText"/>
+    <s:hidden name="closeTemplate"/>
+  </s:form>
+
+  <div id="bd">
+    <div id="bdinput">
+      <div id="openContainer" class="block">
+        <h2 id="openTitleTemplate"><span>Page Template:</span></h2><h2 id="openTitleTag" style="display:none"><span>Open Template:</span></h2>
+        <housepad:div id="openContainerBox" theme="box" cssClass="editor">
+          <s:textarea id="open" name="openTemplateInput" value="Type or paste your FreeMarker template here" wrap="off"/>
+        </housepad:div>
+      </div>
+      <div id="bodyTextContainer" class="block">
+        <h2><span>Body Text:</span></h2>
+        <housepad:div id="bodyTextContainerBox" theme="box" cssClass="editor small">
+          <s:textarea id="bodyText" name="bodyTextInput" value="" rows="1" wrap="off" onclick="this.focus();"/>
+        </housepad:div>
+      </div>
+      <div id="closeContainer" class="block">
+        <h2><span>Close Template:</span></h2>
+        <housepad:div id="closeContainerBox" theme="box" cssClass="editor">
+          <s:textarea id="close" name="closeTemplateInput" value="" wrap="off"/>
+        </housepad:div>
+      </div>
+    </div>
+          <%--<s:submit name="Submit"/>     --%>
+    <div id="bdoutput">
+      <div id="errorContainer"></div>
+      <div id="outputTextContainer" class="block">
+            <h2><span>FreeMarker Result:</span></h2>
+            <housepad:div theme="box" cssClass="editor readonly">
+              <div id="indicatorContainer"><img id="indicator" src="/static/images/indicator.gif" style="display:none" alt="Loading..."/></div>
+              <%--<s:textarea id="outputText" name="outputText" value="" onfocus="this.blur();"/>--%>
+              <div id="outputText"></div>
+            </housepad:div>
+      </div>
+    </div>
+  </div>
+
+  <div id="rt">
     <housepad:div id="settings" theme="box">
       <div class="drop">
         <label for="version">Version:</label>
         <select id="version" name="version">
-          <option value="freemarker-2.3.8" selected="true">freemarker-2.3.8</option>
+          <option value="freemarker-2.3.11" selected="true">freemarker-2.3.11</option>
         </select>
       </div>
       <div class="drop">
@@ -78,7 +91,6 @@
       <%--</housepad:div>--%>
     </div>
   </div>
-  </s:form>
 
   <tiles:insertDefinition name="scripts"/>
 
