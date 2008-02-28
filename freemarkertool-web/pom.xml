@@ -52,13 +52,13 @@
     <dependency>
       <groupId>org.apache.struts</groupId>
       <artifactId>struts2-core</artifactId>
-      <version>2.1.0</version>
+      <version>2.1.1-SNAPSHOT</version>
     </dependency>
 
     <dependency>
       <groupId>org.apache.struts</groupId>
-      <artifactId>struts2-codebehind-plugin</artifactId>
-      <version>2.1.0</version>
+      <artifactId>struts2-sitemesh-plugin</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
     </dependency>
 
     <dependency>
@@ -88,7 +88,7 @@
     <dependency>
       <groupId>org.apache.struts</groupId>
       <artifactId>struts2-tiles-plugin</artifactId>
-      <version>2.1.0</version>
+      <version>2.1.1-SNAPSHOT</version>
     </dependency>
 
     <!--Required by struts2-tiles-plugin -->
@@ -102,12 +102,6 @@
       <groupId>opensymphony</groupId>
       <artifactId>sitemesh</artifactId>
       <version>2.3</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.struts</groupId>
-      <artifactId>struts2-sitemesh-plugin</artifactId>
-      <version>2.0.9</version>
     </dependency>
 
     <dependency>
@@ -193,6 +187,12 @@
       <groupId>com.blueskyminds.framework</groupId>
       <artifactId>framework-guice</artifactId>
       <version>0.01-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.blueskyminds.struts2</groupId>
+      <artifactId>struts2-url-plugin</artifactId>
+      <version>0.1-SNAPSHOT</version>
     </dependency>
 
   </dependencies>

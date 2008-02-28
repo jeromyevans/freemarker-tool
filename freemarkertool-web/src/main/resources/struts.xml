@@ -11,15 +11,9 @@
 
   <constant name="struts.action.extension" value=",json"/>
 
-  <!-- Enable the pattern-based mapper -->
-  <bean type="com.blueskyminds.freemarkertool.web.mapper.PatternActionMapper" name="regexPatternFactory" class="com.blueskyminds.freemarkertool.web.mapper.RegExPatternMatcherFactory"/>
-  <bean type="org.apache.struts2.dispatcher.mapper.ActionMapper" name="urlMapper" class="com.blueskyminds.freemarkertool.web.mapper.PatternActionMapper"/>
-
-  <constant name="mapper.PatternMatcherFactory" value="regexPatternFactory"/>
-  <constant name="struts.mapper.class" value="urlMapper"/>
-
-  <!--<constant name="struts.codebehind.defaultPackage" value="main"/>-->
-  <!--<constant name="struts.rest.defaultHandlerName" value="json"/>-->
+  <!-- Instruct struts2 to use the URLPatternActionMapper as the ActionMapper -->
+  <constant name="struts.mapper.class" value="urlPatternMapper"/>
+  <constant name="struts.urlplugin.configFile" value="struts-defaultIndex-urls.xml"/>
 
   <!-- This package sets up default results of ajax JSON-only responses -->
   <package name="ajaxJSONResponses" extends="struts-default">
@@ -65,8 +59,13 @@
     </action>
   </package>
 
-  <package name="main" extends="struts-default" namespace="/examples">
-    <action name="example" class="com.blueskyminds.freemarkertool.web.actions.examples.ExampleAction">
+  <package name="examples" extends="struts-default" namespace="/examples">
+
+    <result-types>
+      <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+    </result-types>
+
+    <action name="index" class="com.blueskyminds.freemarkertool.web.actions.examples.IndexAction">
       <result name="success" type="tiles">examples.index</result>
     </action>
   </package>

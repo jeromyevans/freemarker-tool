@@ -15,7 +15,7 @@ import java.util.LinkedList;
  * <p/>
  * History:
  */
-public class ExamplesAction extends ActionSupport {
+public class IndexAction extends ActionSupport {
 
     private ExampleLoader exampleLoader;
     private List<ExampleBean> examples;
@@ -24,7 +24,7 @@ public class ExamplesAction extends ActionSupport {
     public String execute() throws Exception {
         //exampleLoader.listExamples();
         examples = new LinkedList<ExampleBean>();
-        return super.execute();
+        return SUCCESS;
     }
 
     @Inject

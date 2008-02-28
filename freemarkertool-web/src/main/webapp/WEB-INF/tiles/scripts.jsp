@@ -6,7 +6,7 @@
 <%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/dom/dom-debug.js"></script>--%>
 <%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/logger/logger-min.js"></script>--%>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/element/element-beta-min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/button/button-beta-min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/button/button-min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/datasource/datasource-beta-min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/datatable/datatable-beta-min.js"></script>
 <%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/tabview/tabview-min.js"></script>--%>

@@ -68,6 +68,10 @@
             <attribute name="method" value="1" />
             <attribute name="URI" value="/WEB-INF/lib/housepad-web-plugin-0.1-SNAPSHOT.jar" />
           </containerElement>
+          <containerElement type="library" name="com.blueskyminds.struts2:struts2-url-plugin:0.1-SNAPSHOT" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/struts2-url-plugin-0.1-SNAPSHOT.jar" />
+          </containerElement>
           <containerElement type="library" name="com.google.inject.servlet:guice-servlet:1.0.1-SNAPSHOT" level="module">
             <attribute name="method" value="1" />
             <attribute name="URI" value="/WEB-INF/lib/guice-servlet-1.0.1-SNAPSHOT.jar" />
@@ -88,9 +92,9 @@
             <attribute name="method" value="1" />
             <attribute name="URI" value="/WEB-INF/lib/struts2yuiplugin-0.1-ALPHA-6-SNAPSHOT.jar" />
           </containerElement>
-          <containerElement type="library" name="com.opensymphony:xwork:2.1.0" level="module">
+          <containerElement type="library" name="com.opensymphony:xwork:2.1.1-SNAPSHOT" level="module">
             <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/xwork-2.1.0.jar" />
+            <attribute name="URI" value="/WEB-INF/lib/xwork-2.1.1-SNAPSHOT.jar" />
           </containerElement>
           <containerElement type="library" name="com.sun:tools:1.5.0" level="module">
             <attribute name="method" value="0" />
@@ -180,21 +184,17 @@
             <attribute name="method" value="1" />
             <attribute name="URI" value="/WEB-INF/lib/sitemesh-2.3.jar" />
           </containerElement>
-          <containerElement type="library" name="org.apache.struts:struts2-codebehind-plugin:2.1.0" level="module">
+          <containerElement type="library" name="org.apache.struts:struts2-core:2.1.1-SNAPSHOT" level="module">
             <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/struts2-codebehind-plugin-2.1.0.jar" />
+            <attribute name="URI" value="/WEB-INF/lib/struts2-core-2.1.1-SNAPSHOT.jar" />
           </containerElement>
-          <containerElement type="library" name="org.apache.struts:struts2-core:2.1.0" level="module">
+          <containerElement type="library" name="org.apache.struts:struts2-sitemesh-plugin:2.1.1-SNAPSHOT" level="module">
             <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/struts2-core-2.1.0.jar" />
+            <attribute name="URI" value="/WEB-INF/lib/struts2-sitemesh-plugin-2.1.1-SNAPSHOT.jar" />
           </containerElement>
-          <containerElement type="library" name="org.apache.struts:struts2-sitemesh-plugin:2.0.9" level="module">
+          <containerElement type="library" name="org.apache.struts:struts2-tiles-plugin:2.1.1-SNAPSHOT" level="module">
             <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/struts2-sitemesh-plugin-2.0.9.jar" />
-          </containerElement>
-          <containerElement type="library" name="org.apache.struts:struts2-tiles-plugin:2.1.0" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/struts2-tiles-plugin-2.1.0.jar" />
+            <attribute name="URI" value="/WEB-INF/lib/struts2-tiles-plugin-2.1.1-SNAPSHOT.jar" />
           </containerElement>
           <containerElement type="library" name="org.apache.tiles:tiles-api:2.0.5" level="module">
             <attribute name="method" value="1" />
@@ -208,9 +208,9 @@
             <attribute name="method" value="1" />
             <attribute name="URI" value="/WEB-INF/lib/tiles-jsp-2.0.5.jar" />
           </containerElement>
-          <containerElement type="library" name="org.freemarker:freemarker:2.3.10" level="module">
+          <containerElement type="library" name="org.freemarker:freemarker:2.3.11" level="module">
             <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/freemarker-2.3.10.jar" />
+            <attribute name="URI" value="/WEB-INF/lib/freemarker-2.3.11.jar" />
           </containerElement>
           <containerElement type="library" name="org.hibernate:hibernate-annotations:3.3.0.ga" level="module">
             <attribute name="method" value="1" />
@@ -249,7 +249,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -371,6 +370,19 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library" exported="">
+      <library name="com.blueskyminds.struts2:struts2-url-plugin:0.1-SNAPSHOT">
+        <CLASSES>
+          <root url="jar://D:/Projects/src/m2/repository/com/blueskyminds/struts2/struts2-url-plugin/0.1-SNAPSHOT/struts2-url-plugin-0.1-SNAPSHOT.jar!/" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="jar://D:/Projects/src/m2/repository/com/blueskyminds/struts2/struts2-url-plugin/0.1-SNAPSHOT/struts2-url-plugin-0.1-SNAPSHOT-javadoc.jar!/" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="jar://D:/Projects/src/m2/repository/com/blueskyminds/struts2/struts2-url-plugin/0.1-SNAPSHOT/struts2-url-plugin-0.1-SNAPSHOT-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
       <library name="com.google.inject.servlet:guice-servlet:1.0.1-SNAPSHOT">
         <CLASSES>
           <root url="jar://d:/projects/src/m2/repository/com/google/inject/servlet/guice-servlet/1.0.1-SNAPSHOT/guice-servlet-1.0.1-SNAPSHOT.jar!/" />
@@ -436,15 +448,15 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library" exported="">
-      <library name="com.opensymphony:xwork:2.1.0">
+      <library name="com.opensymphony:xwork:2.1.1-SNAPSHOT">
         <CLASSES>
-          <root url="jar://D:/Projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/com/opensymphony/xwork/2.1.1-SNAPSHOT/xwork-2.1.1-SNAPSHOT.jar!/" />
         </CLASSES>
         <JAVADOC>
-          <root url="jar://D:/Projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-javadoc.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/com/opensymphony/xwork/2.1.1-SNAPSHOT/xwork-2.1.1-SNAPSHOT-javadoc.jar!/" />
         </JAVADOC>
         <SOURCES>
-          <root url="jar://D:/Projects/src/m2/repository/com/opensymphony/xwork/2.1.0/xwork-2.1.0-sources.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/com/opensymphony/xwork/2.1.1-SNAPSHOT/xwork-2.1.1-SNAPSHOT-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -735,55 +747,41 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library" exported="">
-      <library name="org.apache.struts:struts2-codebehind-plugin:2.1.0">
+      <library name="org.apache.struts:struts2-core:2.1.1-SNAPSHOT">
         <CLASSES>
-          <root url="jar://d:/projects/src/m2/repository/org/apache/struts/struts2-codebehind-plugin/2.1.0/struts2-codebehind-plugin-2.1.0.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/org/apache/struts/struts2-core/2.1.1-SNAPSHOT/struts2-core-2.1.1-SNAPSHOT.jar!/" />
         </CLASSES>
         <JAVADOC>
-          <root url="jar://d:/projects/src/m2/repository/org/apache/struts/struts2-codebehind-plugin/2.1.0/struts2-codebehind-plugin-2.1.0-javadoc.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/org/apache/struts/struts2-core/2.1.1-SNAPSHOT/struts2-core-2.1.1-SNAPSHOT-javadoc.jar!/" />
         </JAVADOC>
         <SOURCES>
-          <root url="jar://d:/projects/src/m2/repository/org/apache/struts/struts2-codebehind-plugin/2.1.0/struts2-codebehind-plugin-2.1.0-sources.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/org/apache/struts/struts2-core/2.1.1-SNAPSHOT/struts2-core-2.1.1-SNAPSHOT-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library" exported="">
-      <library name="org.apache.struts:struts2-core:2.1.0">
+      <library name="org.apache.struts:struts2-sitemesh-plugin:2.1.1-SNAPSHOT">
         <CLASSES>
-          <root url="jar://D:/Projects/src/m2/repository/org/apache/struts/struts2-core/2.1.0/struts2-core-2.1.0.jar!/" />
+          <root url="jar://d:/projects/src/m2/repository/org/apache/struts/struts2-sitemesh-plugin/2.1.1-SNAPSHOT/struts2-sitemesh-plugin-2.1.1-SNAPSHOT.jar!/" />
         </CLASSES>
         <JAVADOC>
-          <root url="jar://D:/Projects/src/m2/repository/org/apache/struts/struts2-core/2.1.0/struts2-core-2.1.0-javadoc.jar!/" />
+          <root url="jar://d:/projects/src/m2/repository/org/apache/struts/struts2-sitemesh-plugin/2.1.1-SNAPSHOT/struts2-sitemesh-plugin-2.1.1-SNAPSHOT-javadoc.jar!/" />
         </JAVADOC>
         <SOURCES>
-          <root url="jar://D:/Projects/src/m2/repository/org/apache/struts/struts2-core/2.1.0/struts2-core-2.1.0-sources.jar!/" />
-          <root url="file://$resources$/struts2.1.0/core/src/main/java" />
+          <root url="jar://d:/projects/src/m2/repository/org/apache/struts/struts2-sitemesh-plugin/2.1.1-SNAPSHOT/struts2-sitemesh-plugin-2.1.1-SNAPSHOT-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library" exported="">
-      <library name="org.apache.struts:struts2-sitemesh-plugin:2.0.9">
+      <library name="org.apache.struts:struts2-tiles-plugin:2.1.1-SNAPSHOT">
         <CLASSES>
-          <root url="jar://D:/Projects/src/m2/repository/org/apache/struts/struts2-sitemesh-plugin/2.0.9/struts2-sitemesh-plugin-2.0.9.jar!/" />
+          <root url="jar://d:/projects/src/m2/repository/org/apache/struts/struts2-tiles-plugin/2.1.1-SNAPSHOT/struts2-tiles-plugin-2.1.1-SNAPSHOT.jar!/" />
         </CLASSES>
         <JAVADOC>
-          <root url="jar://D:/Projects/src/m2/repository/org/apache/struts/struts2-sitemesh-plugin/2.0.9/struts2-sitemesh-plugin-2.0.9-javadoc.jar!/" />
+          <root url="jar://d:/projects/src/m2/repository/org/apache/struts/struts2-tiles-plugin/2.1.1-SNAPSHOT/struts2-tiles-plugin-2.1.1-SNAPSHOT-javadoc.jar!/" />
         </JAVADOC>
         <SOURCES>
-          <root url="jar://D:/Projects/src/m2/repository/org/apache/struts/struts2-sitemesh-plugin/2.0.9/struts2-sitemesh-plugin-2.0.9-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library name="org.apache.struts:struts2-tiles-plugin:2.1.0">
-        <CLASSES>
-          <root url="jar://d:/projects/src/m2/repository/org/apache/struts/struts2-tiles-plugin/2.1.0/struts2-tiles-plugin-2.1.0.jar!/" />
-        </CLASSES>
-        <JAVADOC>
-          <root url="jar://d:/projects/src/m2/repository/org/apache/struts/struts2-tiles-plugin/2.1.0/struts2-tiles-plugin-2.1.0-javadoc.jar!/" />
-        </JAVADOC>
-        <SOURCES>
-          <root url="jar://d:/projects/src/m2/repository/org/apache/struts/struts2-tiles-plugin/2.1.0/struts2-tiles-plugin-2.1.0-sources.jar!/" />
+          <root url="jar://d:/projects/src/m2/repository/org/apache/struts/struts2-tiles-plugin/2.1.1-SNAPSHOT/struts2-tiles-plugin-2.1.1-SNAPSHOT-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -827,15 +825,15 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library" exported="">
-      <library name="org.freemarker:freemarker:2.3.10">
+      <library name="org.freemarker:freemarker:2.3.11">
         <CLASSES>
-          <root url="jar://D:/Projects/src/m2/repository/org/freemarker/freemarker/2.3.10/freemarker-2.3.10.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/org/freemarker/freemarker/2.3.11/freemarker-2.3.11.jar!/" />
         </CLASSES>
         <JAVADOC>
-          <root url="jar://D:/Projects/src/m2/repository/org/freemarker/freemarker/2.3.10/freemarker-2.3.10-javadoc.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/org/freemarker/freemarker/2.3.11/freemarker-2.3.11-javadoc.jar!/" />
         </JAVADOC>
         <SOURCES>
-          <root url="jar://D:/Projects/src/m2/repository/org/freemarker/freemarker/2.3.10/freemarker-2.3.10-sources.jar!/" />
+          <root url="jar://D:/Projects/src/m2/repository/org/freemarker/freemarker/2.3.11/freemarker-2.3.11-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>

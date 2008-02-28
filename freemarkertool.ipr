@@ -747,7 +747,6 @@
   </component>
   <UsedPathMacros>
     <macro name="projectsHome" />
-    <macro name="resources" />
   </UsedPathMacros>
 </project>
 
