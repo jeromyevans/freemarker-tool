@@ -24,29 +24,24 @@
   </div>
 
   <s:form id="templateForm" action="parse.json">
-    <s:hidden name="openTemplate"/>
-    <s:hidden name="bodyText"/>
-    <s:hidden name="closeTemplate"/>
-  </s:form>
-
   <div id="bd">
     <div id="bdinput">
       <div id="openContainer" class="block">
         <h2 id="openTitleTemplate"><span>Page Template:</span></h2><h2 id="openTitleTag" style="display:none"><span>Open Template:</span></h2>
         <housepad:div id="openContainerBox" theme="box" cssClass="editor">
-          <s:textarea id="open" name="openTemplateInput" value="Type or paste your FreeMarker template here" wrap="off"/>
+          <s:textarea id="open" name="openTemplate" value="Type or paste your FreeMarker template here" wrap="off"/>
         </housepad:div>
       </div>
       <div id="bodyTextContainer" class="block">
         <h2><span>Body Text:</span></h2>
         <housepad:div id="bodyTextContainerBox" theme="box" cssClass="editor small">
-          <s:textarea id="bodyText" name="bodyTextInput" value="" rows="1" wrap="off" onclick="this.focus();"/>
+          <s:textarea id="bodyText" name="bodyText" value="" rows="1" wrap="off" onclick="this.focus();"/>
         </housepad:div>
       </div>
       <div id="closeContainer" class="block">
         <h2><span>Close Template:</span></h2>
         <housepad:div id="closeContainerBox" theme="box" cssClass="editor">
-          <s:textarea id="close" name="closeTemplateInput" value="" wrap="off"/>
+          <s:textarea id="close" name="closeTemplate" value="" wrap="off"/>
         </housepad:div>
       </div>
     </div>
@@ -57,8 +52,7 @@
             <h2><span>FreeMarker Result:</span></h2>
             <housepad:div theme="box" cssClass="editor readonly">
               <div id="indicatorContainer"><img id="indicator" src="/static/images/indicator.gif" style="display:none" alt="Loading..."/></div>
-              <%--<s:textarea id="outputText" name="outputText" value="" onfocus="this.blur();"/>--%>
-              <div id="outputText"></div>
+              <pre><div id="outputText"></div></pre>
             </housepad:div>
       </div>
     </div>
@@ -91,6 +85,7 @@
       <%--</housepad:div>--%>
     </div>
   </div>
+  </s:form>
 
   <tiles:insertDefinition name="scripts"/>
 

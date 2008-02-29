@@ -36,7 +36,8 @@ Attributes:
         <div id="title"><img src="/static/images/freemarkertool.jpg" alt="FreeMarker Tool" width="175" height="35"></div>
         <div id="exampleContainer">
           <s:form id="exampleForm" action="example.json">
-          <h2><span><a href="${pageContext.request.contextPath}/examples/">Examples:</a></span></h2>
+          <%--<h2><span><a href="${pageContext.request.contextPath}/examples/">Examples:</a></span></h2>--%>
+          <h2><span>Examples:</span></h2>
           <select id="examples" name="example">
             <option value="">select...</option>
             <option value="1">hello world</option>

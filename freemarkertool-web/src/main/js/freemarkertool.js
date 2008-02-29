@@ -182,9 +182,6 @@ FreemarkerTool.ui = function() {
 
         if (formEl) {
            YAHOO.util.Connect.resetFormState();
-           formEl.openTemplate.value = document.getElementById(FreemarkerTool.constants.OPEN_TEXT_ID).value;
-           formEl.closeTemplate.value = document.getElementById(FreemarkerTool.constants.CLOSE_TEXT_ID).value;
-           formEl.bodyText.value = document.getElementById(FreemarkerTool.constants.BODY_TEXT_ID).value;
            YAHOO.util.Connect.setForm(formEl);
            showIndicator();
            YAHOO.util.Connect.asyncRequest('POST', formEl.action, parseCallback);
@@ -900,6 +897,25 @@ FreemarkerTool.layout = function() {
                 redistributeHeight(_centerEl);
             });
             innerLayout.render();
+
+            
+            // move the form
+            var formEl = Dom.get("templateForm");
+            //delete Dom.get("templateForm");
+
+            var topEl = layout.getUnitByPosition('top').get('element');
+            var rightEl = layout.getUnitByPosition('right').get('element');
+            var centerEl = layout.getUnitByPosition('center').get('element');
+            var bottomEl = layout.getUnitByPosition('bottom').get('element');
+
+            Dom.insertAfter(formEl, topEl);
+            formEl.appendChild(rightEl);            
+            formEl.appendChild(bottomEl);
+            formEl.appendChild(centerEl);
+
+            //var container = Dom.get(layout.get("id"));
+            //var body = container.firstChild;
+            //container.insertBefore(formEl, container.firstChild);
         });
         layout.render();
 
