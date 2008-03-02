@@ -85,8 +85,13 @@ FreemarkerTool.ui = function() {
         var container = containerId;
         var elementId = id;
         var element;
-                
+
+        function resetFont() {
+            YAHOO.util.Dom.setStyle(id, "font-size", "11px");
+        }
+
         function onChangeListener(e) {
+            resetFont();
             callback();
         }
 
@@ -95,6 +100,7 @@ FreemarkerTool.ui = function() {
         }
 
         function onBlurListener(e) {
+            resetFont();
             YAHOO.util.Dom.setStyle(container, "background-color", "white");
         }
 
@@ -109,6 +115,7 @@ FreemarkerTool.ui = function() {
             setContent: function(text) {
                 var el = document.getElementById(elementId);
                 if (el) {
+                    resetFont();                    
                     if (text) {
                         el.value = text;
                     } else {
@@ -599,8 +606,9 @@ FreemarkerTool.ui = function() {
     function focusOnOpenText() {
         // refocus on the main text area
         var openText = document.getElementById(FreemarkerTool.constants.OPEN_TEXT_ID);
-        openText.blur();   // need to refire the event (it's already been focused)
+        openText.blur();   // need to re-fire the event (it's already been focused)
         openText.select();
+        YAHOO.util.Dom.setStyle(openText, "font-size", "16px");
         openText.focus();
     }
 
@@ -612,6 +620,49 @@ FreemarkerTool.ui = function() {
         FreemarkerTool.ui.dismissErrors();
         focusOnOpenText();
         FreemarkerTool.ui.parseTemplates();
+    }
+
+     var handleClose = function() {
+        this.hide();
+    };
+
+    function showHelp(e) {
+         var dialog = new YAHOO.widget.SimpleDialog("helpInfo", {
+            width: "600px",
+            fixedcenter: true,
+            visible: false,
+            draggable: false,
+            close: false,
+            modal: true,
+            icon: YAHOO.widget.SimpleDialog.ICON_HELP,
+            constraintoviewport: true,
+            buttons: [ { text: "Close", handler:handleClose, isDefault: true } ]
+        });
+        dialog.setBody(document.getElementById("help").innerHTML);
+        dialog.render(document.body);
+        dialog.show();
+    }
+
+    var handleSend = function() {
+        this.hide();
+    };
+
+    function showContactForm(e) {
+         var dialog = new YAHOO.widget.SimpleDialog("contactDialog", {
+            width: "600px",
+            fixedcenter: true,
+            visible: false,
+            draggable: false,
+            close: false,
+            modal: true,
+            icon: YAHOO.widget.SimpleDialog.ICON_HELP,
+            constraintoviewport: true,
+            buttons: [  { text: "Send", handler:handleSend, isDefault: true },
+                        { text: "Close", handler:handleClose, isDefault: false } ]
+        });
+        dialog.setBody(document.getElementById("contactFormBody").innerHTML);
+        dialog.render(document.body);
+        dialog.show();
     }
 
     function init() {
@@ -639,7 +690,9 @@ FreemarkerTool.ui = function() {
         initContext();
 
         var newButton = new YAHOO.widget.Button("newBtn");
-        newButton.addListener('click', reset);
+        newButton.addListener('click', reset);                
+        var helpButton = new YAHOO.widget.Button("helpBtn");
+        helpButton.addListener('click', showHelp);
 
         focusOnOpenText();
     }
@@ -804,11 +857,11 @@ FreemarkerTool.layout = function() {
             bodyTextHeight = 0;
             openHeight = availableHeight - VHEADING - VBORDERS;
 
-            YAHOO.util.Dom.setStyle(FreemarkerTool.constants.OPEN_TEXT_ID, "height", openHeight+"px");
+            Dom.setStyle(FreemarkerTool.constants.OPEN_TEXT_ID, "height", openHeight+"px");
         } else {
             var usableHeight = availableHeight - 3 * (VBORDERS + VHEADING);
             bodyTextHeight =  60;
-            openHeight = (availableHeight - bodyTextHeight) / 2;
+            openHeight = (usableHeight - bodyTextHeight) / 2;
             closeHeight = usableHeight - bodyTextHeight - openHeight;
 
             Dom.setStyle(FreemarkerTool.constants.OPEN_TEXT_ID, "height", openHeight+"px");

@@ -9,9 +9,42 @@
   <title>FreeMarker Template Tools</title>
 </head>
 <body id="body">
+  <div id="help" style="display: none">
+    <h1>FreeMarker Tool Help</h1>
+    <p>Use the FreeMarker Tool to quickly view the result of processing a <a href="http://www.freemarker.org">FreeMarker</a> Template.</p>
+    <h2>Usage</h2>
+    <p>Type some text into the Page Template and view the response from the template engine a moment later.</p>
+    <h2>Context</h2>
+    <p>The Context is a nested Map of strings, hashes and sequences.  Use dot notation in the name to
+      define an entry in a hash and square-bracket notation to define an
+      entry in a sequence.</p>
+<div class="codeBody">
+   Create an entry named id in the hash named parameters:<br/>
+   <div class="code">1. parameters.id</div>
+   Create an entry named suburb in a hash named address in a hash named person:<br/>
+   <div class="code">2. person.address.suburb</div>
+    Create the third entry in a sequence named parameters<br/>
+   <div class="code">3. parameters[2]</div>
+    Create the second entry in a sequence named lines in the address entry of person<br/>
+   <div class="code">4. person.address.lines[1]</div>
+</div>
+      <p>Hashes can also use the square-bracket notation and the notation can be mixed.  The tool will infer whether an entry
+      needs to be a string, sequence or map.</p>
+<div class="codeBody">
+ Create an entry called id in the hash named parameters<br/>
+   <div class="code">1. parameters[id]</div>
+ Create an entry called id in the hash named parameters<br/>
+   <div class="code">2. parameters['id']</div>
+ And so on:<br/>
+   <div class="code">3. people[0].address['personal'].lines[1]</div>
+</div>
+    <h2>Interactive Examples</h2>
+    <p>Real examples are provided for editing.  Use them to explore the features of this tool.</p>
+  </div>
 
   <div id="lt">
     <div class="yui-buttongroup">
+      <input type="button" id="helpBtn" value="Help"/>
       <input type="button" id="newBtn" value="New"/>
     </div>
     <div class="yui-buttongroup">
@@ -29,7 +62,7 @@
       <div id="openContainer" class="block">
         <h2 id="openTitleTemplate"><span>Page Template:</span></h2><h2 id="openTitleTag" style="display:none"><span>Open Template:</span></h2>
         <housepad:div id="openContainerBox" theme="box" cssClass="editor">
-          <s:textarea id="open" name="openTemplate" value="Type or paste your FreeMarker template here" wrap="off"/>
+          <s:textarea id="open" name="openTemplate" value="Type or paste your FreeMarker template here..." wrap="off"/>
         </housepad:div>
       </div>
       <div id="bodyTextContainer" class="block">
@@ -52,7 +85,7 @@
             <h2><span>FreeMarker Result:</span></h2>
             <housepad:div theme="box" cssClass="editor readonly">
               <div id="indicatorContainer"><img id="indicator" src="/static/images/indicator.gif" style="display:none" alt="Loading..."/></div>
-              <pre><div id="outputText"></div></pre>
+              <pre><div id="outputText">...and view the result here</div></pre>
             </housepad:div>
       </div>
     </div>

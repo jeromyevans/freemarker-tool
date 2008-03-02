@@ -25,6 +25,7 @@ Attributes:
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/assets/skins/sam/layout.css">
   	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/assets/skins/sam/resize.css"> 
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/button/assets/skins/sam/button.css">
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/yui/build/container/assets/skins/sam/container.css">
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/css/skin.css">
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/css/theme.css">
     <decorator:head/>

@@ -14,6 +14,7 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/layout/layout-beta-min.js"></script>
 <%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/tabview/tabview-min.js"></script>--%>
 <%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/dragdrop/dragdrop-min.js"></script>--%>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/yui/build/container/container-min.js"></script>
 
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/tools-min.js"></script>
 <%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/trimpath-template-1.0.38.js"></script>--%>

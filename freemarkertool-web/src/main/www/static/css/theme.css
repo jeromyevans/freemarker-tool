@@ -134,6 +134,10 @@ div#rt {
   background: url(/static/images/labels.gif) no-repeat 0 -84px;
 }
 
+#outputText {
+  overflow: scroll;
+}
+
 #rt h2 {
   background: url(/static/images/labels.gif) no-repeat 0 -118px;
 }
@@ -301,3 +305,17 @@ div#rt {
 #errorContainer p {
   /*padding-right: 15px;*/
 }
+
+textarea#open {
+  font-size: 16px;
+}
+
+#helpInfo h2,
+#helpInfo p{
+  text-align: left;
+}
+
+#helpInfo button { color: black; background-color: white }
+
+div.codeBody {margin: 1em; text-align:left}
+.code {font-family: monospace; margin-left: 2em;}
