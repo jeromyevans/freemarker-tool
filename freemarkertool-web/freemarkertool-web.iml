@@ -222,6 +222,13 @@
         </packaging>
       </configuration>
     </facet>
+    <facet type="jpa" name="JPA" implicit="true">
+      <configuration>
+        <setting name="validation-enabled" value="true" />
+        <datasource-mapping />
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/target/freemarkertool-web-0.1-SNAPSHOT/WEB-INF/classes/META-INF/persistence.xml" optional="false" version="1.0" />
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />

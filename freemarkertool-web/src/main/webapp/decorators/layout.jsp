@@ -34,7 +34,7 @@ Attributes:
   <body class="yui-skin-sam">
     <div id="hd">
         <div id="adContainer"></div>
-        <div id="title"><img src="/static/images/freemarkertool.jpg" alt="FreeMarker Tool" width="175" height="35"></div>
+        <div id="title" style="position:absolute; left: 10px"><img style="" src="/static/images/freemarkertool.jpg" alt="FreeMarker Tool" width="175" height="35"></div>
         <div id="exampleContainer">
           <s:form id="exampleForm" action="example.json">
           <%--<h2><span><a href="${pageContext.request.contextPath}/examples/">Examples:</a></span></h2>--%>

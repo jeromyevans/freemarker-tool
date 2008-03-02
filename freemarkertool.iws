@@ -20,31 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-parent.iml" afterPath="$PROJECT_DIR$/freemarkertool-parent.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/resources/template/dialog/text.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/resources/struts.xml" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/resources/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/freemarkertool-web.iml" afterPath="$PROJECT_DIR$/freemarkertool-web/freemarkertool-web.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/resources/template/dialog" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/decorators/layout.jsp" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/decorators/layout.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/resources/template/dialog/theme.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/js/freemarkertool.js" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/js/freemarkertool.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/resources/template" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool.iws" afterPath="$PROJECT_DIR$/freemarkertool.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/pom.xml" afterPath="$PROJECT_DIR$/freemarkertool-web/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/resources/template/dialog/textarea.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/resources/template/dialog/controlheader-core.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/resources/template/dialog/controlfooter.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/resources/META-INF/context.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/www/static/css/skin.css" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/www/static/css/skin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/ContactAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/startup/GuiceModule.java" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/startup/GuiceModule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/freemarkertool-web.iml" afterPath="$PROJECT_DIR$/freemarkertool-web/freemarkertool-web.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/www/static/js/freemarkertool-min.js" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/www/static/js/freemarkertool-min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool.iws" afterPath="$PROJECT_DIR$/freemarkertool.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool.ipr" afterPath="$PROJECT_DIR$/freemarkertool.ipr" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/resources/templates" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/www/static/css/theme.css" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/www/static/css/theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/resources/template/dialog/controlheader.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/resources/templates/featureRequest.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/WEB-INF/tiles/scripts.jsp" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/WEB-INF/tiles/scripts.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/decorators/layout.jsp" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/decorators/layout.jsp" />
     </list>
     <ignored path="freemarkertool.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -155,7 +138,25 @@
       <file leaf-file-name="freemarkertool.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/js/freemarkertool.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="993" column="41" selection-start="34118" selection-end="34118" vertical-scroll-proportion="0.48968107">
+            <state line="598" column="70" selection-start="18641" selection-end="18641" vertical-scroll-proportion="0.48608136">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freemarkertool-web/build.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="37" selection-start="945" selection-end="945" vertical-scroll-proportion="0.72186834">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="freemarkertool-all.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/www/static/js/freemarkertool-all.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="21" selection-start="438" selection-end="438" vertical-scroll-proportion="0.55284554">
               <folding />
             </state>
           </provider>
@@ -164,34 +165,7 @@
       <file leaf-file-name="blueskyminds-dom.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/js/blueskyminds-dom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="17" selection-start="132" selection-end="132" vertical-scroll-proportion="0.118673645">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="controlheader-core.ftl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/resources/template/dialog/controlheader-core.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="6" selection-start="2250" selection-end="2250" vertical-scroll-proportion="1.9877836">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="controlheader.ftl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/resources/template/dialog/controlheader.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="61" selection-start="734" selection-end="734" vertical-scroll-proportion="0.47469458">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="textarea.ftl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/resources/template/dialog/textarea.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="129" selection-end="129" vertical-scroll-proportion="0.059336822">
+            <state line="5" column="17" selection-start="132" selection-end="132" vertical-scroll-proportion="0.13412228">
               <folding />
             </state>
           </provider>
@@ -200,7 +174,7 @@
       <file leaf-file-name="textarea.ftl" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://D:/Projects/src/m2/repository/org/apache/struts/struts2-core/2.1.1-SNAPSHOT/struts2-core-2.1.1-SNAPSHOT.jar!/template/css_xhtml/textarea.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="954" selection-end="1165" vertical-scroll-proportion="0.68237346">
+            <state line="23" column="0" selection-start="954" selection-end="1165" vertical-scroll-proportion="0.77120316">
               <folding />
             </state>
           </provider>
@@ -209,7 +183,7 @@
       <file leaf-file-name="theme.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/www/static/css/theme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="329" column="24" selection-start="6064" selection-end="6064" vertical-scroll-proportion="0.66845876">
+            <state line="329" column="24" selection-start="6064" selection-end="6064" vertical-scroll-proportion="0.7581301">
               <folding />
             </state>
           </provider>
@@ -218,7 +192,7 @@
       <file leaf-file-name="skin.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/www/static/css/skin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="242" column="0" selection-start="7324" selection-end="7324" vertical-scroll-proportion="1.3722627">
+            <state line="242" column="0" selection-start="7324" selection-end="7324" vertical-scroll-proportion="1.6102784">
               <folding />
             </state>
           </provider>
@@ -227,7 +201,7 @@
       <file leaf-file-name="ContactAction.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/ContactAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="19" selection-start="823" selection-end="823" vertical-scroll-proportion="0.33333334">
+            <state line="27" column="19" selection-start="823" selection-end="823" vertical-scroll-proportion="0.37804878">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -238,7 +212,7 @@
       <file leaf-file-name="EmailService.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://d:/projects/src/m2/repository/com/blueskyminds/framework/framework-email/0.01-SNAPSHOT/framework-email-0.01-SNAPSHOT.jar!/com/blueskyminds/framework/email/EmailService.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="157" selection-end="157" vertical-scroll-proportion="0.1218638">
+            <state line="5" column="0" selection-start="157" selection-end="157" vertical-scroll-proportion="0.13821138">
               <folding />
             </state>
           </provider>
@@ -247,7 +221,7 @@
       <file leaf-file-name="BlockingEmailer.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://d:/projects/src/m2/repository/com/blueskyminds/framework/framework-email/0.01-SNAPSHOT/framework-email-0.01-SNAPSHOT.jar!/com/blueskyminds/framework/email/BlockingEmailer.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="41" selection-start="598" selection-end="598" vertical-scroll-proportion="0.3655914">
+            <state line="13" column="41" selection-start="598" selection-end="598" vertical-scroll-proportion="0.41463414">
               <folding />
             </state>
           </provider>
@@ -256,7 +230,7 @@
       <file leaf-file-name="GuiceModule.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/startup/GuiceModule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="45" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.609319">
+            <state line="38" column="45" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.6910569">
               <folding />
             </state>
           </provider>
@@ -265,7 +239,7 @@
       <file leaf-file-name="EmailServiceProvider.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://d:/projects/src/m2/repository/com/blueskyminds/framework/framework-guice/0.01-SNAPSHOT/framework-guice-0.01-SNAPSHOT.jar!/com/blueskyminds/framework/guice/providers/EmailServiceProvider.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="13" selection-start="180" selection-end="180" vertical-scroll-proportion="0.1218638">
+            <state line="5" column="13" selection-start="180" selection-end="180" vertical-scroll-proportion="0.13821138">
               <folding />
             </state>
           </provider>
@@ -274,25 +248,25 @@
       <file leaf-file-name="freemarkertool-urls.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/resources/freemarkertool-urls.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="39" selection-start="859" selection-end="859" vertical-scroll-proportion="0.5698324">
+            <state line="18" column="39" selection-start="859" selection-end="859" vertical-scroll-proportion="0.6496815">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="struts.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="struts.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/resources/struts.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="29" selection-start="1966" selection-end="1966" vertical-scroll-proportion="0.41154563">
+            <state line="14" column="64" selection-start="690" selection-end="690" vertical-scroll-proportion="0.28874734">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="layout.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/webapp/decorators/layout.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="57" selection-start="2099" selection-end="2117" vertical-scroll-proportion="0.2756052">
+            <state line="38" column="52" selection-start="2412" selection-end="2412" vertical-scroll-proportion="0.6029724">
               <folding />
             </state>
           </provider>
@@ -301,7 +275,16 @@
       <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="33" selection-start="4301" selection-end="4301" vertical-scroll-proportion="0.18994413">
+            <state line="91" column="29" selection-start="4304" selection-end="4304" vertical-scroll-proportion="0.6709129">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="struts.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/resources/struts.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -310,7 +293,7 @@
       <file leaf-file-name="layout-beta.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/www/static/yui/build/layout/layout-beta.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="312" column="12" selection-start="10844" selection-end="10997" vertical-scroll-proportion="0.03046595">
+            <state line="312" column="12" selection-start="10844" selection-end="10997" vertical-scroll-proportion="0.034552846">
               <folding />
             </state>
           </provider>
@@ -328,7 +311,7 @@
       <file leaf-file-name="scripts.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/webapp/WEB-INF/tiles/scripts.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="36" selection-start="2764" selection-end="2764" vertical-scroll-proportion="0.75977653">
+            <state line="32" column="46" selection-start="3203" selection-end="3203" vertical-scroll-proportion="1.1549894">
               <folding />
             </state>
           </provider>
@@ -536,6 +519,228 @@
           <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\www" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\www" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\www\static" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\www" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\www\static" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\www\static\js" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\www" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\www\static" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\www\static\css" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\webapp" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\webapp" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\webapp\WEB-INF" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\webapp" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\webapp\WEB-INF" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\webapp\WEB-INF\tiles" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\webapp" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\webapp\decorators" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
       </PATH>
       <PATH>
         <PATH_ELEMENT>
@@ -585,11 +790,7 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\resources" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\resources\templates" />
+          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\js" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -612,44 +813,6 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\resources" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\resources\template\dialog" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="freemarkertool" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="freemarkertool-web" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\resources" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\Projects\src\blueskyminds\src\freemarkertool\freemarkertool-web\src\main\resources\META-INF" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -1101,29 +1264,29 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="129" y="18" width="1438" height="988" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11569053" order="1" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1352133" order="1" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792583" order="1" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2769409" order="3" x="1741" y="41" width="1469" height="861" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" order="8" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3267671" order="8" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3267671" order="8" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="0" />
-      <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09255242" order="3" />
+      <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11641359" order="3" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23210412" order="0" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6192609" order="8" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
       <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25028968" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25028968" order="2" />
       <window_info id="Maven Build Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32922733" order="8" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="5" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
@@ -1139,7 +1302,7 @@
     <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added help" />
+    <option name="LAST_COMMIT_MESSAGE" value="outerhtml for IE6/7&#10;Added contact form&#10;layout hidden until init is complete" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
@@ -1160,6 +1323,8 @@
     <MESSAGE value="Added YUI layout manager (sliders) and new button" />
     <MESSAGE value="When layout is rendered the form is moved to wrap the new layout units" />
     <MESSAGE value="Added help" />
+    <MESSAGE value="outerhtml for IE6/7&#10;Added contact form" />
+    <MESSAGE value="outerhtml for IE6/7&#10;Added contact form&#10;layout hidden until init is complete" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1198,46 +1363,19 @@
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
+    <buildFile url="file://$PROJECT_DIR$/freemarkertool-web/build.xml">
+      <antCommandLine value="" />
+      <runInBackground value="true" />
+      <targetFilters />
+      <treeView value="true" />
+      <verbose value="true" />
+      <viewClosedWhenNoErrors value="false" />
+    </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/resources/template/dialog/controlheader.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="61" selection-start="734" selection-end="734" vertical-scroll-proportion="0.47469458">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Projects/src/m2/repository/org/apache/struts/struts2-core/2.1.1-SNAPSHOT/struts2-core-2.1.1-SNAPSHOT.jar!/template/css_xhtml/textarea.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="954" selection-end="1165" vertical-scroll-proportion="0.68237346">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/resources/template/dialog/textarea.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="129" selection-end="129" vertical-scroll-proportion="0.059336822">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/resources/freemarkertool-urls.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="39" selection-start="859" selection-end="859" vertical-scroll-proportion="0.5698324">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/resources/struts.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="29" selection-start="1966" selection-end="1966" vertical-scroll-proportion="0.41154563">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/ContactAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="19" selection-start="823" selection-end="823" vertical-scroll-proportion="0.33333334">
+        <state line="27" column="19" selection-start="823" selection-end="823" vertical-scroll-proportion="0.37804878">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1246,70 +1384,105 @@
     </entry>
     <entry file="jar://d:/projects/src/m2/repository/com/blueskyminds/framework/framework-email/0.01-SNAPSHOT/framework-email-0.01-SNAPSHOT.jar!/com/blueskyminds/framework/email/EmailService.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="157" selection-end="157" vertical-scroll-proportion="0.1218638">
+        <state line="5" column="0" selection-start="157" selection-end="157" vertical-scroll-proportion="0.13821138">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://d:/projects/src/m2/repository/com/blueskyminds/framework/framework-email/0.01-SNAPSHOT/framework-email-0.01-SNAPSHOT.jar!/com/blueskyminds/framework/email/BlockingEmailer.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="41" selection-start="598" selection-end="598" vertical-scroll-proportion="0.3655914">
+        <state line="13" column="41" selection-start="598" selection-end="598" vertical-scroll-proportion="0.41463414">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://d:/projects/src/m2/repository/com/blueskyminds/framework/framework-guice/0.01-SNAPSHOT/framework-guice-0.01-SNAPSHOT.jar!/com/blueskyminds/framework/guice/providers/EmailServiceProvider.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="180" selection-end="180" vertical-scroll-proportion="0.1218638">
+        <state line="5" column="13" selection-start="180" selection-end="180" vertical-scroll-proportion="0.13821138">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/startup/GuiceModule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="45" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.609319">
+        <state line="38" column="45" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.6910569">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/js/blueskyminds-dom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="132" selection-end="132" vertical-scroll-proportion="0.118673645">
+        <state line="5" column="17" selection-start="132" selection-end="132" vertical-scroll-proportion="0.13412228">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/www/static/css/theme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="329" column="24" selection-start="6064" selection-end="6064" vertical-scroll-proportion="0.66845876">
+        <state line="329" column="24" selection-start="6064" selection-end="6064" vertical-scroll-proportion="0.7581301">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/www/static/css/skin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="242" column="0" selection-start="7324" selection-end="7324" vertical-scroll-proportion="1.3722627">
+        <state line="242" column="0" selection-start="7324" selection-end="7324" vertical-scroll-proportion="1.6102784">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/webapp/index.jsp">
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="33" selection-start="4301" selection-end="4301" vertical-scroll-proportion="0.18994413">
+        <state line="20" column="37" selection-start="945" selection-end="945" vertical-scroll-proportion="0.72186834">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/www/static/js/freemarkertool-all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="21" selection-start="438" selection-end="438" vertical-scroll-proportion="0.55284554">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/js/freemarkertool.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="993" column="41" selection-start="34118" selection-end="34118" vertical-scroll-proportion="0.48968107">
+        <state line="598" column="70" selection-start="18641" selection-end="18641" vertical-scroll-proportion="0.48608136">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/webapp/WEB-INF/tiles/scripts.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="46" selection-start="3203" selection-end="3203" vertical-scroll-proportion="1.1549894">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/webapp/decorators/layout.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="57" selection-start="2099" selection-end="2117" vertical-scroll-proportion="0.2756052">
+        <state line="38" column="52" selection-start="2412" selection-end="2412" vertical-scroll-proportion="0.6029724">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="29" selection-start="4304" selection-end="4304" vertical-scroll-proportion="0.6709129">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/resources/struts.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/resources/struts.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="64" selection-start="690" selection-end="690" vertical-scroll-proportion="0.28874734">
           <folding />
         </state>
       </provider>

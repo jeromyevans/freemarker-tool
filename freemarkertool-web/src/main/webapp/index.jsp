@@ -85,7 +85,7 @@
             <h2><span>FreeMarker Result:</span></h2>
             <housepad:div theme="box" cssClass="editor readonly">
               <div id="indicatorContainer"><img id="indicator" src="/static/images/indicator.gif" style="display:none" alt="Loading..."/></div>
-              <div id="outputText"><pre>...and view the result here</pre></div>
+              <div id="outputText"><pre style="height:100px; font-size: 16px">...and view the result here</pre></div>
             </housepad:div>
       </div>
     </div>

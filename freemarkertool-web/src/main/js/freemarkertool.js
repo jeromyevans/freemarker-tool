@@ -664,7 +664,7 @@ FreemarkerTool.ui = function() {
                 } else {
                     var textMessage;
                     if (payload.okay) {
-                        textMessage = "Message sent okay"
+                        textMessage = "Message sent okay";
                     } else {
                         textMessage = "A server error occurred.  The issue has been logged and the administrator notified.";
                     }
@@ -1002,7 +1002,7 @@ FreemarkerTool.layout = function() {
                 var el = document.getElementById(FreemarkerTool.constants.OUTPUT_TEXT_ID);
                 var height = YAHOO.tools.getHeight(bottomEl);
                 var heightpx = height.substring(0, height.indexOf("px"));
-                Dom.setStyle(el, "height", parseInt(heightpx)-60+"px");
+                Dom.setStyle(el, "height", heightpx-60+"px");
 
                 redistributeHeight(_centerEl);
             });
