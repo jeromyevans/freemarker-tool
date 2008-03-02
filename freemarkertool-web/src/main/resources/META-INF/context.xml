@@ -1,0 +1,7 @@
+<Context debug="5" reloadable="true" crossContext="true">
+
+  <!-- JavaMail session -->
+  <Resource name="mail/MyMailSession" auth="Container" type="javax.mail.Session"
+            mail.smtp.host="localhost"/>
+
+</Context>

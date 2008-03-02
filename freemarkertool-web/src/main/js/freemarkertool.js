@@ -42,6 +42,8 @@ FreemarkerTool.ui = function() {
 
     var contextFields;
 
+    var contactDialog;
+
     /** Calls the callback if not reset for the specifid number of ticks to wait */
     var IdleTimer = function(tickInterval, millisToWait, callback) {
 
@@ -130,8 +132,19 @@ FreemarkerTool.ui = function() {
     function setFreemarkerOutput(text) {
         var el = document.getElementById(FreemarkerTool.constants.OUTPUT_TEXT_ID);
         if (el) {
-            blueskyminds.dom.insertHTML(el, text);
-            //el.value = text;
+            var escaped = blueskyminds.dom.escapeHTML(text);
+            if (escaped) {
+                if (YAHOO.env.ua.ie) {
+                    blueskyminds.dom.clearHTML(el);
+                    var div = document.createElement("div");
+                    el.appendChild(div);
+                    div.outerHTML = "<pre>"+escaped+"</pre>";
+                } else {
+                    el.innerHTML = "<pre>"+escaped+"</pre>";
+                }
+            } else {
+                blueskyminds.dom.clearHTML(el);
+            }
         }
     }
 
@@ -634,7 +647,6 @@ FreemarkerTool.ui = function() {
             draggable: false,
             close: false,
             modal: true,
-            icon: YAHOO.widget.SimpleDialog.ICON_HELP,
             constraintoviewport: true,
             buttons: [ { text: "Close", handler:handleClose, isDefault: true } ]
         });
@@ -643,26 +655,70 @@ FreemarkerTool.ui = function() {
         dialog.show();
     }
 
+    var contactCallback = {
+        success: function(o) {
+            var payload = blueskyminds.net.json.evaluate(o.responseText);
+            if (payload) {
+                if (payload.exception) {
+                    blueskyminds.events.fire(ERROR_EVENT, payload.exception.message);
+                } else {
+                    var textMessage;
+                    if (payload.okay) {
+                        textMessage = "Message sent okay"
+                    } else {
+                        textMessage = "A server error occurred.  The issue has been logged and the administrator notified.";
+                    }
+                    var dialog = new YAHOO.widget.SimpleDialog("msgReceivedDialog", {
+                            width: "300px",
+                            fixedcenter: true,
+                            visible: false,
+                            draggable: false,
+                            text: textMessage,
+                            close: false,
+                            modal: true,
+                            constraintoviewport: true,
+                            buttons: [  { text: "Close", handler:handleClose} ]
+                        });
+                    dialog.render(document.body);
+                    dialog.show();
+                }
+            } else {
+                blueskyminds.events.fire(ERROR_EVENT, "Invalid response received from the server");
+            }
+        },
+        failure: function(o) {
+            blueskyminds.events.fire(ERROR_EVENT, blueskyminds.net.errorMessage(o));
+        }
+    };
+
     var handleSend = function() {
+        var formEl = document.getElementById("contactForm");
+        if (formEl) {
+           YAHOO.util.Connect.resetFormState();
+           YAHOO.util.Connect.setForm(formEl);
+           YAHOO.util.Connect.asyncRequest('POST', formEl.action, contactCallback);
+        }
         this.hide();
     };
 
     function showContactForm(e) {
-         var dialog = new YAHOO.widget.SimpleDialog("contactDialog", {
-            width: "600px",
-            fixedcenter: true,
-            visible: false,
-            draggable: false,
-            close: false,
-            modal: true,
-            icon: YAHOO.widget.SimpleDialog.ICON_HELP,
-            constraintoviewport: true,
-            buttons: [  { text: "Send", handler:handleSend, isDefault: true },
-                        { text: "Close", handler:handleClose, isDefault: false } ]
-        });
-        dialog.setBody(document.getElementById("contactFormBody").innerHTML);
-        dialog.render(document.body);
-        dialog.show();
+        YAHOO.util.Event.preventDefault(e);
+        if (!contactDialog) {
+            contactDialog = new YAHOO.widget.SimpleDialog("contactFormDialog", {
+                width: "500px",
+                fixedcenter: true,
+                visible: false,
+                draggable: false,
+                close: false,
+                modal: true,
+                constraintoviewport: true,
+                buttons: [  { text: "Send", handler:handleSend, isDefault: true },
+                            { text: "Cancel", handler:handleClose, isDefault: false } ]
+            });
+            contactDialog.setBody(document.getElementById("contactFormContainer"));
+            contactDialog.render(document.body);
+        }
+        contactDialog.show();
     }
 
     function init() {
@@ -693,6 +749,11 @@ FreemarkerTool.ui = function() {
         newButton.addListener('click', reset);                
         var helpButton = new YAHOO.widget.Button("helpBtn");
         helpButton.addListener('click', showHelp);
+
+        var contactButton = document.getElementById("contactBtn");
+        YAHOO.util.Event.addListener(contactButton, 'click', showContactForm);
+
+        YAHOO.util.Dom.setStyle(["lt", "bd", "rt"], "visibility", "visible");
 
         focusOnOpenText();
     }
@@ -932,7 +993,7 @@ FreemarkerTool.layout = function() {
             var innerLayout = new YAHOO.widget.Layout(el, {
                 parent: layout,
                 units: [
-                    { position: 'bottom', height: 120, resize: true, body: 'bdoutput' },
+                    { position: 'bottom', height: 200, resize: true, body: 'bdoutput' },
                     { position: 'center', body: 'bdinput' }
                 ]
             });

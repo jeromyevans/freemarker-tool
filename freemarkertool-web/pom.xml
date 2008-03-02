@@ -170,7 +170,20 @@
       <version>1.8.0.7</version>
       <!--<scope>test</scope>-->
     </dependency>
-       
+
+    <dependency>
+      <groupId>com.blueskyminds.framework</groupId>
+      <artifactId>framework-email</artifactId>
+      <version>0.01-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.mail</groupId>
+      <artifactId>mail</artifactId>
+      <version>1.4</version>
+      <scope>provided</scope>
+    </dependency>
+    
     <dependency>
       <groupId>com.blueskyminds.housepad</groupId>
       <artifactId>housepad-web-plugin</artifactId>

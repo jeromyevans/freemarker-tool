@@ -14,8 +14,8 @@ Attributes:
   <head>
     <title><decorator:title default="Freemarker Tool" /></title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <meta name="Keywords" content="freemarker template, freemarker, template, java, mvc, struts2, struts, tag, taglib">
-    <meta name="Description" content="A tool to edit and review live FreeMarker templates online">
+    <meta name="Keywords" content="Freemarker template, FreeMarker, template, java, mvc, struts2, struts, tag, taglib, webapp, yui">
+    <meta name="Description" content="A tool to edit and process FreeMarker templates online">
     <meta name="Robots" content="Index,Follow">
     <meta name="Author" content="Blue Sky Minds Pty Ltd" />
     <meta name="Copyright" content="Blue Sky Minds Pty Ltd" />
@@ -52,8 +52,9 @@ Attributes:
           </s:form>
     </div>
     <decorator:body/>
-    <div id="ft"> 
-      <a href="http://www.blueskyminds.com.au/contact.jsp" title="Blue Sky Minds"><img src="/static/images/blueskyminds_sml.gif" alt="Blue Sky Minds Logo" width="120" height="15"/><span>Blue Sky Minds</span></a>
+    <div id="ft">
+      <a id="contactBtn" href="#">Request a Feature / Report a Problem</a>
+      <span id="link"><a href="http://www.blueskyminds.com.au/contact.jsp" title="Blue Sky Minds"><img src="/static/images/blueskyminds_sml.gif" alt="Blue Sky Minds Logo" width="120" height="15"/><span>Blue Sky Minds</span></a></span>
     </div>
     </div>
   </body>

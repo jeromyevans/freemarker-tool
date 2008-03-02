@@ -6,7 +6,7 @@
 
 <html>
 <head>
-  <title>FreeMarker Template Tools</title>
+  <title>FreeMarker Tool</title>
 </head>
 <body id="body">
   <div id="help" style="display: none">
@@ -42,7 +42,7 @@
     <p>Real examples are provided for editing.  Use them to explore the features of this tool.</p>
   </div>
 
-  <div id="lt">
+  <div id="lt" style="visibility:hidden">
     <div class="yui-buttongroup">
       <input type="button" id="helpBtn" value="Help"/>
       <input type="button" id="newBtn" value="New"/>
@@ -57,7 +57,7 @@
   </div>
 
   <s:form id="templateForm" action="parse.json">
-  <div id="bd">
+  <div id="bd" style="visibility:hidden">
     <div id="bdinput">
       <div id="openContainer" class="block">
         <h2 id="openTitleTemplate"><span>Page Template:</span></h2><h2 id="openTitleTag" style="display:none"><span>Open Template:</span></h2>
@@ -85,13 +85,13 @@
             <h2><span>FreeMarker Result:</span></h2>
             <housepad:div theme="box" cssClass="editor readonly">
               <div id="indicatorContainer"><img id="indicator" src="/static/images/indicator.gif" style="display:none" alt="Loading..."/></div>
-              <pre><div id="outputText">...and view the result here</div></pre>
+              <div id="outputText"><pre>...and view the result here</pre></div>
             </housepad:div>
       </div>
     </div>
   </div>
 
-  <div id="rt">
+  <div id="rt" style="visibility:hidden">
     <housepad:div id="settings" theme="box">
       <div class="drop">
         <label for="version">Version:</label>
@@ -120,6 +120,15 @@
   </div>
   </s:form>
 
+  <div style="display:none">
+  <div id="contactFormContainer">
+    <s:form id="contactForm" action="/contact.json" theme="dialog">
+      <s:textfield label="Your Name" name="fullName"/>
+      <s:textfield label="Your E-mail Address" name="emailAddress"/>
+      <s:textarea label="Feature Request/Problem Report" name="message" rows="10"/>
+    </s:form>
+  </div>
+  </div>
   <tiles:insertDefinition name="scripts"/>
 
 </body>

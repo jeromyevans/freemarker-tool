@@ -57,6 +57,13 @@
         <param name="wrapWithComments">true</param>
       </result>
     </action>
+    <action name="contact" class="com.blueskyminds.freemarkertool.web.actions.ContactAction">
+      <interceptor-ref name="json"/>
+      <interceptor-ref name="defaultStack"/>
+      <result type="json">
+        <param name="wrapWithComments">true</param>
+      </result>
+    </action>
   </package>
 
   <package name="examples" extends="struts-default" namespace="/examples">

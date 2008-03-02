@@ -315,7 +315,33 @@ textarea#open {
   text-align: left;
 }
 
-#helpInfo button { color: black; background-color: white }
-
 div.codeBody {margin: 1em; text-align:left}
 .code {font-family: monospace; margin-left: 2em;}
+
+#contactBtn{
+  float: left; margin-left: 10px;
+}
+
+#ft a:visited{
+  color: blue;
+}
+
+#contactFormContainer {
+  text-align: left;
+}
+
+#contactFormContainer input {
+  width: 300px
+}
+
+#contactFormContainer textarea {
+  width: 475px
+}
+
+.yui-panel button, .yui-panel button.default, .yui-panel button.yui-button-hover {
+  background-color: #666666;
+  color: black;
+}
+
+
+

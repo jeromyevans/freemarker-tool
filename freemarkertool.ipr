@@ -60,6 +60,7 @@
       <entry name="?*.html" />
       <entry name="?*.dtd" />
       <entry name="?*.tld" />
+      <entry name="?*.ftl" />
     </wildcardResourcePatterns>
   </component>
   <component name="CreatePatchCommitExecutor">
