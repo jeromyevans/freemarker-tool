@@ -37,6 +37,7 @@ a img {
 }
 
 #hd {
+  margin-top: 5px;
   /*height: 90px;  *//* 100px inc margin */
   /*margin:3px 5px 7px 5px;*/
 }
@@ -74,7 +75,7 @@ div#rt {
 
 #title {
   position: absolute;
-  top: 10px;
+  top: 5px;
 }
 
 #adContainer {
@@ -82,8 +83,8 @@ div#rt {
   margin: 0 auto;
   width: 728px;
   height: 90px;
-  background: url("../images/banner.gif");
-  background-color: #f6f6f6;
+  /*background: url("../images/banner.gif");*/
+  /*background-color: #f6f6f6;*/
 }
                                              
 #exampleContainer {

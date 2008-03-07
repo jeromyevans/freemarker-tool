@@ -20,14 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/js/freemarkertool.js" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/js/freemarkertool.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-parent.iml" afterPath="$PROJECT_DIR$/freemarkertool-parent.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/freemarkertool-web.iml" afterPath="$PROJECT_DIR$/freemarkertool-web/freemarkertool-web.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/www/static/js/freemarkertool-min.js" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/www/static/js/freemarkertool-min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool.iws" afterPath="$PROJECT_DIR$/freemarkertool.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool.ipr" afterPath="$PROJECT_DIR$/freemarkertool.ipr" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/WEB-INF/tiles/scripts.jsp" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/WEB-INF/tiles/scripts.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/decorators/layout.jsp" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/webapp/decorators/layout.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freemarkertool-web/src/main/www/static/css/theme.css" afterPath="$PROJECT_DIR$/freemarkertool-web/src/main/www/static/css/theme.css" />
     </list>
     <ignored path="freemarkertool.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -138,7 +135,7 @@
       <file leaf-file-name="freemarkertool.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/js/freemarkertool.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="598" column="70" selection-start="18641" selection-end="18641" vertical-scroll-proportion="0.48608136">
+            <state line="175" column="4" selection-start="5042" selection-end="5808" vertical-scroll-proportion="0.02182285">
               <folding />
             </state>
           </provider>
@@ -147,7 +144,7 @@
       <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="37" selection-start="945" selection-end="945" vertical-scroll-proportion="0.72186834">
+            <state line="20" column="37" selection-start="945" selection-end="945" vertical-scroll-proportion="0.022427442">
               <folding />
             </state>
           </provider>
@@ -156,7 +153,7 @@
       <file leaf-file-name="freemarkertool-all.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/www/static/js/freemarkertool-all.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="21" selection-start="438" selection-end="438" vertical-scroll-proportion="0.55284554">
+            <state line="16" column="21" selection-start="438" selection-end="438" vertical-scroll-proportion="0.02182285">
               <folding />
             </state>
           </provider>
@@ -165,7 +162,7 @@
       <file leaf-file-name="blueskyminds-dom.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/js/blueskyminds-dom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="17" selection-start="132" selection-end="132" vertical-scroll-proportion="0.13412228">
+            <state line="5" column="17" selection-start="132" selection-end="132" vertical-scroll-proportion="0.021410579">
               <folding />
             </state>
           </provider>
@@ -174,16 +171,16 @@
       <file leaf-file-name="textarea.ftl" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://D:/Projects/src/m2/repository/org/apache/struts/struts2-core/2.1.1-SNAPSHOT/struts2-core-2.1.1-SNAPSHOT.jar!/template/css_xhtml/textarea.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="954" selection-end="1165" vertical-scroll-proportion="0.77120316">
+            <state line="23" column="0" selection-start="954" selection-end="1165" vertical-scroll-proportion="0.49244332">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="theme.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="theme.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/www/static/css/theme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="329" column="24" selection-start="6064" selection-end="6064" vertical-scroll-proportion="0.7581301">
+            <state line="4" column="29" selection-start="156" selection-end="156" vertical-scroll-proportion="0.09018568">
               <folding />
             </state>
           </provider>
@@ -192,7 +189,7 @@
       <file leaf-file-name="skin.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/www/static/css/skin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="242" column="0" selection-start="7324" selection-end="7324" vertical-scroll-proportion="1.6102784">
+            <state line="6" column="85" selection-start="155" selection-end="155" vertical-scroll-proportion="0.02182285">
               <folding />
             </state>
           </provider>
@@ -201,10 +198,8 @@
       <file leaf-file-name="ContactAction.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/ContactAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="19" selection-start="823" selection-end="823" vertical-scroll-proportion="0.37804878">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="27" column="19" selection-start="823" selection-end="823" vertical-scroll-proportion="0.02182285">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -212,7 +207,7 @@
       <file leaf-file-name="EmailService.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://d:/projects/src/m2/repository/com/blueskyminds/framework/framework-email/0.01-SNAPSHOT/framework-email-0.01-SNAPSHOT.jar!/com/blueskyminds/framework/email/EmailService.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="157" selection-end="157" vertical-scroll-proportion="0.13821138">
+            <state line="5" column="0" selection-start="157" selection-end="157" vertical-scroll-proportion="0.10911425">
               <folding />
             </state>
           </provider>
@@ -221,7 +216,7 @@
       <file leaf-file-name="BlockingEmailer.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://d:/projects/src/m2/repository/com/blueskyminds/framework/framework-email/0.01-SNAPSHOT/framework-email-0.01-SNAPSHOT.jar!/com/blueskyminds/framework/email/BlockingEmailer.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="41" selection-start="598" selection-end="598" vertical-scroll-proportion="0.41463414">
+            <state line="13" column="41" selection-start="598" selection-end="598" vertical-scroll-proportion="0.28369704">
               <folding />
             </state>
           </provider>
@@ -230,7 +225,7 @@
       <file leaf-file-name="GuiceModule.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/startup/GuiceModule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="45" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.6910569">
+            <state line="38" column="45" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.436457">
               <folding />
             </state>
           </provider>
@@ -239,7 +234,7 @@
       <file leaf-file-name="EmailServiceProvider.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://d:/projects/src/m2/repository/com/blueskyminds/framework/framework-guice/0.01-SNAPSHOT/framework-guice-0.01-SNAPSHOT.jar!/com/blueskyminds/framework/guice/providers/EmailServiceProvider.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="13" selection-start="180" selection-end="180" vertical-scroll-proportion="0.13821138">
+            <state line="5" column="13" selection-start="180" selection-end="180" vertical-scroll-proportion="0.10911425">
               <folding />
             </state>
           </provider>
@@ -248,16 +243,16 @@
       <file leaf-file-name="freemarkertool-urls.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/resources/freemarkertool-urls.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="39" selection-start="859" selection-end="859" vertical-scroll-proportion="0.6496815">
+            <state line="18" column="39" selection-start="859" selection-end="859" vertical-scroll-proportion="0.40369394">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="struts.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="struts.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/resources/struts.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="64" selection-start="690" selection-end="690" vertical-scroll-proportion="0.28874734">
+            <state line="14" column="64" selection-start="690" selection-end="690" vertical-scroll-proportion="0.022427442">
               <folding />
             </state>
           </provider>
@@ -266,7 +261,7 @@
       <file leaf-file-name="layout.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/webapp/decorators/layout.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="52" selection-start="2412" selection-end="2412" vertical-scroll-proportion="0.6029724">
+            <state line="47" column="14" selection-start="2553" selection-end="2553" vertical-scroll-proportion="0.78496045">
               <folding />
             </state>
           </provider>
@@ -275,7 +270,7 @@
       <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="29" selection-start="4304" selection-end="4304" vertical-scroll-proportion="0.6709129">
+            <state line="103" column="47" selection-start="4738" selection-end="4738" vertical-scroll-proportion="2.3100264">
               <folding />
             </state>
           </provider>
@@ -293,7 +288,7 @@
       <file leaf-file-name="layout-beta.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/www/static/yui/build/layout/layout-beta.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="312" column="12" selection-start="10844" selection-end="10997" vertical-scroll-proportion="0.034552846">
+            <state line="312" column="12" selection-start="10844" selection-end="10997" vertical-scroll-proportion="0.02182285">
               <folding />
             </state>
           </provider>
@@ -311,7 +306,7 @@
       <file leaf-file-name="scripts.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/webapp/WEB-INF/tiles/scripts.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="46" selection-start="3203" selection-end="3203" vertical-scroll-proportion="1.1549894">
+            <state line="1" column="0" selection-start="1" selection-end="998" vertical-scroll-proportion="0.022427442">
               <folding />
             </state>
           </provider>
@@ -944,13 +939,6 @@
         <option name="Make" value="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG" enabled="false" merge="false">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -980,19 +968,6 @@
         <option name="Make" value="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-    </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
       <option name="WORKING_DIRECTORY" />
       <option name="HOST" value="localhost" />
@@ -1008,6 +983,38 @@
       <option name="DEPLOY_TOMCAT_MANAGER" value="false" />
       <option name="BASE_DIRECTORY_NAME" value="" />
       <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="C:/Program Files/JetBrains/IntelliJ IDEA 6.0/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
     </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
@@ -1050,18 +1057,6 @@
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="C:/Program Files/JetBrains/IntelliJ IDEA 6.0/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
     </configuration>
     <configuration default="false" name="TestRegExPatternMatcher" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <pattern value="com.blueskyminds.freemarkertool.web.mapper.*" />
@@ -1206,10 +1201,10 @@
       </method>
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.TestRegExPatternMatcher" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.TestDefaultURIMatcher.testMatch" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TestVariableSubstitution.testExtractVariables" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.TestPatternActionMapper.testPackages" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.TestPatternActionMapper.testPackages" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TestRegExPatternMatcher" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TestDefaultURIMatcher.testMatch" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TestVariableSubstitution.testExtractVariables" />
       <item index="4" class="java.lang.String" itemvalue="Tomcat Server.FreemarkerTool" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1263,25 +1258,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="129" y="18" width="1438" height="988" extended-state="0" />
-    <editor active="false" />
+    <frame x="93" y="10" width="1470" height="986" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1352133" order="1" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13498233" order="1" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792583" order="1" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2769409" order="3" x="1741" y="41" width="1469" height="861" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" order="8" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3267671" order="8" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263647" order="8" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="0" />
-      <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11641359" order="3" />
+      <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11590106" order="3" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23210412" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23180212" order="0" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6192609" order="8" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
@@ -1302,7 +1297,7 @@
     <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="outerhtml for IE6/7&#10;Added contact form&#10;layout hidden until init is complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="minified scripts" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
@@ -1325,6 +1320,7 @@
     <MESSAGE value="Added help" />
     <MESSAGE value="outerhtml for IE6/7&#10;Added contact form" />
     <MESSAGE value="outerhtml for IE6/7&#10;Added contact form&#10;layout hidden until init is complete" />
+    <MESSAGE value="minified scripts" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1373,102 +1369,58 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/www/static/css/skin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="85" selection-start="155" selection-end="155" vertical-scroll-proportion="0.02182285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/web/actions/ContactAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="19" selection-start="823" selection-end="823" vertical-scroll-proportion="0.37804878">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="27" column="19" selection-start="823" selection-end="823" vertical-scroll-proportion="0.02182285">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://d:/projects/src/m2/repository/com/blueskyminds/framework/framework-email/0.01-SNAPSHOT/framework-email-0.01-SNAPSHOT.jar!/com/blueskyminds/framework/email/EmailService.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="157" selection-end="157" vertical-scroll-proportion="0.13821138">
+        <state line="5" column="0" selection-start="157" selection-end="157" vertical-scroll-proportion="0.10911425">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://d:/projects/src/m2/repository/com/blueskyminds/framework/framework-email/0.01-SNAPSHOT/framework-email-0.01-SNAPSHOT.jar!/com/blueskyminds/framework/email/BlockingEmailer.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="41" selection-start="598" selection-end="598" vertical-scroll-proportion="0.41463414">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://d:/projects/src/m2/repository/com/blueskyminds/framework/framework-guice/0.01-SNAPSHOT/framework-guice-0.01-SNAPSHOT.jar!/com/blueskyminds/framework/guice/providers/EmailServiceProvider.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="180" selection-end="180" vertical-scroll-proportion="0.13821138">
+        <state line="13" column="41" selection-start="598" selection-end="598" vertical-scroll-proportion="0.28369704">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/java/com/blueskyminds/freemarkertool/startup/GuiceModule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="45" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.6910569">
+        <state line="38" column="45" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.436457">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/js/blueskyminds-dom.js">
+    <entry file="jar://d:/projects/src/m2/repository/com/blueskyminds/framework/framework-guice/0.01-SNAPSHOT/framework-guice-0.01-SNAPSHOT.jar!/com/blueskyminds/framework/guice/providers/EmailServiceProvider.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="132" selection-end="132" vertical-scroll-proportion="0.13412228">
+        <state line="5" column="13" selection-start="180" selection-end="180" vertical-scroll-proportion="0.10911425">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/www/static/css/theme.css">
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/resources/freemarkertool-urls.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="329" column="24" selection-start="6064" selection-end="6064" vertical-scroll-proportion="0.7581301">
+        <state line="18" column="39" selection-start="859" selection-end="859" vertical-scroll-proportion="0.40369394">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/www/static/css/skin.css">
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/resources/struts.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="242" column="0" selection-start="7324" selection-end="7324" vertical-scroll-proportion="1.6102784">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="37" selection-start="945" selection-end="945" vertical-scroll-proportion="0.72186834">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/www/static/js/freemarkertool-all.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="21" selection-start="438" selection-end="438" vertical-scroll-proportion="0.55284554">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/js/freemarkertool.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="598" column="70" selection-start="18641" selection-end="18641" vertical-scroll-proportion="0.48608136">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/webapp/WEB-INF/tiles/scripts.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="46" selection-start="3203" selection-end="3203" vertical-scroll-proportion="1.1549894">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/webapp/decorators/layout.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="52" selection-start="2412" selection-end="2412" vertical-scroll-proportion="0.6029724">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="29" selection-start="4304" selection-end="4304" vertical-scroll-proportion="0.6709129">
+        <state line="14" column="64" selection-start="690" selection-end="690" vertical-scroll-proportion="0.022427442">
           <folding />
         </state>
       </provider>
@@ -1480,9 +1432,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/resources/struts.xml">
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/www/static/yui/build/layout/layout-beta.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="64" selection-start="690" selection-end="690" vertical-scroll-proportion="0.28874734">
+        <state line="312" column="12" selection-start="10844" selection-end="10997" vertical-scroll-proportion="0.02182285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/www/static/yui/build/layout/layout-beta-debug.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/webapp/WEB-INF/tiles/scripts.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="1" selection-end="998" vertical-scroll-proportion="0.022427442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/js/freemarkertool.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="175" column="4" selection-start="5042" selection-end="5808" vertical-scroll-proportion="0.02182285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="47" selection-start="4738" selection-end="4738" vertical-scroll-proportion="2.3100264">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/webapp/decorators/layout.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="14" selection-start="2553" selection-end="2553" vertical-scroll-proportion="0.78496045">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freemarkertool-web/src/main/www/static/css/theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="29" selection-start="156" selection-end="156" vertical-scroll-proportion="0.09018568">
           <folding />
         </state>
       </provider>

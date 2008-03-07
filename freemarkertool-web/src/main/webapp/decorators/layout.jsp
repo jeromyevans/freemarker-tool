@@ -33,7 +33,19 @@ Attributes:
 
   <body class="yui-skin-sam">
     <div id="hd">
-        <div id="adContainer"></div>
+        <div id="adContainer">
+          <script type="text/javascript">
+            <!--
+            google_ad_client = "pub-9621243558489658";
+
+            google_ad_slot = "3601269076";
+            google_ad_width = 728;
+            google_ad_height = 90;
+            //-->
+          </script>
+          <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script>
+        </div>
         <div id="title" style="position:absolute; left: 10px"><img style="" src="/static/images/freemarkertool.jpg" alt="FreeMarker Tool" width="175" height="35"></div>
         <div id="exampleContainer">
           <s:form id="exampleForm" action="example.json">
