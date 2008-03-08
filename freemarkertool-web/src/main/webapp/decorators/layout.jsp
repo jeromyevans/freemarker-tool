@@ -12,10 +12,10 @@ Attributes:
 --%>
 <html>
   <head>
-    <title><decorator:title default="Freemarker Tool" /></title>
+    <title><decorator:title default="FreeMarker Template Preview for Java Developers" /></title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <meta name="Keywords" content="Freemarker template, FreeMarker, template, java, mvc, struts2, struts, tag, taglib, webapp, yui">
-    <meta name="Description" content="A tool to edit and process FreeMarker templates online">
+    <meta name="Description" content="A tool to edit and process FreeMarker templates">
     <meta name="Robots" content="Index,Follow">
     <meta name="Author" content="Blue Sky Minds Pty Ltd" />
     <meta name="Copyright" content="Blue Sky Minds Pty Ltd" />
