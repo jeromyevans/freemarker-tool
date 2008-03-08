@@ -6,12 +6,12 @@
 
 <html>
 <head>
-  <title>FreeMarker Tool</title>
+  <title>FreeMarker Template Preview for Java Developers</title>
 </head>
 <body id="body">
   <div id="help" style="display: none">
     <h1>FreeMarker Tool Help</h1>
-    <p>Use the FreeMarker Tool to quickly view the result of processing a <a href="http://www.freemarker.org">FreeMarker</a> Template.</p>
+    <p>FreeMarker is a Java Template Engine Library. Use the FreeMarker Tool to quickly view the result of processing a <a href="http://www.freemarker.org">FreeMarker</a> Template.</p>
     <h2>Usage</h2>
     <p>Type some text into the Page Template and view the response from the template engine a moment later.</p>
     <h2>Context</h2>
