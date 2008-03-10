@@ -13,10 +13,10 @@ Attributes:
 <html>
   <head>
     <title><decorator:title default="FreeMarker Template Preview for Java Developers" /></title>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <meta name="Keywords" content="Freemarker template, FreeMarker, template, java, mvc, struts2, struts, tag, taglib, webapp, yui">
-    <meta name="Description" content="A tool to edit and process FreeMarker templates">
-    <meta name="Robots" content="Index,Follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Keywords" content="Freemarker template, FreeMarker, template, java, mvc, struts2, struts, tag, taglib, webapp, yui"/>
+    <meta name="Description" content="A tool to edit and process FreeMarker templates"/>
+    <meta name="Robots" content="Index,Follow"/>
     <meta name="Author" content="Blue Sky Minds Pty Ltd" />
     <meta name="Copyright" content="Blue Sky Minds Pty Ltd" />
     <script type="text/javascript"></script>
@@ -47,8 +47,8 @@ Attributes:
           </script>
         </div>
         <div id="title" style="position:absolute; left: 10px"><img style="" src="/static/images/freemarkertool.jpg" alt="FreeMarker Tool" width="175" height="35"></div>
+        <s:form id="exampleForm" action="example.json">
         <div id="exampleContainer">
-          <s:form id="exampleForm" action="example.json">
           <%--<h2><span><a href="${pageContext.request.contextPath}/examples/">Examples:</a></span></h2>--%>
           <h2><span>Examples:</span></h2>
           <select id="examples" name="example">
@@ -59,10 +59,10 @@ Attributes:
             <option value="4">hash-context</option>
             <option value="5">struts2-div</option>
             <option value="6">struts2-checkbox</option>
-          </select>&nbsp;<br/>
+          </select>&nbsp;<br/>          
           <div class="indicatorContainer"><img id="exampleIndicator" src="/static/images/indicator.gif" style="display:none" alt="Loading..."/></div>
-          </s:form>
-    </div>
+        </div>
+        </s:form>    
     <decorator:body/>
     <div id="ft">
       <a id="contactBtn" href="#">Request a Feature / Report a Problem</a>

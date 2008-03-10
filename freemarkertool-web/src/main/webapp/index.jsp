@@ -13,11 +13,11 @@
     <h1>FreeMarker Tool Help</h1>
     <p>FreeMarker is a Java Template Engine Library. Use the FreeMarker Tool to quickly view the result of processing a <a href="http://www.freemarker.org">FreeMarker</a> Template.</p>
     <h2>Usage</h2>
-    <p>Type some text into the Page Template and view the response from the template engine a moment later.</p>
+    <p>Type some text into the Page Template and view the response from the engine a moment later.</p>
     <h2>Context</h2>
-    <p>The Context is a nested Map of strings, hashes and sequences.  Use dot notation in the name to
-      define an entry in a hash and square-bracket notation to define an
-      entry in a sequence.</p>
+    <p>The Context is a java.util.Map of strings, hashes and sequences.  Use dot notation to
+      create an entry in a hash and square-bracket notation to create an
+      entry in a sequence.  The tool will construct the corresponding entries as nested java.util.Map's, java.util.List's and java.lang.String's.</p>
 <div class="codeBody">
    Create an entry named id in the hash named parameters:<br/>
    <div class="code">1. parameters.id</div>
@@ -28,8 +28,8 @@
     Create the second entry in a sequence named lines in the address entry of person<br/>
    <div class="code">4. person.address.lines[1]</div>
 </div>
-      <p>Hashes can also use the square-bracket notation and the notation can be mixed.  The tool will infer whether an entry
-      needs to be a string, sequence or map.</p>
+      <p>Hashes may also use the square-bracket notation and the notation may be mixed.  The tool will infer whether an entry
+      needs to be a String, java.util.List or java.util.Map.</p>
 <div class="codeBody">
  Create an entry called id in the hash named parameters<br/>
    <div class="code">1. parameters[id]</div>
@@ -39,7 +39,10 @@
    <div class="code">3. people[0].address['personal'].lines[1]</div>
 </div>
     <h2>Interactive Examples</h2>
-    <p>Real examples are provided for editing.  Use them to explore the features of this tool.</p>
+    <p>Real examples are provided for editing.  Use them to explore the features of this tool.  Details examples are included
+     from the <a href="http://struts.apache.org/2.x/">Apache Struts 2</a> tag library.</p>
+    <h2>Limitations</h2>
+    <p>The Map-based Context enables only a minimal set of the FreeMarker features for handling complex Objects and data types.</p>
   </div>
 
   <div id="lt" style="visibility:hidden">
@@ -96,13 +99,13 @@
       <div class="drop">
         <label for="version">Version:</label>
         <select id="version" name="version">
-          <option value="freemarker-2.3.11" selected="true">freemarker-2.3.11</option>
+          <option value="freemarker-2.3.11" selected>freemarker-2.3.11</option>
         </select>
       </div>
       <div class="drop">
         <label for="root">Context Root:</label>
         <select id="root" name="root">
-          <option value="map" selected="true">Map</option>
+          <option value="map" selected>Map</option>
         </select>
       </div>
     </housepad:div>

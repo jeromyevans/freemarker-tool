@@ -641,7 +641,7 @@ FreemarkerTool.ui = function() {
 
     function showHelp(e) {
          var dialog = new YAHOO.widget.SimpleDialog("helpInfo", {
-            width: "600px",
+            width: "640px",
             fixedcenter: true,
             visible: false,
             draggable: false,
